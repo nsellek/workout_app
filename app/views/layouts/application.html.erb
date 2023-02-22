@@ -11,6 +11,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if user_signed_in? %>
+      <% if current_user&.trainer? %>
+        <%= render 'layouts/trainer_navbar' %>
+      <% else %>
+        <%= render 'layout/client_navbar' %>
+      <% end %>
+    <% end %>
+    <div class="toast-container top-0 end-0 p-3">
+      <%= render 'layouts/notice' if notice %>
+    </div>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

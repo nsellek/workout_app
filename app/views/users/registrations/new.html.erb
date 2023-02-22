@@ -1,0 +1,102 @@
+<div class="row mt-md-5 mt-sm-1">
+  <div class="col col-md-4 offset-md-4">
+    <div class="card text-center">
+      <div class="card-header">
+        <h2>Sign up</h2>
+      </div>
+      <div class="card-body">
+        <%= form_for resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false } do |f| %>
+          <%= f.hidden_field :type, value: User::CLIENT_TYPE %>
+          <div class="input-group mb-3">
+            <div class="form-floating">
+              <%= f.text_field :first_name,
+                                autofocus: true,
+                                autocomplete: 'first_name',
+                                class: 'form-control',
+                                placeholder: 'John',
+                                required: true
+              %>
+              <%= f.label :first_name %>
+              <% if resource.errors.include? :first_name %>
+                <div class="invalid-feedback">
+                  <ul>
+                    <% resource.errors.full_messages_for(:first_name).each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end%>
+            </div>
+            <div class="form-floating">
+              <%= f.text_field :last_name,
+                                autocomplete: 'last_name',
+                                class: 'form-control',
+                                placeholder: 'Doe',
+                                required: true
+              %>
+              <%= f.label :last_name %>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <%= f.email_field :email,
+                              autocomplete: "email",
+                              class: 'form-control',
+                              placeholder: 'name@example.com',
+                              required: true
+            %>
+            <%= f.label :email, 'Email Address' %>
+          </div>
+
+          <div class="form-floating mb-3">
+            <%= f.password_field :password,
+                                  autocomplete: "new-password",
+                                  class: 'form-control',
+                                  placeholder: 'password',
+                                  required: true
+            %>
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+              <div class="form-text">
+                <%= @minimum_password_length %> characters minimum
+              </div>
+            <% end %>
+          </div>
+
+          <div class="form-floating mb-3">
+            <%= f.password_field :password_confirmation,
+                                  autocomplete: "new-password",
+                                  class: 'form-control',
+                                  placeholder: 'password',
+                                  required: true
+            %>
+            <%= f.label :password_confirmation %>
+            <% if resource.errors.include? :password_confirmation %>
+              <div class="invalid-feedback">
+                <ul>
+                  <% resource.errors.full_messages_for(:password_confirmation).each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end%>
+          </div>
+
+          <fieldset class="input-group mb-3">
+            <legend class="col-form-label float-start">You are a:</legend>
+            <% User::USER_TYPES.each do |user_type| %>
+              <div class="form-check form-check-inline">
+                <%= f.radio_button :type, user_type, class: 'form-check-input' %>
+                <%= f.label "user_type_#{user_type.downcase}", user_type.titleize %>
+              </div>
+            <% end %>
+          </fieldset>
+
+          <%= f.submit "Sign up", class: 'btn btn-primary' %>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>
