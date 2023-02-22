@@ -1,5 +1,6 @@
 AllCops:
   NewCops: enable
+  TargetRubyVersion:
 
 Style/Documentation:
   Enabled: false
