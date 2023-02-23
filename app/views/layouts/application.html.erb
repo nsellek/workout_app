@@ -25,7 +25,7 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
-    <div class="container-fluid">
+    <div id="<%= current_user&.type&.downcase %>" class="container-fluid">
       <%= yield %>
     </div>
   </body>

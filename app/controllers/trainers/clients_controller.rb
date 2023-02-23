@@ -2,7 +2,7 @@ module Trainers
   class ClientsController < ApplicationController
 
     def index
-      @clients = current_user.clients
+      @clients = ::ClientPresenter.from_collection(current_user.clients)
     end
 
     private
