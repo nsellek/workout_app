@@ -5,6 +5,7 @@ ruby '3.2.1'
 gem 'after_party'
 gem 'bootsnap', require: false
 gem 'bootstrap'
+gem 'breadcrumbs_on_rails'
 gem 'devise'
 gem 'importmap-rails'
 gem 'jbuilder'

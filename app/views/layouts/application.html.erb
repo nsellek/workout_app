@@ -25,6 +25,8 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
+    <%= render_breadcrumbs separator: '', builder: BreadcrumbsBuilderService %>
+
     <div id="<%= current_user&.type&.downcase %>" class="container-fluid">
       <%= yield %>
     </div>

@@ -1,5 +1,6 @@
 module Trainers
   class DashboardsController < ApplicationController
+    add_breadcrumb 'Dashboard', :trainers_dashboard
 
     def dashboard; end
 

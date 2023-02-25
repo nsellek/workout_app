@@ -1,0 +1,12 @@
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <% breadcrumbs.each do |breadcrumb| %>
+      <li class="breadcrumb-item">
+        <%= link_to_unless_current breadcrumb.name,
+                    breadcrumb.path,
+                    class: 'breadcrumb-item'
+        %>
+      </li>
+    <% end %>
+  </ol>
+</nav>

@@ -21,4 +21,4 @@ const ClientsInvite = class {
   }
 }
 
-defaultInit('#invite_field', new ClientsInvite);
+defaultInit('#invite_field', ClientsInvite);

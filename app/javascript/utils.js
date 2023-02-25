@@ -1,6 +1,8 @@
 export let defaultInit = (element, callback) => {
-  if (document.querySelector(element))
-    callback.init();
+  document.addEventListener('turbo:load', () => {
+    if (document.querySelector(element))
+      (new callback).init();
+  })
 }
 
 export let stopDefault = (event) => {
