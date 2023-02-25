@@ -1,9 +1,10 @@
-<div class="col col-md-2">
-  <div class="card p-2">
+<div class="col col-md-3">
+  <div class="shadow card p-2">
     <img src="<%= client.avatar %>" alt="<%= client.fullname %>" class="card-img-top">
     <div class="card-body text-center">
       <h5 class="card-title"><%= client.fullname %></h5>
       <%= link_to 'View', '#!', class: 'btn btn-primary' %>
+      <%#= link_to 'Archive', '#!', class: 'text-danger' %>
     </div>
   </div>
 </div>

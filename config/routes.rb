@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
   namespace :trainers do
     get '/dashboard', to: 'dashboards#dashboard'
-    resources :clients, only: [:index], shallow: true
+    resources :clients, only: [:index, :new], shallow: true
   end
 end

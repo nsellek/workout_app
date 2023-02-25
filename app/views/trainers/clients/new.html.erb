@@ -1,0 +1,55 @@
+<div class="row mt-md-5 mt-sm-1">
+  <div class="col col-md-4 offset-md-4">
+    <div class="card text-center">
+      <div class="card-header">
+        <h2>Invite Client</h2>
+      </div>
+      <div class="card-body">
+        <%= text_field_tag 'invite_field',
+                            @invite_url,
+                            class: 'form-control',
+                            readonly: true
+        %>
+        <div class="btn-group mt-2" role="group">
+          <span
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="Comming Soon"
+            >
+            <%= link_to '<i class="fa-solid fa-comment"></i> Text'.html_safe,
+                        '#!',
+                        class: 'btn btn-success disabled rounded-start rounded-0',
+                        id: 'text_btn',
+                        data: {
+                          bs_toggle: 'tooltip',
+                          bs_placement: 'bottom',
+                          bs_title: 'Comming Soon'
+                        }
+            %>
+          </span>
+          <%= link_to '<i class="fa-solid fa-copy"></i> Copy'.html_safe,
+                      '#!',
+                      class: 'btn btn-primary',
+                      id: 'copy_btn'
+          %>
+          <span
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Comming Soon"
+          >
+          <%= link_to '<i class="fa-solid fa-envelope"></i> Email'.html_safe,
+                      '#!',
+                      class: 'btn btn-warning email_link disabled rounded-end rounded-0',
+                      id: 'email_btn',
+                      data: {
+                        bs_toggle: 'tooltip',
+                        bs_placement: 'bottom',
+                        bs_title: 'Comming Soon'
+                      }
+          %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

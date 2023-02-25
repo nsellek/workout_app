@@ -16,3 +16,6 @@ Layout/ArgumentAlignment:
 
 Layout/EmptyLinesAroundClassBody:
   Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
