@@ -2,7 +2,8 @@
 
 module Users
   class SessionsController < Devise::SessionsController
-    skip_before_action :authenticate_user!
+    skip_before_action  :authenticate_user!,
+                        :set_active_page
     # before_action :configure_sign_in_params, only: [:create]
 
     # GET /resource/sign_in

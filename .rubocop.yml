@@ -12,7 +12,7 @@ Metrics/MethodLength:
   Enabled: false
 
 Layout/ArgumentAlignment:
-  EnforcedStyle: with_fixed_indentation
+  EnforcedStyle: with_first_argument
 
 Layout/EmptyLinesAroundClassBody:
   Enabled: false

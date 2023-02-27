@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav flex-row flex-wrap">
         <li class="nav-item">
           <%= link_to 'Dashboard',
                       trainers_dashboard_path,
@@ -16,6 +16,15 @@
           <%= link_to 'Clients',
                       trainers_clients_path,
                       class: "nav-link #{active_nav_item('clients')}"
+          %>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item">
+          <%= button_to 'Logout',
+                        destroy_user_session_path,
+                        method: :delete,
+                        class: 'nav-link btn btn-link'
           %>
         </li>
       </ul>
