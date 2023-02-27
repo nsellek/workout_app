@@ -1,13 +1,22 @@
-<nav class="navbar navbar-expanded-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <%= link_to app_name, clients_dashboard_path, class: 'navbar-brand' %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav flex-row flex-wrap">
         <li class="nav-item">
           <%= link_to 'Dashboard', clients_dashboard_path, class: 'nav-link active' %>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item">
+          <%= button_to 'Logout',
+                        destroy_user_session_path,
+                        method: :delete,
+                        class: 'nav-link btn btn-link'
+          %>
         </li>
       </ul>
     </div>

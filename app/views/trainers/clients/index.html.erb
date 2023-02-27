@@ -1,12 +1,12 @@
-<div class="row mt-md-5 mt-sm-1">
+<div class="row mt-md-5 mt-sm-1 g">
   <div class="col col-md-8 offset-md-2">
     <h3>Clients</h3>
-    <div class="row mt-3 clients">
+    <div class="row gy-2 clients">
       <% @clients.each do |client| %>
         <%= render 'tile', client: client %>
       <% end %>
 
-      <div class="col col-md-3">
+      <div class="col col-md-3 col-6">
         <div class="shadow card p-2">
           <%= link_to new_trainers_client_path do %>
             <img src="<%= add_client_img %>" alt="" class="card-img-top">

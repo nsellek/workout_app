@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  get '/invite/:token', to: 'invites#show'
+
   namespace :clients do
     get '/dashboard', to: 'dashboards#dashboard'
   end

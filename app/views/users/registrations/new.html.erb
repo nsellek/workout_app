@@ -6,7 +6,18 @@
       </div>
       <div class="card-body">
         <%= form_for resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false } do |f| %>
-          <%= f.hidden_field :type, value: User::CLIENT_TYPE %>
+          <% if @trainer %>
+            <%= f.hidden_field :type, value: User::CLIENT_TYPE %>
+            <%= f.hidden_field(:trainer_id, value: @trainer.id) %>
+            <div class="form-floating mb-3">
+              <%= text_field_tag 'trainer_name',
+                                  @trainer.fullname,
+                                  disabled: true,
+                                  class: 'form-control'
+              %>
+              <%= label_tag 'trainer_name', 'Trainer Name' %>
+            </div>
+          <% end %>
           <div class="input-group mb-3">
             <div class="form-floating">
               <%= f.text_field :first_name,
@@ -82,15 +93,17 @@
             <% end%>
           </div>
 
-          <fieldset class="input-group mb-3">
-            <legend class="col-form-label float-start">You are a:</legend>
-            <% User::USER_TYPES.each do |user_type| %>
-              <div class="form-check form-check-inline">
-                <%= f.radio_button :type, user_type, class: 'form-check-input' %>
-                <%= f.label "user_type_#{user_type.downcase}", user_type.titleize %>
-              </div>
-            <% end %>
-          </fieldset>
+          <% unless @trainer %>
+            <fieldset class="input-group mb-3">
+              <legend class="col-form-label float-start">You are a:</legend>
+              <% User::USER_TYPES.each do |user_type| %>
+                <div class="form-check form-check-inline">
+                  <%= f.radio_button :type, user_type, class: 'form-check-input' %>
+                  <%= f.label "user_type_#{user_type.downcase}", user_type.titleize %>
+                </div>
+              <% end %>
+            </fieldset>
+          <% end %>
 
           <%= f.submit "Sign up", class: 'btn btn-primary' %>
         <% end %>

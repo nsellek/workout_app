@@ -1,0 +1,2 @@
+class TrainerPresenter < UserPresenter
+end
