@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-light">
+<nav class="navbar navbar-dark navbar-expand-md bg-dark">
   <div class="container-fluid">
     <%= link_to app_name, trainers_dashboard_path, class: 'navbar-brand' %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,12 @@
         </li>
       </ul>
       <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item">
+          <%= link_to 'Profile',
+                      '#!',
+                      class: "nav-link #{active_nav_item('profile')}"
+          %>
+        </li>
         <li class="nav-item">
           <%= button_to 'Logout',
                         destroy_user_session_path,

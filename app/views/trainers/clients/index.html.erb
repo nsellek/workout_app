@@ -1,7 +1,8 @@
+<%= breadcrumbs %>
 <div class="row mt-md-5 mt-sm-1 g">
   <div class="col col-md-8 offset-md-2">
     <h3>Clients</h3>
-    <div class="row gy-2 clients">
+    <div class="row gy-xs-2 gy-4 clients">
       <% @clients.each do |client| %>
         <%= render 'tile', client: client %>
       <% end %>
