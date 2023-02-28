@@ -81,4 +81,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  database: workout_app_production
+  username: workout_app
+  password: <%= ENV["WORKOUT_APP_DATABASE_PASSWORD"] %>
