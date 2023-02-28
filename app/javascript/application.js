@@ -6,7 +6,7 @@ import "bootstrap"
 import "@fortawesome/fontawesome-free"
 
 // custom JS
-import './trainers/clients_invite'
+import 'clients_invite'
 // import 'clients'
 
 (() => {
