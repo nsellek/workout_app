@@ -1,6 +1,6 @@
 inheritance: true
+indirect: true
 exclude:
   - ActiveRecord::InternalMetadata
   - ActiveRecord::SchemaMigration
   - AfterParty::TaskRecord
-  
