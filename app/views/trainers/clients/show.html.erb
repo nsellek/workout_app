@@ -1,5 +1,5 @@
 <div class="row flex-nowrap">
-  <%= render 'sidebar', client: @client%>
+  <%= render 'layouts/client_sidebar', client: @client unless browser.mobile? %>
 
   <div class="col py-3">
     <%= breadcrumbs %>

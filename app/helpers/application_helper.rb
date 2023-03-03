@@ -5,6 +5,6 @@ module ApplicationHelper
   end
 
   def breadcrumbs
-    render_breadcrumbs separator: '', builder: BreadcrumbsBuilderService
+    render_breadcrumbs separator: '', builder: BreadcrumbsBuilderService unless browser.mobile?
   end
 end

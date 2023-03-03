@@ -1,11 +1,19 @@
 <nav class="navbar navbar-dark navbar-expand-md bg-dark">
   <div class="container-fluid">
     <%= link_to app_name, trainers_dashboard_path, class: 'navbar-brand' %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav flex-row flex-wrap">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <%= link_to 'Dashboard',
                       trainers_dashboard_path,
@@ -19,7 +27,7 @@
           %>
         </li>
       </ul>
-      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+      <ul class="navbar-nav ms-md-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <%= link_to 'Profile',
                       '#!',
