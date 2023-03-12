@@ -10,17 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_28_033838) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_10_005808) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "client_workouts", force: :cascade do |t|
-    t.bigint "client_id", null: false
-    t.bigint "trainer_id", null: false
+  create_table "exercises", force: :cascade do |t|
     t.string "name"
+    t.string "sets"
+    t.string "reps"
+    t.string "weight"
+    t.text "notes"
+    t.bigint "workout_day_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["trainer_id", "client_id"], name: "index_client_workouts_on_trainer_id_and_client_id", unique: true
+    t.index ["workout_day_id"], name: "index_exercises_on_workout_day_id"
   end
 
   create_table "invite_tokens", force: :cascade do |t|
@@ -65,21 +68,38 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_28_033838) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "workouts", force: :cascade do |t|
-    t.string "name"
-    t.integer "sets"
-    t.integer "reps"
-    t.text "notes"
-    t.bigint "client_workouts_id", null: false
+  create_table "workout_days", force: :cascade do |t|
+    t.bigint "workout_week_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["client_workouts_id"], name: "index_workouts_on_client_workouts_id"
+    t.index ["workout_week_id"], name: "index_workout_days_on_workout_week_id"
   end
 
-  add_foreign_key "client_workouts", "users", column: "client_id"
-  add_foreign_key "client_workouts", "users", column: "trainer_id"
+  create_table "workout_sets", force: :cascade do |t|
+    t.integer "weight"
+    t.integer "reps"
+    t.text "notes"
+    t.bigint "exercise_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["exercise_id"], name: "index_workout_sets_on_exercise_id"
+  end
+
+  create_table "workout_weeks", force: :cascade do |t|
+    t.bigint "client_id", null: false
+    t.bigint "trainer_id", null: false
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trainer_id", "client_id"], name: "index_workout_weeks_on_trainer_id_and_client_id"
+  end
+
+  add_foreign_key "exercises", "workout_days"
   add_foreign_key "invite_tokens", "users", column: "trainer_id"
   add_foreign_key "trainer_clients", "users", column: "client_id"
   add_foreign_key "trainer_clients", "users", column: "trainer_id"
-  add_foreign_key "workouts", "client_workouts", column: "client_workouts_id"
+  add_foreign_key "workout_days", "workout_weeks"
+  add_foreign_key "workout_sets", "exercises"
+  add_foreign_key "workout_weeks", "users", column: "client_id"
+  add_foreign_key "workout_weeks", "users", column: "trainer_id"
 end

@@ -28,6 +28,10 @@ export let createToast = (text, opts = {}) => {
   new bootstrap.Toast(toastElement, opts).show()
 }
 
+export let addEventListener = (nodeList, event, callback) => {
+  nodeList.forEach( x => x.addEventListener(event, callback))
+}
+
 let createNode = (htmlString) => {
   let placeholder = document.createElement('div');
 

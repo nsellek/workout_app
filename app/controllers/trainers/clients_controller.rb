@@ -7,7 +7,7 @@ module Trainers
     end
 
     def show
-      @client = presenter(Client.find(params[:id]))
+      @client = presenter(current_user.clients.find(params[:id]))
       add_breadcrumb @client.fullname
       @active_sidenav = 'client_profile'
     end

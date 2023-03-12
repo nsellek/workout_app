@@ -1,0 +1,249 @@
+<div class="row flex-nowrap">
+  <%= render 'layouts/client_sidebar', client: @client unless browser.mobile? %>
+
+  <div class="col py-3">
+    <%= breadcrumbs %>
+
+    <div class="row mt-md-5 mt-1">
+      <div class="col col-md-10 offset-md-1">
+        <div class="row">
+          <h3>New Week</h3>
+        </div>
+        <div class="row gy-2 gy-md-4">
+          <div class="col col-12">
+            <div class="shadow card p-2">
+              <div class="card-body">
+                <%= form_for  @workout_week,
+                              url: trainers_client_workout_weeks_path(@client) do |f|
+                %>
+                  <div class="form-floating mb-3">
+                    <%= f.text_field :name,
+                                      class: 'form-control',
+                                      placeholder: 'Week name'
+                    %>
+                    <%= f.label :name %>
+                  </div>
+                  <div class="days">
+                    <%= f.fields_for :workout_days do |cf| %>
+                      <div class="day mb-3" data-count="1">
+                        <h5>
+                          Day <span class="day_count">1</span>
+                        </h5>
+                        <div class="exercises">
+                          <%= cf.fields_for :exercises do |ef| %>
+                            <div class="exercise">
+                              <h6>
+                                Exercise <span class="workout_count">1</span>
+                              </h6>
+                              <div class="row mb-3">
+                                <div class="col col-12 col-md-6">
+                                  <div class="form-floating">
+                                    <%= ef.text_field :name,
+                                                      class: 'form-control',
+                                                      placeholder: 'Exercise Name'
+                                    %>
+                                    <%= ef.label :name %>
+                                  </div>
+                                </div>
+                                <div class="col col-6 col-md-2">
+                                  <div class="form-floating">
+                                    <%= ef.number_field :sets,
+                                                        class: 'form-control',
+                                                        placeholder: 'Sets'
+                                    %>
+                                    <%= ef.label :sets %>
+                                  </div>
+                                </div>
+                                <div class="col col-6 col-md-2">
+                                  <div class="form-floating">
+                                    <%= ef.number_field :reps,
+                                                        class: 'form-control',
+                                                        placeholder: 'Reps'
+                                    %>
+                                    <%= ef.label :reps %>
+                                  </div>
+                                </div>
+                                <div class="col col-6 col-md-2">
+                                  <div class="form-floating">
+                                    <%= ef.number_field :weight,
+                                                        class: 'form-control',
+                                                        placeholder: 'Weight'
+                                    %>
+                                    <%= ef.label :weight %>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          <% end %>
+                        </div>
+                        <%= link_to 'Add exercise', '#!', class: 'btn btn-outline-primary add-exercise' %>
+                      </div>
+                    <% end %>
+                  </div>
+                  <%= link_to 'Add Day' , '#!', class: 'btn btn-outline-primary add-day' %>
+                  <%= f.submit 'Save', class: 'btn btn-primary' %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<template id="exercise-template">
+  <div class="exercise">
+    <h6>
+      Exercise <span class="workout_count"></span>
+    </h6>
+    <div class="row mb-3">
+      <div class="col col-12 col-md-6">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            placeholder="Exercise Name"
+            type="text"
+            name="workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][name]"
+            id="workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_name"
+          >
+          <label
+            for="workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_name"
+          >
+            Name
+          </label>
+        </div>
+      </div>
+      <div class="col col-6 col-md-2">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            placeholder="Sets"
+            type="number"
+            name="workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][sets]"
+            id="workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_sets"
+          >
+          <label
+            for="workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_sets"
+          >
+            Sets
+          </label>
+        </div>
+      </div>
+      <div class="col col-6 col-md-2">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            placeholder="Reps"
+            type="number"
+            name="workout_week[workout_days_attributes][{day}][exercises_attributes][0][reps]"
+            id="workout_week_workout_days_attributes_{day}_exercises_attributes_0_reps"
+          >
+          <label
+            for="workout_week_workout_days_attributes_{day}_exercises_attributes_0_reps"
+          >
+            Reps
+          </label>
+        </div>
+      </div>
+      <div class="col col-6 col-md-2">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            placeholder="Weight"
+            type="number"
+            name="workout_week[workout_days_attributes][{day}][exercises_attributes][0][weight]"
+            id="workout_week_workout_days_attributes_{day}_exercises_attributes_0_weight"
+          >
+          <label
+            for="workout_week_workout_days_attributes_{day}_exercises_attributes_0_weight"
+          >
+            Weight
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="day-template">
+  <div class="day mb-3" data-count="">
+    <h5>
+      Day <span class="day_count"></span>
+    </h5>
+    <div class="exercises">
+      <div class="exercise">
+        <h6>
+          Exercise <span class="workout_count">1</span>
+        </h6>
+        <div class="row mb-3">
+          <div class="col col-12 col-md-6">
+            <div class="form-floating">
+              <input
+                class="form-control"
+                placeholder="Exercise Name"
+                type="text"
+                name="workout_week[workout_days_attributes][{day}][exercises_attributes][0][name]"
+                id="workout_week_workout_days_attributes_{day}_exercises_attributes_0_name"
+              >
+              <label
+                for="workout_week_workout_days_attributes_{day}_exercises_attributes_0_name"
+              >
+                Name
+              </label>
+            </div>
+          </div>
+          <div class="col col-6 col-md-2">
+            <div class="form-floating">
+              <input
+                class="form-control"
+                placeholder="Sets"
+                type="number"
+                name="workout_week[workout_days_attributes][{day}][exercises_attributes][0][sets]"
+                id="workout_week_workout_days_attributes_{day}_exercises_attributes_0_sets"
+              >
+              <label
+                for="workout_week_workout_days_attributes_{day}_exercises_attributes_0_sets"
+              >
+                Sets
+              </label>
+            </div>
+          </div>
+          <div class="col col-6 col-md-2">
+            <div class="form-floating">
+              <input
+                class="form-control"
+                placeholder="Reps"
+                type="number"
+                name="workout_week[workout_days_attributes][{day}][exercises_attributes][0][reps]"
+                id="workout_week_workout_days_attributes_{day}_exercises_attributes_0_reps"
+              >
+              <label
+                for="workout_week_workout_days_attributes_{day}_exercises_attributes_0_reps"
+              >
+                Reps
+              </label>
+            </div>
+          </div>
+          <div class="col col-6 col-md-2">
+            <div class="form-floating">
+              <input
+                class="form-control"
+                placeholder="Weight"
+                type="number"
+                name="workout_week[workout_days_attributes][{day}][exercises_attributes][0][weight]"
+                id="workout_week_workout_days_attributes_{day}_exercises_attributes_0_weight"
+              >
+              <label
+                for="workout_week_workout_days_attributes_{day}_exercises_attributes_0_weight"
+              >
+                Weight
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-outline-primary add-exercise" href="#!">Add exercise</a>
+  </div>
+</template>

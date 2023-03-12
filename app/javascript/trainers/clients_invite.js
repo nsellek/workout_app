@@ -9,7 +9,7 @@ const ClientsInvite = class {
   }
 
   bindCopyBtn() {
-    this.copyBtn.addEventListener('click', (event) => {
+    this.copyBtn.addEventListener('click', event => {
       stopDefault(event);
       navigator.clipboard.writeText(this.inviteField.value);
       createToast('Successfully copied invite link!');

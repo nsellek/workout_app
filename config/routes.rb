@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
   namespace :trainers do
     get '/dashboard', to: 'dashboards#dashboard'
-    resources :clients, only: [:index, :show, :new], shallow: true
+    resources :clients, only: [:index, :show, :new], shallow: true do
+      resources :workouts, only: [:index, :show, :new], shallow: true
+      resources :workout_weeks, only: [:create], shallow: true
+    end
   end
 end

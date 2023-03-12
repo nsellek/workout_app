@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   private
 
   def presenter(obj)
-    if obj.is_a? ActiveRecord::Associations::CollectionProxy
+    if obj.is_a?(ActiveRecord::Associations::CollectionProxy) || obj.is_a?(ActiveRecord::AssociationRelation)
       item = obj.first
       return obj if item.nil?
 

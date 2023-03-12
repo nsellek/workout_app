@@ -12,3 +12,4 @@ pin '@fortawesome/fontawesome-free', to: 'https://ga.jspm.io/npm:@fortawesome/fo
 # custom js
 pin 'utils', to: 'utils.js', preload: true
 pin 'clients_invite', to: 'trainers/clients_invite.js', preload: true
+pin 'new_workout', to: 'trainers/new_workout.js', preload: true

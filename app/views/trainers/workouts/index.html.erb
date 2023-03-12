@@ -1,0 +1,50 @@
+<div class="row flex-nowrap">
+  <%= render 'layouts/client_sidebar', client: @client unless browser.mobile? %>
+
+  <div class="col py-3">
+    <%= breadcrumbs %>
+
+    <div class="row mt-md-5 mt-1">
+      <div class="col col-md-10 offset-md-1">
+        <div class="row">
+          <h3>
+            Workout Weeks
+            <%= link_to 'Add Week',
+                        new_trainers_client_workout_path(@client),
+                        class: 'btn btn-success float-end'
+            %>
+          </h3>
+        </div>
+        <div class="row gy-2 gy-md-4">
+          <% if @week_count.zero? %>
+            <div class="col col-md-3 col-6 mx-auto">
+              <div class="shadow card p-2 text-center">
+                <div class="card-body">
+                  <h5 class="card-title">No Workout Weeks Yet</h5>
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <% @workout_weeks.each_with_index do |week, index| %>
+              <div class="col col-md-3 col-6">
+                <div class="shadow card p2 text-center">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= week.title(@week_count - index) %></h5>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Days: <%= week.day_count %></li>
+                    <li class="list-group-item">Workouts: <%= week.exercise_count %></li>
+                  </ul>
+                  <div class="card-body">
+                    <%= link_to 'View', '#!', class: 'btn btn-primary' %>
+                    <%= link_to 'Edit', '#!', class: 'btn btn-warning' %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

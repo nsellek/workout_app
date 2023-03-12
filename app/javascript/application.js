@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free"
 
 // custom JS
 import 'clients_invite'
+import 'new_workout'
 // import 'clients'
 
 (() => {

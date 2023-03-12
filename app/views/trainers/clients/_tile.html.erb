@@ -1,6 +1,10 @@
 <div class="col col-md-3 col-6">
   <div class="shadow card p-2">
-    <img src="<%= client.avatar %>" alt="<%= client.fullname %>" class="card-img-top">
+    <img
+      src="<%= client.avatar %>"
+      alt="<%= client.fullname %>"
+      class="card-img-top"
+    >
     <div class="card-body text-center">
       <h5 class="card-title"><%= client.fullname %></h5>
       <%= link_to 'View', trainers_client_path(client), class: 'btn btn-primary' %>

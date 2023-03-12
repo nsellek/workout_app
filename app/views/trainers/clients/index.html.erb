@@ -1,22 +1,19 @@
 <%= breadcrumbs %>
 <div class="row mt-md-5 mt-sm-1 g">
   <div class="col col-md-8 offset-md-2">
-    <h3>Clients</h3>
-    <div class="row gy-xs-2 gy-4 clients">
+    <div class="row">
+      <h3>
+        Clients
+        <%= link_to 'New Client',
+                    new_trainers_client_path,
+                    class: 'btn btn-success float-end'
+        %>
+      </h3>
+    </div>
+    <div class="row gy-2 gy-md-4 clients">
       <% @clients.each do |client| %>
         <%= render 'tile', client: client %>
       <% end %>
-
-      <div class="col col-md-3 col-6">
-        <div class="shadow card p-2">
-          <%= link_to new_trainers_client_path do %>
-            <img src="<%= add_client_img %>" alt="" class="card-img-top">
-          <% end %>
-          <div class="card-body text-center">
-            <h5 class="card-title">Add New Client</h5>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
