@@ -37,7 +37,10 @@
                   </ul>
                   <div class="card-body">
                     <%= link_to 'View', '#!', class: 'btn btn-primary' %>
-                    <%= link_to 'Edit', '#!', class: 'btn btn-warning' %>
+                    <%= link_to 'Edit',
+                                edit_trainers_client_workout_path(@client, week),
+                                class: 'btn btn-warning'
+                    %>
                   </div>
                 </div>
               </div>

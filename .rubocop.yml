@@ -19,3 +19,6 @@ Layout/EmptyLinesAroundClassBody:
 
 Style/SymbolArray:
   EnforcedStyle: brackets
+
+Style/HashAsLastArrayItem:
+  Enabled: false

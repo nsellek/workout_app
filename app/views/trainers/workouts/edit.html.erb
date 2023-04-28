@@ -7,11 +7,11 @@
     <div class="row mt-md-5 mt-1">
       <div class="col col-md-10 offset-md-1">
         <div class="row">
-          <h3>New Week</h3>
+          <h3>Edit Week</h3>
         </div>
         <%= render  'trainers/workout_weeks/form',
                     workout_week: @workout_week,
-                    url: trainers_client_workout_weeks_path(@client)
+                    url: trainers_client_workout_week_path(@client, @workout_week)
         %>
       </div>
     </div>

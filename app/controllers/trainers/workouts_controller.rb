@@ -18,6 +18,15 @@ module Trainers
       workout_day.exercises.build
     end
 
+    def edit
+      add_breadcrumb 'Wrokouts', trainers_client_workouts_path(@client)
+      add_breadcrumb 'Edit'
+      @workout_week = WorkoutWeek.where(
+        trainer: current_user,
+        client: @client
+      ).find(params[:id])
+    end
+
     private
 
     def set_active_page

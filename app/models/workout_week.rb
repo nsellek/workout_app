@@ -5,5 +5,5 @@ class WorkoutWeek < ApplicationRecord
   belongs_to :trainer
   belongs_to :client
 
-  accepts_nested_attributes_for :workout_days
+  accepts_nested_attributes_for :workout_days, allow_destroy: true
 end

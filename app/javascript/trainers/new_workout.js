@@ -1,12 +1,14 @@
 import { defaultInit, stopDefault, addEventListener } from "utils";
 
-const NewWorkout = class {
+export const NewWorkout = class {
   constructor() {
     this.addExerciseBtns = document.querySelectorAll('.add-exercise');
     this.exerciseTemplate = document.querySelector('#exercise-template');
     this.addDayBtn = document.querySelector('.add-day');
     this.dayTemplate = document.querySelector('#day-template');
     this.daysContainer = document.querySelector('.days');
+    this.deleteExerciseBtns = document.querySelectorAll('.remove-workout');
+    this.deleteDayBtns = document.querySelectorAll('.remove-day');
   }
 
   bindAddExerciseBtns() {
@@ -24,8 +26,18 @@ const NewWorkout = class {
     })
   }
 
-  bindAddExerciseLogic(event) {
-    
+  bindDeleteExerciseBtns() {
+    addEventListener(this.deleteExerciseBtns, 'click', event => {
+      stopDefault(event)
+      this.deleteExercise(event.target)
+    })
+  }
+
+  bindDeleteDayBtns() {
+    addEventListener(this.deleteDayBtns, 'click', event => {
+      stopDefault(event)
+      this.deleteDay(event.target)
+    })
   }
 
   addExercise(addBtn, exercisesContainer) {
@@ -52,6 +64,10 @@ const NewWorkout = class {
       forAttr = forAttr.replace('{exercise]', exerciseCount).replace('{day}', dayCount)
       field.setAttribute('for', forAttr);
     })
+    exerciseNode.querySelector('.remove-workout').addEventListener('click', event => {
+      stopDefault(event)
+      this.deleteExercise(event.target)
+    })
     exercisesContainer.append(exerciseNode);
   }
 
@@ -59,7 +75,7 @@ const NewWorkout = class {
     let dayNode = this.dayTemplate.content.cloneNode(true),
         inputFields = dayNode.querySelectorAll('input'),
         labelFields = dayNode.querySelectorAll('label'),
-        dayCount = parseInt(this.daysContainer.querySelector('.day:last-of-type').dataset.count),
+        dayCount = parseInt(this.daysContainer.querySelector('.day:last-of-type')?.dataset?.count) || 0,
         plainDayCount = (dayCount + 1);
 
     dayNode.querySelector('.day').dataset.count = plainDayCount;
@@ -85,12 +101,53 @@ const NewWorkout = class {
       let exercisesContainer = event.target.previousElementSibling
       this.addExercise(event.target, exercisesContainer);
     })
+    dayNode.querySelector('.remove-workout').addEventListener('click', event => {
+      stopDefault(event)
+      this.deleteExercise(event.target)
+    })
+    dayNode.querySelector('.remove-day').addEventListener('click', event => {
+      stopDefault(event)
+      this.deleteDay(event.target)
+    })
     this.daysContainer.append(dayNode);
+  }
+
+  deleteExercise(btn) {
+    let exercise = btn.closest('.exercise'),
+        dayContainer = btn.closest('.days');
+
+    exercise.remove()
+    this.updateExercises(dayContainer)
+  }
+
+  deleteDay(btn) {
+    let day = btn.closest('.day');
+    
+    day.remove()
+    this.updateDays()
+  }
+
+  updateExercises(dayContainer) {
+    debugger;
+    dayContainer.querySelectorAll('.exercise:visible').forEach((exercise, index) => {
+      let exerciseCount = index + 1;
+      exercise.querySelector('.workout_count').innerText = exerciseCount;
+    })
+  }
+
+  updateDays() {
+    document.querySelectorAll('.day').forEach((day, index) => {
+      let dayCount = index + 1
+      day.querySelector('.day_count').innerText = dayCount;
+      day.dataset.count = dayCount;
+    })
   }
 
   init() {
     this.bindAddExerciseBtns();
     this.bindAddDayBtn();
+    this.bindDeleteExerciseBtns();
+    this.bindDeleteDayBtns();
   }
 }
 

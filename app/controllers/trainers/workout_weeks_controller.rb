@@ -6,12 +6,23 @@ module Trainers
 
     def create
       @workout_week = current_user.workout_weeks.new(workout_week_params)
-      @workout_week.client = @client
-binding.pry
+
       if @workout_week.save
+        flash[:notice] = 'Week successfully created!'
         redirect_to trainers_client_workouts_path(@client)
       else
-        render :new
+        render action: :new, controller: :workouts
+      end
+    end
+
+    def update
+      @workout_week = current_user.workout_weeks.find(params[:id])
+
+      if @workout_week.update(workout_week_params)
+        flash[:notice] = 'Week successfully updated!'
+        redirect_to trainers_client_workouts_path(@client)
+      else
+        render action: :edit, controller: :workouts
       end
     end
 
@@ -21,28 +32,24 @@ binding.pry
       @client = current_user.clients.find(params[:client_id])
     end
 
-    def add_exercise?
-      params[:commit] == 'Add exercise'
-    end
-
-    def add_day?
-      params[:commit] == 'Add Day'
-    end
-
     def workout_week_params
       params
         .require(:workout_week)
         .permit(
           :name,
           workout_days_attributes: [
+            :id,
+            :_destroy,
             exercises_attributes: [
+              :id,
               :name,
               :sets,
               :reps,
-              :weight
+              :weight,
+              :_destroy
             ]
           ]
-        )
+        ).merge(client_id: @client.id)
     end
   end
 end
