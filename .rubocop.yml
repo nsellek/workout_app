@@ -14,6 +14,9 @@ Metrics/MethodLength:
 Layout/ArgumentAlignment:
   EnforcedStyle: with_first_argument
 
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
 Layout/EmptyLinesAroundClassBody:
   Enabled: false
 

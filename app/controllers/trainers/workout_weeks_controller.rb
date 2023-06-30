@@ -1,8 +1,9 @@
 module Trainers
   class WorkoutWeeksController < ApplicationController
     before_action :set_client
+    before_action :set_workout_week, only: [:show]
 
-    skip_before_action :set_active_page
+    add_breadcrumb 'Clients', :trainers_clients
 
     def create
       @workout_week = current_user.workout_weeks.new(workout_week_params)
@@ -26,10 +27,27 @@ module Trainers
       end
     end
 
+    def show
+      add_breadcrumb 'Workouts', trainers_client_workouts_path(@client)
+      add_breadcrumb @workout_week.name
+    end
+
     private
 
     def set_client
-      @client = current_user.clients.find(params[:client_id])
+      @client = presenter(current_user.clients.find(params[:client_id]))
+    end
+
+    def set_workout_week
+      @workout_week = presenter(
+        WorkoutWeek
+          .includes(workout_days: [exercises: :workout_sets])
+          .find_by(
+            trainer: current_user,
+            client: @client,
+            id: params[:id]
+          )
+      )
     end
 
     def workout_week_params
@@ -50,6 +68,11 @@ module Trainers
             ]
           ]
         ).merge(client_id: @client.id)
+    end
+
+    def set_active_page
+      @active_page = 'clients'
+      @active_sidenav = 'client_workouts'
     end
   end
 end

@@ -1,0 +1,49 @@
+<div class="row flex-nowrap">
+  <%= render 'layouts/client_sidebar', client: @client unless browser.mobile? %>
+
+  <div class="col py-3">
+    <%= breadcrumbs %>
+
+    <div class="row mt-md-5 mt-1">
+      <div class="col col-md-10 offset-md-1">
+        <div class="row">
+          <h3><%= @workout_week.name %></h3>
+        </div>
+        <div class="row gy-2 gy-md-4">
+          <% @workout_week.workout_days.each_with_index do |day, i| %>
+            <div class="col col-md-4 col-6">
+              <div class="shadow card p2">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Day <%= i + 1 %></h5>
+                </div>
+
+                <div class="accordion" id="day-<%= i %>">
+                  <% day.exercises.each_with_index do |exercise, ei| %>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="<%= "#{exercise.name.parameterize}-#{ei}" %>">
+                        <%= button_tag exercise.name,
+                                    class: "accordion-button #{'collapsed' unless ei.zero?}",
+                                    data: {
+                                      bs_toggle: 'collapse',
+                                      bs_target: "##{exercise.name.parameterize}-#{ei}-collapse"
+                                    }
+                        %>
+                      </h2>
+                      <div
+                        id="<%= "#{exercise.name.parameterize}-#{ei}-collapse" %>"
+                        class="accordion-collapse collapse <%= "show" if ei.zero? %>"
+                        data-bs-parent="#day-<%= i %>"
+                      >
+                        <%= exercise.name %>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

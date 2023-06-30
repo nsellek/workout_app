@@ -21,4 +21,11 @@ class ApplicationController < ActionController::Base
       "#{obj.class}Presenter".constantize.new(obj)
     end
   end
+
+  def current_user
+    return @current_user if defined? @current_user
+    return nil unless super
+
+    @current_user ||= presenter(super)
+  end
 end

@@ -35,8 +35,11 @@
                     <li class="list-group-item">Days: <%= week.day_count %></li>
                     <li class="list-group-item">Workouts: <%= week.exercise_count %></li>
                   </ul>
-                  <div class="card-body">
-                    <%= link_to 'View', '#!', class: 'btn btn-primary' %>
+                  <div class="card-footer">
+                    <%= link_to 'View',
+                                trainers_client_workout_week_path(@client, week),
+                                class: 'btn btn-primary'
+                    %>
                     <%= link_to 'Edit',
                                 edit_trainers_client_workout_path(@client, week),
                                 class: 'btn btn-warning'

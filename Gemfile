@@ -42,6 +42,7 @@ group :development do
   gem 'rack-mini-profiler'
   gem 'rails-erd'
   gem 'web-console'
+  gem 'rubocop'
 end
 
 group :test do

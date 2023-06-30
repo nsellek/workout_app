@@ -11,4 +11,8 @@ class WorkoutWeekPresenter < BasePresenter
   def exercise_count
     exercises.count
   end
+
+  def days
+    workout_days
+  end
 end

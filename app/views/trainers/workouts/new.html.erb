@@ -11,7 +11,8 @@
         </div>
         <%= render  'trainers/workout_weeks/form',
                     workout_week: @workout_week,
-                    url: trainers_client_workout_weeks_path(@client)
+                    url: trainers_client_workout_weeks_path(@client),
+                    week_count: @week_count
         %>
       </div>
     </div>
