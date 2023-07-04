@@ -69,7 +69,11 @@ module Users
 
     # The path used after sign up.
     def after_sign_up_path_for(resource)
-      send("#{resource.class.to_s.downcase}s_dashboard_path")
+      if resource.trainner?
+        trainers_dashboard_path
+      else
+        clients_workout_path
+      end
     end
 
     # The path used after sign up for inactive accounts.

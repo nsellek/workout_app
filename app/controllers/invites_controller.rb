@@ -7,7 +7,7 @@ class InvitesController < ApplicationController
     if invite
       redirect_to new_user_registration_path(trainer_id: invite.trainer_id)
     else
-      alert = 'Invalid invite token'
+      flash[:notice] = 'Invalid invite token'
       redirect_to new_user_registration_path
     end
   end

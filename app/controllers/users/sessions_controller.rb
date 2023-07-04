@@ -29,7 +29,11 @@ module Users
     # end
 
     def after_sign_in_path_for(resource)
-      send("#{resource.class.to_s.downcase}s_dashboard_path")
+      if resource.trainer?
+        trainers_dashboard_path
+      else
+        clients_workout_path
+      end
     end
   end
 end

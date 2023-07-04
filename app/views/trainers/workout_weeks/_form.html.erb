@@ -13,7 +13,7 @@
           </div>
           <div class="days">
             <%= f.fields_for :workout_days do |cf| %>
-              <div class="day mb-3" data-count="1">
+              <div class="day mb-3" data-count="<%= cf.options[:child_index] %>">
                 <%= cf.hidden_field :id, class: 'workout-day-id' if cf.object.id %>
                 <h5 class="d-inline-block">
                   Day <span class="day_count"><%= cf.options[:child_index] + 1 %></span>

@@ -6,9 +6,13 @@ import "bootstrap"
 import "@fortawesome/fontawesome-free"
 
 // custom JS
+// Trainers JS
 import 'clients_invite'
 import 'new_workout'
 import 'edit_workout'
+
+// Clients JS
+import 'add_set'
 // import 'clients'
 
 document.addEventListener('turbo:load', () => {

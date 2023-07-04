@@ -1,0 +1,43 @@
+<div class="modal fade" id="add-set-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h6 class="modal-title text-center"><%= exercise.name %></h6>
+      </div>
+      <%= form_for url_obj do |f| %>
+        <div class="modal-body">
+          <div class="input-group innput-group-sm">
+            <div class="form-floating">
+              <%= f.number_field :weight, class: 'form-control', placeholder: 'weight' %>
+              <%= f.label :weight %>
+            </div>
+            <div class="form-floating">
+              <%= f.number_field :reps, class: 'form-control', placeholder: 'reps' %>
+              <%= f.label :reps %>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="btn-group w-100">
+            <%= button_tag 'Cancel',
+                          type: :button,
+                          class: 'btn btn-outline-secondary',
+                          data: {
+                            bs_dismiss: 'modal'
+                          }
+          %>
+          <%= f.submit 'Save', class: 'btn btn-primary' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%
+=begin%>
+ <script>
+  new bootstrap.Modal('#add-set-modal').show()
+</script>
+<%
+=end%>

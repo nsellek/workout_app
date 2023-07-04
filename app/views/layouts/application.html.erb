@@ -10,9 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body id="<%= current_user&.class %>">
     <% if user_signed_in? %>
-      <% if current_user&.trainer? %>
+      <% if current_user.trainer? %>
         <%= render 'layouts/trainer_navbar' %>
       <% else %>
         <%= render 'layouts/client_navbar' %>
@@ -21,12 +21,14 @@
     <div class="toast-container top-0 end-0 p-3">
       <%= render 'layouts/notice' if notice %>
     </div>
-    <% if alert %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
 
-    <div id="<%= current_user&.type&.downcase %>" class="container-fluid">
+    <div id="<%= current_user&.type&.downcase %>" class="container-fluid" style="margin-bottom: 60px">
       <%= yield %>
     </div>
+
+    <% if user_signed_in? && current_user.client? %>
+      <%= render 'layouts/client_footer' %>
+    <% end %>
+    <%= turbo_frame_tag 'modal' %>
   </body>
 </html>

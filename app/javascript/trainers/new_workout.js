@@ -45,7 +45,7 @@ export const NewWorkout = class {
         inputFields = exerciseNode.querySelectorAll('input'),
         labelFields = exerciseNode.querySelectorAll('label'),
         exerciseCount = exercisesContainer.querySelectorAll('.exercise').length,
-        dayCount = addBtn.closest('.day').dataset.count - 1;
+        dayCount = addBtn.closest('.day').dataset.count;
 
     exerciseNode.querySelector('.workout_count').innerText = (exerciseCount + 1);
     inputFields.forEach(field => {
@@ -79,7 +79,7 @@ export const NewWorkout = class {
         plainDayCount = (dayCount + 1);
 
     dayNode.querySelector('.day').dataset.count = plainDayCount;
-    dayNode.querySelector('.day_count').innerText = plainDayCount;
+    dayNode.querySelector('.day_count').innerText = plainDayCount++;
     inputFields.forEach(field => {
       let name = field.getAttribute('name'),
           id = field.id;
@@ -122,13 +122,12 @@ export const NewWorkout = class {
 
   deleteDay(btn) {
     let day = btn.closest('.day');
-    
+
     day.remove()
     this.updateDays()
   }
 
   updateExercises(dayContainer) {
-    debugger;
     dayContainer.querySelectorAll('.exercise:visible').forEach((exercise, index) => {
       let exerciseCount = index + 1;
       exercise.querySelector('.workout_count').innerText = exerciseCount;
@@ -139,7 +138,7 @@ export const NewWorkout = class {
     document.querySelectorAll('.day').forEach((day, index) => {
       let dayCount = index + 1
       day.querySelector('.day_count').innerText = dayCount;
-      day.dataset.count = dayCount;
+      day.dataset.count = index;
     })
   }
 

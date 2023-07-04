@@ -14,3 +14,4 @@ pin 'utils', to: 'utils.js', preload: true
 pin 'clients_invite', to: 'trainers/clients_invite.js', preload: true
 pin 'new_workout', to: 'trainers/new_workout.js', preload: true
 pin 'edit_workout', to: 'trainers/edit_workout.js', preload: true
+pin 'add_set', to: 'clients/add_set.js', preload: true
