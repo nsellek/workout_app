@@ -1,7 +1,7 @@
 module Clients
   class WorkoutSetsController < ApplicationController
-    before_action :set_exercise, except: [:edit, :update, :delete]
-    before_action :set_set, only: [:edit, :update, :delete]
+    before_action :set_exercise, only: [:new, :create]
+    before_action :set_set, except: [:new, :create]
 
     skip_before_action :set_active_page
 
@@ -19,6 +19,21 @@ module Clients
 
     def update
       @set.update(set_params)
+
+      respond_to(&:turbo_stream)
+    end
+
+    def destroy
+      @set.delete
+
+      respond_to do |format|
+        format.turbo_stream { render turbo_stream: turbo_stream.remove("exercise-#{@set.exercise_id}-set-#{@set.id}") }
+      end
+    end
+
+    def repeat
+      @new_set = @set.dup
+      @new_set.save
 
       respond_to(&:turbo_stream)
     end

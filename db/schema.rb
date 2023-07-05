@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_30_182207) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_143835) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -72,7 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_30_182207) do
     t.bigint "workout_week_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "completed", default: false
+    t.date "completed_at"
     t.index ["workout_week_id"], name: "index_workout_days_on_workout_week_id"
   end
 
@@ -83,6 +83,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_30_182207) do
     t.bigint "exercise_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "warmup", default: false
     t.index ["exercise_id"], name: "index_workout_sets_on_exercise_id"
   end
 

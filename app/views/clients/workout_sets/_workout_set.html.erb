@@ -12,10 +12,20 @@
     %>
     <div class="swipe-menu"><i class="fa fa-lg fa-ellipsis-v"></i></div>
   </div>
-  <%= link_to '#!', class: 'swipe-btn swipe-left d-flex align-items-center justify-content-center' do %>
+  <%= link_to clients_workout_set_path(workout_set),
+              class: 'swipe-btn swipe-left d-flex align-items-center justify-content-center',
+              data: {
+                turbo_method: :delete
+              } do
+  %>
     <i class="fa-solid fa-trash-can"></i>
   <% end %>
-  <%= link_to '#!', class: 'swipe-btn swipe-right d-flex align-items-center justify-content-center' do %>
+  <%= link_to repeat_clients_workout_set_path(workout_set),
+              class: 'swipe-btn swipe-right d-flex align-items-center justify-content-center',
+              data: {
+                turbo_method: :post
+              } do
+  %>
     <i class="fa-solid fa-repeat"></i>
   <% end %>
 </li>

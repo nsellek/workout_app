@@ -25,3 +25,6 @@ Style/SymbolArray:
 
 Style/HashAsLastArrayItem:
   Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false

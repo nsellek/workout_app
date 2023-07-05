@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
   root 'home#index'
 
   devise_for :users, controllers: {
@@ -18,7 +14,11 @@ Rails.application.routes.draw do
 
     resources :workout_days, only: [], shallow: true do
       resources :exercises, only: [] do
-        resources :workout_sets, only: [:new, :create, :edit, :update]
+        resources :workout_sets, except: :index do
+          member do
+            post :repeat
+          end
+        end
       end
     end
   end

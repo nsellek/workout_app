@@ -5,8 +5,8 @@ class WorkoutDay < ApplicationRecord
 
   has_many :exercises
 
-  scope :completed, -> { where(completed: true) }
-  scope :incompleted, -> { where(completed: false) }
+  scope :completed, -> { where.not(completed_at: nil) }
+  scope :incompleted, -> { where(completed_at: nil) }
 
   accepts_nested_attributes_for :exercises, allow_destroy: true
 
