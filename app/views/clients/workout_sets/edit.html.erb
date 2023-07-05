@@ -1,0 +1,7 @@
+<%= turbo_frame_tag 'modal' do %>
+  <%= render 'clients/workout_sets/form',
+              set: @set,
+              exercise: @set.exercise,
+              url_obj: [:clients, @set]
+  %>
+<% end %>

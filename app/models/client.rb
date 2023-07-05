@@ -5,4 +5,5 @@ class Client < User
   has_many :workout_weeks
   has_many :workout_days, through: :workout_weeks
   has_many :exercises, through: :workout_days
+  has_many :workout_sets, through: :exercises
 end

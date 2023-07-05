@@ -1,10 +1,10 @@
-<div class="modal fade" id="add-set-modal" tabindex="-1">
+<div class="modal fade" id="set-modal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header justify-content-center">
         <h6 class="modal-title text-center"><%= exercise.name %></h6>
       </div>
-      <%= form_for url_obj do |f| %>
+      <%= form_for url_obj, html: {class: 'workout_set_form'} do |f| %>
         <div class="modal-body">
           <div class="input-group innput-group-sm">
             <div class="form-floating">
@@ -33,11 +33,3 @@
     </div>
   </div>
 </div>
-
-<%
-=begin%>
- <script>
-  new bootstrap.Modal('#add-set-modal').show()
-</script>
-<%
-=end%>

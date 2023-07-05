@@ -1,3 +1,82 @@
 .subtitle {
   font-size: 14px;
 }
+
+.swipe-container {
+  overflow: hidden;
+
+  .swap-item {
+    position: relative;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    background-color: white;
+
+    .edit-link {
+      display: flex;
+      width: 100%;
+      padding-left: 40px;
+      justify-content: center;
+      align-items: center;
+      color: var(--bs-list-group-action-color);
+    }
+
+    .swipe-menu {
+      padding: 9px 20px;
+    }
+
+    &.swap-open {
+      margin-left: -30%;
+      margin-right: 30%;
+    }
+  }
+
+  .swipe-btn {
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+  }
+
+  .swipe-left {
+    right: 15%;
+    background-color: var(--bs-danger);
+  }
+
+  .swipe-right {
+    background-color: var(--bs-primary);
+  }
+}
+
+// .swipe-container {
+//   display: flex;
+//   overflow: auto;
+//   overflow-x: scroll;
+//   scroll-snap-type: x proximity;
+
+//   +::-webkit-scrollbar {
+//     display: none;
+//   }
+
+//   .swipe-element {
+//     scroll-snap-align: start;
+//     min-width: 100%;
+//   }
+
+//   .action {
+//     min-width: 100%;
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .left {
+//     background-color: var(--bs-primary);
+//   }
+
+//   .right {
+//     background-color: var(--bs-danger);
+//     color: white;
+//     justify-content: flex-end;
+//   }
+// }

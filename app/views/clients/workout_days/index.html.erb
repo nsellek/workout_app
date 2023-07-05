@@ -15,7 +15,7 @@
             </p>
           </div>
 
-          <div class="card-body py-0">
+          <div class="card-body p-0">
             <ul id="sets-<%= exercise.id %>" class="list-group list-group-flush">
               <%= render exercise.workout_sets %>
             </ul>
@@ -38,5 +38,3 @@
     <% end %>
   <% end %>
 </div>
-
-<%= turbo_frame_tag 'sets_script' %>
