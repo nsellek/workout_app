@@ -10,4 +10,13 @@ class WorkoutDay < ApplicationRecord
 
   accepts_nested_attributes_for :exercises, allow_destroy: true
 
+  def complete!
+    return if completed?
+
+    update(completed_at: Date.today)
+  end
+
+  def completed?
+    completed_at.present?
+  end
 end

@@ -19,7 +19,7 @@ export const AddSet = class {
   bindModalClose() {
     document.addEventListener('turbo:submit-end', event => {
       let target = event.target;
-      console.log(target)
+
       if (target.classList.contains('workout_set_form'))
         this.modal.hide()
     });

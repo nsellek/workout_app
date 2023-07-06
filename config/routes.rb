@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     get '/workout', to: 'workout_days#index'
 
     resources :workout_days, only: [], shallow: true do
+      member do
+        post :complete
+      end
       resources :exercises, only: [] do
         resources :workout_sets, except: :index do
           member do

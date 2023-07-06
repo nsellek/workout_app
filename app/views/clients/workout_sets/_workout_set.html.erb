@@ -3,29 +3,36 @@
   class="list-group-item d-flex swipe-container p-0"
 >
   <div class="swap-item d-flex list-group-item-action">
-    <%= link_to "#{workout_set.weight}x#{workout_set.reps}",
-                edit_clients_workout_set_path(workout_set),
-                class: 'edit-link text-decoration-none',
-                data: {
-                  turbo_frame: 'modal'
-                }
+    <%= link_to_unless completed,
+                        "#{workout_set.weight}x#{workout_set.reps}",
+                        edit_clients_workout_set_path(workout_set),
+                        class: 'edit-link text-decoration-none',
+                        data: {
+                          turbo_frame: 'modal'
+                        } do
     %>
-    <div class="swipe-menu"><i class="fa fa-lg fa-ellipsis-v"></i></div>
+      <span class="completed"><%= "#{workout_set.weight}x#{workout_set.reps}" %></span>
+    <% end %>
+    <% unless completed %>
+      <div class="swipe-menu"><i class="fa fa-lg fa-ellipsis-v"></i></div>
+    <% end %>
   </div>
-  <%= link_to clients_workout_set_path(workout_set),
-              class: 'swipe-btn swipe-left d-flex align-items-center justify-content-center',
-              data: {
-                turbo_method: :delete
-              } do
-  %>
-    <i class="fa-solid fa-trash-can"></i>
-  <% end %>
-  <%= link_to repeat_clients_workout_set_path(workout_set),
-              class: 'swipe-btn swipe-right d-flex align-items-center justify-content-center',
-              data: {
-                turbo_method: :post
-              } do
-  %>
-    <i class="fa-solid fa-repeat"></i>
+  <% unless completed %>
+    <%= link_to clients_workout_set_path(workout_set),
+                class: 'swipe-btn swipe-left d-flex align-items-center justify-content-center',
+                data: {
+                  turbo_method: :delete
+                } do
+    %>
+      <i class="fa-solid fa-trash-can"></i>
+    <% end %>
+    <%= link_to repeat_clients_workout_set_path(workout_set),
+                class: 'swipe-btn swipe-right d-flex align-items-center justify-content-center',
+                data: {
+                  turbo_method: :post
+                } do
+    %>
+      <i class="fa-solid fa-repeat"></i>
+    <% end %>
   <% end %>
 </li>
