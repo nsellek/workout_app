@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   namespace :clients do
     get '/dashboard', to: 'dashboards#dashboard'
     get '/workout', to: 'workout_days#index'
+    get '/options', to: 'options#index'
+    get '/profile', to: 'clients#edit'
+
+    resources :clients, only: [:update]
 
     resources :workout_days, only: [], shallow: true do
       member do

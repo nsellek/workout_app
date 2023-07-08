@@ -1,12 +1,17 @@
 <nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <% if @back_url %>
+      <%= link_to @back_url, class: 'navbar-toggler' do %>
+        <i class="fa-solid fa-chevron-left navbar-icon"></i>
+      <% end %>
+    <% end %>
     <%= link_to app_name,
                 clients_dashboard_path,
                 class: 'navbar-brand position-absolute top-50 start-50 translate-middle'
     %>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
         <li class="nav-item">

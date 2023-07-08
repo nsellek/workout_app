@@ -1,0 +1,42 @@
+<div class="row mt-4">
+  <div class="col">
+    <div class="card shadow">
+      <div class="card-body">
+        <%= form_for [:clients, current_user] do |f| %>
+          <div class="input-group mb-3">
+            <div class="form-floating">
+              <%= f.text_field :first_name,
+                                autofocus: true,
+                                autocomplete: 'first_name',
+                                class: 'form-control form-control-sm',
+                                placeholder: 'John',
+                                required: true
+              %>
+              <%= f.label :first_name %>
+            </div>
+            <div class="form-floating">
+              <%= f.text_field :last_name,
+                                autocomplete: 'last_name',
+                                class: 'form-control form-control-sm',
+                                placeholder: 'Doe',
+                                required: true
+              %>
+              <%= f.label :last_name %>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <%= f.email_field :email,
+                              autocomplete: "email",
+                              class: 'form-control',
+                              placeholder: 'name@example.com',
+                              required: true
+            %>
+            <%= f.label :email, 'Email Address' %>
+          </div>
+
+          <%= f.submit "Update", class: 'btn btn-success w-100' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
