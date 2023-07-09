@@ -1,6 +1,12 @@
 <div id="workouts" class="row mt-1 gy-3">
   <% if @workout_day.nil? %>
-
+    <div class="col">
+      <div class="card shadow p-2 text-center">
+        <div class="card-body">
+          <h5 class="card-title">No Workout Planned Yet</h5>
+        </div>
+      </div>
+    </div>
   <% else %>
     <%= render 'index',
                 workout_day: @workout_day,

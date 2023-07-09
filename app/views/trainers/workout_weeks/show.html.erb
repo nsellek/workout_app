@@ -22,19 +22,29 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="<%= "#{exercise.name.parameterize}-#{ei}" %>">
                         <%= button_tag exercise.name,
-                                    class: "accordion-button #{'collapsed' unless ei.zero?}",
+                                    class: "accordion-button collapsed",
                                     data: {
                                       bs_toggle: 'collapse',
-                                      bs_target: "##{exercise.name.parameterize}-#{ei}-collapse"
+                                      bs_target: "#x#{exercise.name.parameterize}-#{ei}-collapse"
                                     }
                         %>
                       </h2>
                       <div
-                        id="<%= "#{exercise.name.parameterize}-#{ei}-collapse" %>"
-                        class="accordion-collapse collapse <%= "show" if ei.zero? %>"
+                        id="<%= "x#{exercise.name.parameterize}-#{ei}-collapse" %>"
+                        class="accordion-collapse collapse"
                         data-bs-parent="#day-<%= i %>"
                       >
-                        <%= exercise.name %>
+                        <div class="accordion-body text-center">
+                          <% if exercise.workout_sets.blank? %>
+                            No Sets Logged
+                          <% else %>
+                            <ul class="list-group list-group-flush">
+                              <% exercise.workout_sets.each do |set| %>
+                                <li class="list-group-item"><%= "#{set.weight}x#{set.reps}" %></li>
+                              <% end %>
+                            </ul>
+                          <% end %>
+                        </div>
                       </div>
                     </div>
                   <% end %>

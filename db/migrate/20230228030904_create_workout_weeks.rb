@@ -8,8 +8,8 @@ class CreateWorkoutWeeks < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_foreign_key :workout_weeks, :users, column: :trainer_id
-    add_foreign_key :workout_weeks, :users, column: :client_id
+    add_foreign_key :workout_weeks, :accounts, column: :trainer_id
+    add_foreign_key :workout_weeks, :accounts, column: :client_id
     add_index :workout_weeks, [:trainer_id, :client_id]
   end
 end

@@ -1,2 +1,2 @@
-class TrainerPresenter < UserPresenter
+class TrainerPresenter < AccountPresenter
 end

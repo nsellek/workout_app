@@ -1,0 +1,21 @@
+<div class="row mt-5">
+  <div class="col">
+    <div class="card shadow text-center">
+      <div class="card-header">
+        <h3 class="card-title">Add Trainer</h3>
+      </div>
+      <div class="card-body">
+        <%= form_for :invite, url: clients_trainers_path do |f| %>
+          <div class="form-floating mb-3">
+            <%= f.text_field :token, class: 'form-control', placeholder: 'token' %>
+            <%= f.label :token %>
+          </div>
+
+          <div class="btn-group w-100">
+            <%= f.submit 'Add Trainer', class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

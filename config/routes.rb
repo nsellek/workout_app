@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/invite/:token', to: 'invites#show'
 
+  resources :accounts, only: [:index, :create, :show]
+
   namespace :clients do
     get '/dashboard', to: 'dashboards#dashboard'
     get '/workout', to: 'workout_days#index'
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
     get '/profile', to: 'clients#edit'
 
     resources :clients, only: [:update]
+    resources :trainers, only: [:new, :create]
 
     resources :workout_days, only: [], shallow: true do
       member do

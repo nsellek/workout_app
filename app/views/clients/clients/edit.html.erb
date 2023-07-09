@@ -2,7 +2,7 @@
   <div class="col">
     <div class="card shadow">
       <div class="card-body">
-        <%= form_for [:clients, current_user] do |f| %>
+        <%= form_for current_user, url: clients_client_path(current_user) do |f| %>
           <div class="input-group mb-3">
             <div class="form-floating">
               <%= f.text_field :first_name,

@@ -1,0 +1,55 @@
+<div class="row mt-4">
+  <h3>Select Account</h3>
+  <div class="col col-md-2 col-6">
+    <div class="card shadow p-2">
+      <img
+        src="<%= current_user.avatar %>"
+        alt="<%= current_user.fullname %>"
+        class="card-img-top"
+      >
+      <div class="card-body text-center">
+        <h5 class="card-title">Client Account</h5>
+        <% if current_user.client %>
+          <%= link_to 'Select',
+                      account_path(current_user.client),
+                      class: 'btn btn-primary'
+          %>
+        <% else %>
+          <%= link_to 'Create',
+                      accounts_path(type: :Client),
+                      class: 'btn btn-primary',
+                      data: {
+                        turbo_method: :post
+                      }
+          %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col col-md-2 col-6">
+    <div class="card shadow p-2">
+      <img
+        src="<%= current_user.avatar %>"
+        alt="<%= current_user.fullname %>"
+        class="card-img-top"
+      >
+      <div class="card-body text-center">
+        <h5 class="card-title">Trainer Account</h5>
+        <% if current_user.trainer %>
+          <%= link_to 'Select',
+                      account_path(current_user.trainer),
+                      class: 'btn btn-primary'
+          %>
+        <% else %>
+          <%= link_to 'Create',
+                      accounts_path(type: :Trainer),
+                      class: 'btn btn-primary',
+                      data: {
+                        turbo_method: :post
+                      }
+          %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,7 @@ Metrics/MethodLength:
   Enabled: false
 
 Layout/ArgumentAlignment:
-  EnforcedStyle: with_first_argument
+  EnforcedStyle: with_fixed_indentation
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented

@@ -7,7 +7,7 @@ class CreateInviteTokens < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_foreign_key :invite_tokens, :users, column: :trainer_id
+    add_foreign_key :invite_tokens, :accounts, column: :trainer_id
     add_index :invite_tokens, :token
     add_index :invite_tokens, :trainer_id
     add_index :invite_tokens, [:trainer_id, :token]

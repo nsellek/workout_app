@@ -35,6 +35,9 @@
           %>
         </li>
         <li class="nav-item">
+          <%= link_to 'Switch Accounts', accounts_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
           <%= button_to 'Logout',
                         destroy_user_session_path,
                         method: :delete,

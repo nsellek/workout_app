@@ -1,5 +1,5 @@
-class Trainer < User
-  has_many :trainer_clients
+class Trainer < Account
+  has_many :trainer_clients, dependent: :destroy
   has_many :clients, through: :trainer_clients
   has_many :workout_weeks
   has_many :workout_days, through: :workout_weeks

@@ -1,6 +1,8 @@
 class InvitesController < ApplicationController
-  skip_before_action  :authenticate_user!,
-                      :set_active_page
+  skip_before_action :authenticate_user!,
+    :set_active_page,
+    :check_for_trainer,
+    :check_account
 
   def show
     invite = InviteToken.where(token: params[:token]).first

@@ -14,6 +14,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_143835) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "accounts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_accounts_on_type"
+    t.index ["user_id"], name: "index_accounts_on_user_id"
+  end
+
   create_table "exercises", force: :cascade do |t|
     t.string "name"
     t.string "sets"
@@ -49,7 +58,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_143835) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "type", null: false
     t.string "first_name"
     t.string "last_name"
     t.datetime "created_at", null: false
@@ -96,12 +104,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_143835) do
     t.index ["trainer_id", "client_id"], name: "index_workout_weeks_on_trainer_id_and_client_id"
   end
 
+  add_foreign_key "accounts", "users"
   add_foreign_key "exercises", "workout_days"
-  add_foreign_key "invite_tokens", "users", column: "trainer_id"
-  add_foreign_key "trainer_clients", "users", column: "client_id"
-  add_foreign_key "trainer_clients", "users", column: "trainer_id"
+  add_foreign_key "invite_tokens", "accounts", column: "trainer_id"
+  add_foreign_key "trainer_clients", "accounts", column: "client_id"
+  add_foreign_key "trainer_clients", "accounts", column: "trainer_id"
   add_foreign_key "workout_days", "workout_weeks"
   add_foreign_key "workout_sets", "exercises"
-  add_foreign_key "workout_weeks", "users", column: "client_id"
-  add_foreign_key "workout_weeks", "users", column: "trainer_id"
+  add_foreign_key "workout_weeks", "accounts", column: "client_id"
+  add_foreign_key "workout_weeks", "accounts", column: "trainer_id"
 end

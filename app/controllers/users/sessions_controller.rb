@@ -2,8 +2,10 @@
 
 module Users
   class SessionsController < Devise::SessionsController
-    skip_before_action  :authenticate_user!,
-                        :set_active_page
+    skip_before_action :authenticate_user!,
+      :set_active_page,
+      :check_for_trainer,
+      :check_account
     # before_action :configure_sign_in_params, only: [:create]
 
     # GET /resource/sign_in
@@ -17,9 +19,10 @@ module Users
     # end
 
     # DELETE /resource/sign_out
-    # def destroy
-    #   super
-    # end
+    def destroy
+      session[:account_id] = nil
+      super
+    end
 
     # protected
 
@@ -28,12 +31,8 @@ module Users
     #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
     # end
 
-    def after_sign_in_path_for(resource)
-      if resource.trainer?
-        trainers_dashboard_path
-      else
-        clients_workout_path
-      end
+    def after_sign_in_path_for(_resource)
+      accounts_path
     end
   end
 end

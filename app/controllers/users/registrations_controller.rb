@@ -2,8 +2,10 @@
 
 module Users
   class RegistrationsController < Devise::RegistrationsController
-    skip_before_action  :authenticate_user!,
-                        :set_active_page
+    skip_before_action :authenticate_user!,
+      :set_active_page,
+      :check_for_trainer,
+      :check_account
     before_action :configure_sign_up_params, only: [:create]
     # before_action :configure_account_update_params, only: [:update]
 
@@ -19,8 +21,12 @@ module Users
     # POST /resource
     def create
       super
-      trainer = Trainer.find(params[:user][:trainer_id])
-      resource.trainer = trainer
+      trainer = Trainer.find_by(id: params[:user][:trainer_id])
+      return unless trainer && resource.valid?
+
+      client = resource.create_client
+      client.trainer = trainer
+      session[:account_id] = client.id
     end
 
     # GET /resource/edit
@@ -68,11 +74,11 @@ module Users
     # end
 
     # The path used after sign up.
-    def after_sign_up_path_for(resource)
-      if resource.trainner?
-        trainers_dashboard_path
+    def after_sign_up_path_for(_resource)
+      if session[:account_id]
+        redirect_to(clients_workout_path)
       else
-        clients_workout_path
+        accounts_path
       end
     end
 

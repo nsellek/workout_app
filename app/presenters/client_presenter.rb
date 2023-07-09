@@ -1,2 +1,2 @@
-class ClientPresenter < UserPresenter
+class ClientPresenter < AccountPresenter
 end

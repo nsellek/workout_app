@@ -8,25 +8,16 @@ class User < ApplicationRecord
     :validatable,
     :trackable
 
+  has_one :trainer, dependent: :destroy
+  has_one :client, dependent: :destroy
+
   USER_TYPES = %w[
     Trainer
     Client
   ].freeze
 
-  validates :type, inclusion: USER_TYPES
   validates :first_name,
     :last_name,
     :email,
     presence: true
-
-  TRAINER_TYPE = 'Trainer'.freeze
-  CLIENT_TYPE = 'Client'.freeze
-
-  def trainer?
-    type == TRAINER_TYPE
-  end
-
-  def client?
-    type == CLIENT_TYPE
-  end
 end

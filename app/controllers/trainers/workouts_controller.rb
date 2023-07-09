@@ -14,8 +14,8 @@ module Trainers
     def new
       add_breadcrumb 'Wrokouts', trainers_client_workouts_path(@client)
       add_breadcrumb 'New'
-      @workout_week = presenter(current_user.workout_weeks.new(client_id: @client.id))
-      @week_count = current_user.workout_weeks.count
+      @workout_week = presenter(current_account.workout_weeks.new(client_id: @client.id))
+      @week_count = current_account.workout_weeks.count
       workout_day = @workout_week.workout_days.build
       workout_day.exercises.build
     end
@@ -33,13 +33,13 @@ module Trainers
     end
 
     def set_client
-      @client = presenter(current_user.clients.find(params[:client_id]))
+      @client = presenter(current_account.clients.find(params[:client_id]))
     end
 
     def set_workout
       @workout_week = presenter(
         WorkoutWeek.where(
-          trainer: current_user,
+          trainer: current_account,
           client: @client
         ).includes(workout_days: [:exercises]).find(params[:id])
       )

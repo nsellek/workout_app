@@ -3,7 +3,7 @@ module Clients
     before_action :set_workout_day, only: :complete
 
     def index
-      @workout_day = presenter(current_user.current_workout_day)
+      @workout_day = presenter(current_account.current_workout_day)
     end
 
     def complete
@@ -20,7 +20,7 @@ module Clients
     end
 
     def set_workout_day
-      @workout_day = presenter(current_user.workout_days.includes(exercises: :workout_sets).find(params[:id]))
+      @workout_day = presenter(current_account.workout_days.includes(exercises: :workout_sets).find(params[:id]))
     end
   end
 end
