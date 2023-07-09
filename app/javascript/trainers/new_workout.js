@@ -79,21 +79,21 @@ export const NewWorkout = class {
         plainDayCount = (dayCount + 1);
 
     dayNode.querySelector('.day').dataset.count = plainDayCount;
-    dayNode.querySelector('.day_count').innerText = plainDayCount++;
+    dayNode.querySelector('.day_count').innerText = plainDayCount + 1;
     inputFields.forEach(field => {
       let name = field.getAttribute('name'),
           id = field.id;
 
-      name = name.replace('{day}', dayCount);
+      name = name.replace('{day}', plainDayCount);
       field.setAttribute('name', name);
 
-      id = id.replace('{day}', dayCount);
+      id = id.replace('{day}', plainDayCount);
       field.id = id;
     })
     labelFields.forEach(field => {
       let forAttr = field.getAttribute('for');
 
-      forAttr = forAttr.replace('{day}', dayCount);
+      forAttr = forAttr.replace('{day}', plainDayCount);
       field.setAttribute('for', forAttr)
     })
     dayNode.querySelector('.add-exercise').addEventListener('click', event => {

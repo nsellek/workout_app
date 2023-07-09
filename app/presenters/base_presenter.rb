@@ -4,6 +4,10 @@ class BasePresenter < SimpleDelegator
     objects.map { |obj| new(obj) }
   end
 
+  def class
+    object.class
+  end
+
   private
 
   def object

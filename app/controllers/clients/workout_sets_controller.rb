@@ -41,11 +41,11 @@ module Clients
     private
 
     def set_exercise
-      @exercise = current_user.exercises.find(params[:exercise_id])
+      @exercise = current_account.exercises.find(params[:exercise_id])
     end
 
     def set_set
-      @set = current_user.workout_sets.find(params[:id])
+      @set = current_account.workout_sets.find(params[:id])
     end
 
     def set_params

@@ -6,7 +6,7 @@ module Trainers
     add_breadcrumb 'Clients', :trainers_clients
 
     def create
-      @workout_week = current_user.workout_weeks.new(workout_week_params)
+      @workout_week = current_account.workout_weeks.new(workout_week_params)
 
       if @workout_week.save
         flash[:notice] = 'Week successfully created!'
@@ -17,8 +17,7 @@ module Trainers
     end
 
     def update
-      @workout_week = current_user.workout_weeks.find(params[:id])
-
+      @workout_week = current_account.workout_weeks.find(params[:id])
       if @workout_week.update(workout_week_params)
         flash[:notice] = 'Week successfully updated!'
         redirect_to trainers_client_workouts_path(@client)
@@ -35,7 +34,7 @@ module Trainers
     private
 
     def set_client
-      @client = presenter(current_user.clients.find(params[:client_id]))
+      @client = presenter(current_account.clients.find(params[:client_id]))
     end
 
     def set_workout_week
@@ -43,8 +42,8 @@ module Trainers
         WorkoutWeek
           .includes(workout_days: [exercises: :workout_sets])
           .find_by(
-            trainer: current_user,
-            client: @client,
+            trainer_id: current_account.id,
+            client_id: @client.id,
             id: params[:id]
           )
       )
