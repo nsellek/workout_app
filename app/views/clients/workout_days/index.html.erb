@@ -1,4 +1,30 @@
-<div id="workouts" class="row mt-1 gy-3">
+<div id="workout-week" class="row mt-2">
+  <div class="dropdown-center d-flex justify-content-center">
+    <%= link_to @workout_week.name,
+                '#!',
+                class: ' fs-4 dropdown-toggle text-decoration-none text-body',
+                data: {
+                  bs_toggle: 'dropdown'
+                }
+    %>
+    <ul class="dropdown-menu">
+      <% @workout_week.workout_days.each_with_index do |day, index| %>
+        <li>
+          <% if day.id == @workout_day.id %>
+            <span class="dropdown-item active"><%= "Day #{index + 1}" %></span>
+          <% else %>
+            <%= link_to "Day #{index + 1}",
+                        clients_workout_path(day_id: day.id),
+                        class: "dropdown-item"
+            %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div id="workouts" class="row mt-1 gy-2">
   <% if @workout_day.nil? %>
     <div class="col">
       <div class="card shadow p-2 text-center">
@@ -10,7 +36,7 @@
   <% else %>
     <%= render 'index',
                 workout_day: @workout_day,
-                completed: @workout_day.completed?
+                view_only: @view_only || @workout_day.completed?
     %>
   <% end %>
 </div>

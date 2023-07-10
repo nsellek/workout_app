@@ -28,3 +28,6 @@ Style/HashAsLastArrayItem:
 
 Metrics/BlockLength:
   Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false

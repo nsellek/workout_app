@@ -51,7 +51,11 @@ module Clients
     def set_params
       params
         .require(:workout_set)
-        .permit(:weight, :reps)
+        .permit(
+          :weight,
+          :reps,
+          :warmup
+        )
     end
   end
 end

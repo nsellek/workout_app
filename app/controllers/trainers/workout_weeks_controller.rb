@@ -18,6 +18,7 @@ module Trainers
 
     def update
       @workout_week = current_account.workout_weeks.find(params[:id])
+
       if @workout_week.update(workout_week_params)
         flash[:notice] = 'Week successfully updated!'
         redirect_to trainers_client_workouts_path(@client)

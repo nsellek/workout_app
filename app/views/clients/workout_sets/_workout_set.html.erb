@@ -2,8 +2,8 @@
   id="exercise-<%= workout_set.exercise_id %>-set-<%= workout_set.id %>"
   class="list-group-item d-flex swipe-container p-0"
 >
-  <div class="swap-item d-flex list-group-item-action">
-    <%= link_to_unless completed,
+  <div class="swap-item d-flex list-group-item-action <%= 'text-bg-warning' if workout_set.warmup %>">
+    <%= link_to_unless view_only,
                         "#{workout_set.weight}x#{workout_set.reps}",
                         edit_clients_workout_set_path(workout_set),
                         class: 'edit-link text-decoration-none',
@@ -11,13 +11,13 @@
                           turbo_frame: 'modal'
                         } do
     %>
-      <span class="completed"><%= "#{workout_set.weight}x#{workout_set.reps}" %></span>
+      <span class="view_only"><%= "#{workout_set.weight}x#{workout_set.reps}" %></span>
     <% end %>
-    <% unless completed %>
+    <% unless view_only %>
       <div class="swipe-menu"><i class="fa fa-lg fa-ellipsis-v"></i></div>
     <% end %>
   </div>
-  <% unless completed %>
+  <% unless view_only %>
     <%= link_to clients_workout_set_path(workout_set),
                 class: 'swipe-btn swipe-left d-flex align-items-center justify-content-center',
                 data: {

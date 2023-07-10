@@ -34,13 +34,15 @@
                         class="accordion-collapse collapse"
                         data-bs-parent="#day-<%= i %>"
                       >
-                        <div class="accordion-body text-center">
+                        <div class="accordion-body text-center px-0">
                           <% if exercise.workout_sets.blank? %>
                             No Sets Logged
                           <% else %>
                             <ul class="list-group list-group-flush">
                               <% exercise.workout_sets.each do |set| %>
-                                <li class="list-group-item"><%= "#{set.weight}x#{set.reps}" %></li>
+                                <li class="list-group-item <%= 'text-bg-warning' if set.warmup %>">
+                                  <%= "#{set.weight} x #{set.reps}" %>
+                                </li>
                               <% end %>
                             </ul>
                           <% end %>

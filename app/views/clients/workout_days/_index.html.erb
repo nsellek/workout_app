@@ -1,5 +1,5 @@
 <% workout_day.exercises.each do |exercise| %>
-  <div class="col-12">
+  <div class="col-12 mb-3">
     <div class="shadow card p2">
       <div class="card-header">
         <p class="card-title">
@@ -13,10 +13,10 @@
 
       <div class="card-body p-0">
         <ul id="sets-<%= exercise.id %>" class="list-group list-group-flush">
-          <%= render exercise.workout_sets, completed: completed %>
+          <%= render exercise.workout_sets, view_only: view_only %>
         </ul>
       </div>
-      <% unless completed %>
+      <% unless view_only %>
         <div class="card-footer text-center">
           <div class="btn-group w-100">
               <%= link_to 'Add Set',
@@ -33,7 +33,7 @@
     </div>
   </div>
 <% end %>
-<% unless completed %>
+<% unless view_only %>
   <div class="col-12 mb-2">
     <div class="btn-group w-100">
       <%= link_to 'Complete Day',

@@ -1,7 +1,7 @@
 <%= turbo_stream.update 'workouts' do %>
   <%= render 'index',
               workout_day: @workout_day,
-              completed: @workout_day.completed?
+              view_only: @workout_day.completed?
   %>
 <% end %>
 

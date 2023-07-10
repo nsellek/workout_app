@@ -6,7 +6,7 @@
       </div>
       <%= form_for url_obj, html: {class: 'workout_set_form'} do |f| %>
         <div class="modal-body">
-          <div class="input-group innput-group-sm">
+          <div class="input-group mb-3">
             <div class="form-floating">
               <%= f.number_field :weight, class: 'form-control', placeholder: 'weight' %>
               <%= f.label :weight %>
@@ -15,6 +15,10 @@
               <%= f.number_field :reps, class: 'form-control', placeholder: 'reps' %>
               <%= f.label :reps %>
             </div>
+          </div>
+          <div class="form-check">
+            <%= f.check_box :warmup, class: 'form-check-input' %>
+            <%= f.label :warmup, 'Mark as warmup', class: 'form-check-label' %>
           </div>
         </div>
         <div class="modal-footer">

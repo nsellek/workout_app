@@ -12,9 +12,9 @@ class AccountsController < ApplicationController
     session[:account_id] = account.id
 
     if account.client?
-      redirect_to clients_dashboard_path
+      redirect_to clients_workout_path
     else
-      redirect_to trainers_dashboard_path
+      redirect_to trainers_clients_path
     end
   end
 
@@ -23,9 +23,9 @@ class AccountsController < ApplicationController
     session[:account_id] = account.id
 
     if account.client?
-      redirect_to clients_dashboard_path
+      redirect_to clients_workout_path
     else
-      redirect_to trainers_dashboard_path
+      redirect_to trainers_clients_path
     end
   end
 end
