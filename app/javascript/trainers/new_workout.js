@@ -61,7 +61,7 @@ export const NewWorkout = class {
     labelFields.forEach(field => {
       let forAttr = field.getAttribute('for');
 
-      forAttr = forAttr.replace('{exercise]', exerciseCount).replace('{day}', dayCount)
+      forAttr = forAttr.replace('{exercise}', exerciseCount).replace('{day}', dayCount)
       field.setAttribute('for', forAttr);
     })
     exerciseNode.querySelector('.remove-workout').addEventListener('click', event => {
