@@ -14,6 +14,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.4'
 gem 'sassc-rails'
+gem 'simple_calendar', '~> 2.4'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -40,8 +41,8 @@ end
 group :development do
   gem 'rack-mini-profiler'
   gem 'rails-erd'
-  gem 'web-console'
   gem 'rubocop'
+  gem 'web-console'
 end
 
 group :test do

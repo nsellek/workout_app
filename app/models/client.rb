@@ -8,7 +8,7 @@ class Client < Account
   has_many :workout_sets, through: :exercises
 
   def current_workout_week
-    current_workout_day.workout_week
+    current_workout_day&.workout_week
   end
 
   def current_workout_day
