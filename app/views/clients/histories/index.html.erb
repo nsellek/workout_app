@@ -1,13 +1,15 @@
-<%= month_calendar(events: @workout_days, attribute: :completed_at) do |date, workout_day| %>
-  <% if workout_day.any? %>
-    <%= link_to clients_workout_path(day_id: workout_day.first.id), class: 'text-body text-decoration-none' do %>
-      <%= date.day %>
+<%= turbo_frame_tag 'calendar' do %>
+  <%= month_calendar(events: @workout_days, attribute: :completed_at) do |date, workout_day| %>
+    <% if workout_day.any? %>
+      <%= link_to clients_workout_path(day_id: workout_day.first.id), class: 'text-body text-decoration-none' do %>
+        <%= date.day %>
 
-      <% workout_day.each do |day| %>
-        <div class="day-logged bg-primary mx-auto"></div>
+        <% workout_day.each do |day| %>
+          <div class="day-logged bg-primary mx-auto"></div>
+        <% end %>
       <% end %>
+    <% else %>
+      <%= date.day %>
     <% end %>
-  <% else %>
-    <%= date.day %>
   <% end %>
 <% end %>
