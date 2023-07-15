@@ -64,6 +64,7 @@ module Trainers
               :sets,
               :reps,
               :weight,
+              :notes,
               :_destroy
             ]
           ]

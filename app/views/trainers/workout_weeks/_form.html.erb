@@ -32,7 +32,7 @@
                         </span>
                       </h6>
                       <div class="row mb-3 g-3">
-                        <div class="col col-12 col-md-5">
+                        <div class="col col-12 col-md-5 order-0">
                           <div class="form-floating">
                             <%= ef.text_field :name,
                                               class: 'form-control',
@@ -41,7 +41,7 @@
                             <%= ef.label :name %>
                           </div>
                         </div>
-                        <div class="col col-4 col-md-2">
+                        <div class="col col-4 col-md-2 order-1">
                           <div class="form-floating">
                             <%= ef.number_field :sets,
                                                 class: 'form-control',
@@ -50,7 +50,7 @@
                             <%= ef.label :sets %>
                           </div>
                         </div>
-                        <div class="col col-4 col-md-2">
+                        <div class="col col-4 col-md-2 order-2">
                           <div class="form-floating">
                             <%= ef.number_field :reps,
                                                 class: 'form-control',
@@ -59,7 +59,7 @@
                             <%= ef.label :reps %>
                           </div>
                         </div>
-                        <div class="col col-4 col-md-2">
+                        <div class="col col-4 col-md-2 order-3">
                           <div class="form-floating">
                             <%= ef.number_field :weight,
                                                 class: 'form-control',
@@ -68,7 +68,16 @@
                             <%= ef.label :weight %>
                           </div>
                         </div>
-                        <div class="col col-12 col-md-1">
+                        <div class="col col-12 order-sm-5 order-4">
+                          <div class="form-floating">
+                            <%= ef.text_field :notes,
+                                              class: 'form-control',
+                                              placeholder: 'Notes'
+                            %>
+                            <%= ef.label :notes %>
+                          </div>
+                        </div>
+                        <div class="col col-12 col-md-1 order-sm-4 order-5">
                           <div class="d-grid">
                             <%= link_to '#!', class: 'btn btn-danger py-3 remove-workout' do %>
                               <i class="fa-regular fa-trash-can"></i>
@@ -97,7 +106,7 @@
       Exercise <span class="workout_count"></span>
     </h6>
     <div class="row mb-3 g-3">
-      <div class="col col-12 col-md-5">
+      <div class="col col-12 col-md-5 order-0">
         <div class="form-floating">
           <input
             class="form-control"
@@ -113,7 +122,7 @@
           </label>
         </div>
       </div>
-      <div class="col col-4 col-md-2">
+      <div class="col col-4 col-md-2 order-1">
         <div class="form-floating">
           <input
             class="form-control"
@@ -129,7 +138,7 @@
           </label>
         </div>
       </div>
-      <div class="col col-4 col-md-2">
+      <div class="col col-4 col-md-2 order-2">
         <div class="form-floating">
           <input
             class="form-control"
@@ -145,7 +154,7 @@
           </label>
         </div>
       </div>
-      <div class="col col-4 col-md-2">
+      <div class="col col-4 col-md-2 order-3">
         <div class="form-floating">
           <input
             class="form-control"
@@ -161,7 +170,23 @@
           </label>
         </div>
       </div>
-      <div class="col col-12 col-md-1">
+      <div class="col col-12 order-4 order-sm-5">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            placeholder="Notes"
+            type="text"
+            name="workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][notes]"
+            id="workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_notes"
+          >
+          <label
+            for="workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_notes"
+          >
+            Notes
+          </label>
+        </div>
+      </div>
+      <div class="col col-12 col-md-1 order-5 order-sm-4">
         <div class="d-grid">
           <%= link_to '#!', class: 'btn btn-danger py-3 remove-workout' do %>
             <i class="fa-regular fa-trash-can"></i>
@@ -186,7 +211,7 @@
           Exercise <span class="workout_count">1</span>
         </h6>
         <div class="row mb-3 g-3">
-          <div class="col col-12 col-md-5">
+          <div class="col col-12 col-md-5 order-0">
             <div class="form-floating">
               <input
                 class="form-control"
@@ -202,7 +227,7 @@
               </label>
             </div>
           </div>
-          <div class="col col-4 col-md-2">
+          <div class="col col-4 col-md-2 order-1">
             <div class="form-floating">
               <input
                 class="form-control"
@@ -218,7 +243,7 @@
               </label>
             </div>
           </div>
-          <div class="col col-4 col-md-2">
+          <div class="col col-4 col-md-2 order-2">
             <div class="form-floating">
               <input
                 class="form-control"
@@ -234,7 +259,7 @@
               </label>
             </div>
           </div>
-          <div class="col col-4 col-md-2">
+          <div class="col col-4 col-md-2 order-3">
             <div class="form-floating">
               <input
                 class="form-control"
@@ -250,7 +275,23 @@
               </label>
             </div>
           </div>
-          <div class="col col-12 col-md-1">
+          <div class="col col-12 order-4 order-sm-5">
+            <div class="form-floating">
+              <input
+                class="form-control"
+                placeholder="Notes"
+                type="text"
+                name="workout_week[workout_days_attributes][{day}][exercises_attributes][0][notes]"
+                id="workout_week_workout_days_attributes_{day}_exercises_attributes_0_notes"
+              >
+              <label
+                for="workout_week_workout_days_attributes_{day}_exercises_attributes_0_notes"
+              >
+                Notes
+              </label>
+            </div>
+          </div>
+          <div class="col col-12 col-md-1 order-5 order-sm-4">
             <div class="d-grid">
               <%= link_to '#!', class: 'btn btn-danger py-3 remove-workout' do %>
                 <i class="fa-regular fa-trash-can"></i>
