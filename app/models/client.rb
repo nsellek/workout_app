@@ -1,6 +1,7 @@
 class Client < Account
   has_one :trainer_client, dependent: :destroy
   has_one :trainer, through: :trainer_client
+  has_one :configuration, through: :trainer
 
   has_many :workout_weeks
   has_many :workout_days, through: :workout_weeks
@@ -16,5 +17,9 @@ class Client < Account
       .includes(exercises: :workout_sets)
       .where(completed_at: [Date.today, nil])
       .first
+  end
+
+  def settings
+    @settings ||= configuration.settings
   end
 end

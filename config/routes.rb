@@ -37,6 +37,9 @@ Rails.application.routes.draw do
   namespace :trainers do
     get '/dashboard', to: 'dashboards#dashboard'
     get '/profile', to: 'trainers#profile'
+
+    resources :configurations, only: [:index, :update]
+
     resources :clients, only: [:index, :show, :new] do
       resources :workouts, only: [:index, :show, :new, :edit]
       resources :workout_weeks, only: [:create, :update, :show]

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_05_143835) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_09_191136) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_143835) do
     t.datetime "updated_at", null: false
     t.index ["type"], name: "index_accounts_on_type"
     t.index ["user_id"], name: "index_accounts_on_user_id"
+  end
+
+  create_table "configurations", force: :cascade do |t|
+    t.integer "trainer_id"
+    t.jsonb "settings", default: {}, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "exercises", force: :cascade do |t|

@@ -5,11 +5,15 @@ class ApplicationController < ActionController::Base
   before_action :check_for_trainer, if: -> { current_account&.client? }
 
   helper_method :app_name,
-    :current_account
+    :current_account,
+    :settings
 
   def app_name
-    # @app_name ||= @trainer.custom_name || "Workout App"
-    'Workout App'
+    @app_name ||= settings.app_name
+  end
+
+  def settings
+    @settings ||= current_account.settings
   end
 
   private

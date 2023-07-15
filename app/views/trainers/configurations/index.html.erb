@@ -1,0 +1,78 @@
+<div class="row flex-nowrap">
+  <%= render 'layouts/trainer_sidebar' unless browser.mobile? %>
+
+  <div class="col py-3">
+    <%= breadcrumbs %>
+
+    <div class="row mt-md-5 mt-1">
+      <div class="col col-md-10 offset-md-1">
+        <div class="row">
+          <h3>Settings</h3>
+        </div>
+        <%= form_for @configs, url: trainers_configuration_path(@configs) do |f| %>
+          <div class="row">
+            <div class="col">
+              <div class="shadow card">
+                <h5 class="card-header">Nav Bars</h5>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <%= f.label :nav_color, 'Nav Bar Color', class: 'form-label' %>
+                    <%= f.color_field :nav_color, class: 'form-control' %>
+                  </div>
+                  <div class="mb-3">
+                    <%= f.label :nav_text_color, 'Nav Bar Text Color', class: 'form-label' %>
+                    <%= f.color_field :nav_text_color, class: 'form-control' %>
+                  </div>
+                  <div class="mb-3">
+                    <%= f.label :side_nav_color, 'Side Panel Color', class: 'form-label' %>
+                    <%= f.color_field :side_nav_color, class: 'form-control' %>
+                  </div>
+                  <div class="mb-3">
+                    <%= f.label :side_nav_text_color, 'Side Panel Text Color', class: 'form-label' %>
+                    <%= f.color_field :side_nav_text_color, class: 'form-control' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="shadow card">
+                <h5 class="card-header">Workouts</h5>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <%= label_tag '', 'Sets/Rep format', class: 'form-label' %>
+                    <div class="form-check">
+                      <%= f.radio_button :sets_reps, 'short', class: 'form-check-input' %>
+                      <%= f.label :sets_reps, 'Short Form (3x2)', class: 'form-check-label' %>
+                    </div>
+                    <div class="form-check">
+                      <%= f.radio_button :sets_reps, 'long', class: 'form-check-input' %>
+                      <%= f.label :sets_reps, 'Long Form (3 sets of 2)', class: 'form-check-label' %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="shadow card">
+                <h5 class="card-header">App</h5>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <%= f.label :app_name, 'Name', class: 'form-label' %>
+                    <%= f.text_field :app_name, class: 'form-control' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-3">
+            <div class="col-1">
+              <%= f.submit 'Save', class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

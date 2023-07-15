@@ -5,6 +5,14 @@ module ApplicationHelper
     return 'active' if @active_footer == page
   end
 
+  def config_helper(setting)
+    style = ''
+    style += "background-color:#{settings.send(setting)}!important;" if setting.in? ConfigHandler::BACKGROUND_SETTINGS
+    style += "color:#{settings.send(setting)}!important;" if setting.in? ConfigHandler::TEXT_SETTINGS
+
+    style
+  end
+
   def breadcrumbs
     render_breadcrumbs separator: '', builder: BreadcrumbsBuilderService unless browser.mobile?
   end
