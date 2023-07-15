@@ -20,6 +20,6 @@ class Client < Account
   end
 
   def settings
-    @settings ||= configuration.settings || ConfigHandler.new
+    @settings ||= configuration&.settings || ConfigHandler.new
   end
 end
