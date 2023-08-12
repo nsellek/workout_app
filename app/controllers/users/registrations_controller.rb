@@ -2,8 +2,7 @@
 
 module Users
   class RegistrationsController < Devise::RegistrationsController
-    skip_before_action :authenticate_user!,
-      :set_active_page,
+    skip_before_action :set_active_page,
       :check_for_trainer,
       :check_account
     before_action :configure_sign_up_params, only: [:create]
@@ -11,8 +10,8 @@ module Users
 
     # GET /resource/sign_up
     def new
-      if params[:trainer_id]
-        trainer = Trainer.find(params[:trainer_id])
+      if session[:trainer_id]
+        trainer = Trainer.find(session[:trainer_id])
         @trainer = presenter(trainer)
       end
       super
@@ -21,8 +20,10 @@ module Users
     # POST /resource
     def create
       super
-      trainer = Trainer.find_by(id: params[:user][:trainer_id])
+      trainer = Trainer.find_by(id: session[:trainer_id])
       return unless trainer && resource.valid?
+
+      session[:trainer_id] = nil
 
       client = resource.create_client
       client.trainer = trainer

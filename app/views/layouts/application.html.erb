@@ -25,6 +25,9 @@
     <div id="notice" class="toast-container top-0 end-0 p-3">
       <%= render 'layouts/notice' if notice %>
     </div>
+    <div id="alert" class="toast-container top-0 end-0 p3">
+      <%= render 'layouts/alert' if alert %>
+    </div>
 
     <div id="<%= current_account&.type&.downcase %>" class="container-fluid" style="margin-bottom: 60px">
       <%= yield %>

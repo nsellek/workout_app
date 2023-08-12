@@ -2,8 +2,7 @@
 
 module Users
   class SessionsController < Devise::SessionsController
-    skip_before_action :authenticate_user!,
-      :set_active_page,
+    skip_before_action :set_active_page,
       :check_for_trainer,
       :check_account
     # before_action :configure_sign_in_params, only: [:create]
