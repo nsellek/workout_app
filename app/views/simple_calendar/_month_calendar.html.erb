@@ -4,7 +4,9 @@
       <i class="fa-solid fa-chevron-left fa-xl"></i>
       <i class="fa-solid fa-chevron-left fa-xl"></i>
     <% end %>
-    <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
+    <span class="calendar-title">
+      <%= t('date.month_names')[start_date.month] %> <%= start_date.year %>
+    </span>
     <%= link_to calendar.url_for_next_view, class: 'text-decoration-none' do %>
       <i class="fa-solid fa-chevron-right fa-xl"></i>
       <i class="fa-solid fa-chevron-right fa-xl"></i>

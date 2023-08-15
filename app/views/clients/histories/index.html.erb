@@ -1,7 +1,12 @@
 <%= turbo_frame_tag 'calendar' do %>
   <%= month_calendar(events: @workout_days, attribute: :completed_at) do |date, workout_day| %>
     <% if workout_day.any? %>
-      <%= link_to clients_workout_path(day_id: workout_day.first.id), class: 'text-body text-decoration-none' do %>
+      <%= link_to clients_history_path(workout_day.first.id),
+                  class: 'text-body text-decoration-none',
+                  data: {
+                    turbo_frame: 'workout_preview'
+                  } do
+      %>
         <%= date.day %>
 
         <% workout_day.each do |day| %>
@@ -12,4 +17,8 @@
       <%= date.day %>
     <% end %>
   <% end %>
+<% end %>
+
+<%= turbo_frame_tag 'workout_preview' do %>
+  <%= render 'clients/histories/preview', workout_day: @workout_day %>
 <% end %>

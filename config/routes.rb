@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
     resources :clients, only: [:update]
     resources :trainers, only: [:new, :create]
-    resources :histories, only: [:index]
+    resources :histories, only: [:index, :show]
 
     resources :workout_days, only: [], shallow: true do
       member do

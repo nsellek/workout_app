@@ -1,0 +1,21 @@
+<% if workout_day.present? %>
+  <ul class="list-group">
+    <% workout_day.exercises.each do |exercise| %>
+      <li class="list-group-item">
+        <%= exercise.name %>
+        <span class="float-end">
+          <%= exercise.sets_reps(settings) %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="btn-group w-100 mt-2">
+    <%= link_to 'Go To Day',
+                clients_workout_path(day_id: workout_day.id),
+                class: 'btn btn-success'
+    %>
+  </div>
+<% else %>
+
+<% end %>
