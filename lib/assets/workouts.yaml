@@ -1,0 +1,2620 @@
+---
+- name: 3/4 Sit-Up
+  muscle_group_id: abdominals
+  equipment: body only
+- name: 90/90 Hamstring
+  muscle_group_id: hamstrings
+  equipment: body only
+- name: Ab Crunch Machine
+  muscle_group_id: abdominals
+  equipment: machine
+- name: Ab Roller
+  muscle_group_id: abdominals
+  equipment: other
+- name: Adductor
+  muscle_group_id: adductors
+  equipment: foam roll
+- name: Adductor/Groin
+  muscle_group_id: adductors
+  equipment:
+- name: Advanced Kettlebell Windmill
+  muscle_group_id: abdominals
+  equipment: kettlebells
+- name: Air Bike
+  muscle_group_id: abdominals
+  equipment: body only
+- name: All Fours Quad Stretch
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Alternate Hammer Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Alternate Heel Touchers
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Alternate Incline Dumbbell Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Alternate Leg Diagonal Bound
+  muscle_group_id: quadriceps
+  equipment:
+- name: Alternating Cable Shoulder Press
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Alternating Deltoid Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Alternating Floor Press
+  muscle_group_id: chest
+  equipment: kettlebells
+- name: Alternating Hang Clean
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: Alternating Kettlebell Press
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Alternating Kettlebell Row
+  muscle_group_id: middle back
+  equipment: kettlebells
+- name: Alternating Renegade Row
+  muscle_group_id: middle back
+  equipment: kettlebells
+- name: Ankle Circles
+  muscle_group_id: calves
+  equipment:
+- name: Ankle On The Knee
+  muscle_group_id: glutes
+  equipment:
+- name: Anterior Tibialis-SMR
+  muscle_group_id: calves
+  equipment: other
+- name: Anti-Gravity Press
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Arm Circles
+  muscle_group_id: shoulders
+  equipment:
+- name: Arnold Dumbbell Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Around The Worlds
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Atlas Stone Trainer
+  muscle_group_id: lower back
+  equipment: other
+- name: Atlas Stones
+  muscle_group_id: lower back
+  equipment: other
+- name: Axle Deadlift
+  muscle_group_id: lower back
+  equipment: other
+- name: Back Flyes - With Bands
+  muscle_group_id: shoulders
+  equipment: bands
+- name: Backward Drag
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Backward Medicine Ball Throw
+  muscle_group_id: shoulders
+  equipment: medicine ball
+- name: Balance Board
+  muscle_group_id: calves
+  equipment: other
+- name: Ball Leg Curl
+  muscle_group_id: hamstrings
+  equipment: exercise ball
+- name: Band Assisted Pull-Up
+  muscle_group_id: lats
+  equipment: other
+- name: Band Good Morning
+  muscle_group_id: hamstrings
+  equipment: bands
+- name: Band Good Morning (Pull Through)
+  muscle_group_id: hamstrings
+  equipment: bands
+- name: Band Hip Adductions
+  muscle_group_id: adductors
+  equipment: bands
+- name: Band Pull Apart
+  muscle_group_id: shoulders
+  equipment: bands
+- name: Band Skull Crusher
+  muscle_group_id: triceps
+  equipment: bands
+- name: Barbell Ab Rollout
+  muscle_group_id: abdominals
+  equipment: barbell
+- name: Barbell Ab Rollout - On Knees
+  muscle_group_id: abdominals
+  equipment: barbell
+- name: Barbell Bench Press - Medium Grip
+  muscle_group_id: chest
+  equipment: barbell
+- name: Barbell Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Barbell Curls Lying Against An Incline
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Barbell Deadlift
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Barbell Full Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Barbell Glute Bridge
+  muscle_group_id: glutes
+  equipment: barbell
+- name: Barbell Guillotine Bench Press
+  muscle_group_id: chest
+  equipment: barbell
+- name: Barbell Hack Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Barbell Hip Thrust
+  muscle_group_id: glutes
+  equipment: barbell
+- name: Barbell Incline Bench Press - Medium Grip
+  muscle_group_id: chest
+  equipment: barbell
+- name: Barbell Incline Shoulder Raise
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Barbell Lunge
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Barbell Rear Delt Row
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Barbell Rollout from Bench
+  muscle_group_id: abdominals
+  equipment: barbell
+- name: Barbell Seated Calf Raise
+  muscle_group_id: calves
+  equipment: barbell
+- name: Barbell Shoulder Press
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Barbell Shrug
+  muscle_group_id: traps
+  equipment: barbell
+- name: Barbell Shrug Behind The Back
+  muscle_group_id: traps
+  equipment: barbell
+- name: Barbell Side Bend
+  muscle_group_id: abdominals
+  equipment: barbell
+- name: Barbell Side Split Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Barbell Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Barbell Squat To A Bench
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Barbell Step Ups
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Barbell Walking Lunge
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Battling Ropes
+  muscle_group_id: shoulders
+  equipment: other
+- name: Bear Crawl Sled Drags
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Behind Head Chest Stretch
+  muscle_group_id: chest
+  equipment: other
+- name: Bench Dips
+  muscle_group_id: triceps
+  equipment: body only
+- name: Bench Jump
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Bench Press - Powerlifting
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Bench Press - With Bands
+  muscle_group_id: chest
+  equipment: bands
+- name: Bench Press with Chains
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Bench Sprint
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Bent-Arm Barbell Pullover
+  muscle_group_id: lats
+  equipment: barbell
+- name: Bent-Arm Dumbbell Pullover
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Bent-Knee Hip Raise
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Bent Over Barbell Row
+  muscle_group_id: middle back
+  equipment: barbell
+- name: Bent Over Dumbbell Rear Delt Raise With Head On Bench
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Bent Over Low-Pulley Side Lateral
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Bent Over One-Arm Long Bar Row
+  muscle_group_id: middle back
+  equipment: barbell
+- name: Bent Over Two-Arm Long Bar Row
+  muscle_group_id: middle back
+  equipment: barbell
+- name: Bent Over Two-Dumbbell Row
+  muscle_group_id: middle back
+  equipment: dumbbell
+- name: Bent Over Two-Dumbbell Row With Palms In
+  muscle_group_id: middle back
+  equipment: dumbbell
+- name: Bent Press
+  muscle_group_id: abdominals
+  equipment: kettlebells
+- name: Bicycling
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Bicycling, Stationary
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Board Press
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Body-Up
+  muscle_group_id: triceps
+  equipment: body only
+- name: Body Tricep Press
+  muscle_group_id: triceps
+  equipment: body only
+- name: Bodyweight Flyes
+  muscle_group_id: chest
+  equipment: e-z curl bar
+- name: Bodyweight Mid Row
+  muscle_group_id: middle back
+  equipment: other
+- name: Bodyweight Squat
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Bodyweight Walking Lunge
+  muscle_group_id: quadriceps
+  equipment:
+- name: Bosu Ball Cable Crunch With Side Bends
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Bottoms-Up Clean From The Hang Position
+  muscle_group_id: forearms
+  equipment: kettlebells
+- name: Bottoms Up
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Box Jump (Multiple Response)
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Box Skip
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Box Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Box Squat with Bands
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Box Squat with Chains
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Brachialis-SMR
+  muscle_group_id: biceps
+  equipment: foam roll
+- name: Bradford/Rocky Presses
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Butt-Ups
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Butt Lift (Bridge)
+  muscle_group_id: glutes
+  equipment: body only
+- name: Butterfly
+  muscle_group_id: chest
+  equipment: machine
+- name: Cable Chest Press
+  muscle_group_id: chest
+  equipment: cable
+- name: Cable Crossover
+  muscle_group_id: chest
+  equipment: cable
+- name: Cable Crunch
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Cable Deadlifts
+  muscle_group_id: quadriceps
+  equipment: cable
+- name: Cable Hammer Curls - Rope Attachment
+  muscle_group_id: biceps
+  equipment: cable
+- name: Cable Hip Adduction
+  muscle_group_id: quadriceps
+  equipment: cable
+- name: Cable Incline Pushdown
+  muscle_group_id: lats
+  equipment: cable
+- name: Cable Incline Triceps Extension
+  muscle_group_id: triceps
+  equipment: cable
+- name: Cable Internal Rotation
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Cable Iron Cross
+  muscle_group_id: chest
+  equipment: cable
+- name: Cable Judo Flip
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Cable Lying Triceps Extension
+  muscle_group_id: triceps
+  equipment: cable
+- name: Cable One Arm Tricep Extension
+  muscle_group_id: triceps
+  equipment: cable
+- name: Cable Preacher Curl
+  muscle_group_id: biceps
+  equipment: cable
+- name: Cable Rear Delt Fly
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Cable Reverse Crunch
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Cable Rope Overhead Triceps Extension
+  muscle_group_id: triceps
+  equipment: cable
+- name: Cable Rope Rear-Delt Rows
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Cable Russian Twists
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Cable Seated Crunch
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Cable Seated Lateral Raise
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Cable Shoulder Press
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Cable Shrugs
+  muscle_group_id: traps
+  equipment: cable
+- name: Cable Wrist Curl
+  muscle_group_id: forearms
+  equipment: cable
+- name: Calf-Machine Shoulder Shrug
+  muscle_group_id: traps
+  equipment: machine
+- name: Calf Press
+  muscle_group_id: calves
+  equipment: machine
+- name: Calf Press On The Leg Press Machine
+  muscle_group_id: calves
+  equipment: machine
+- name: Calf Raise On A Dumbbell
+  muscle_group_id: calves
+  equipment: dumbbell
+- name: Calf Raises - With Bands
+  muscle_group_id: calves
+  equipment: bands
+- name: Calf Stretch Elbows Against Wall
+  muscle_group_id: calves
+  equipment:
+- name: Calf Stretch Hands Against Wall
+  muscle_group_id: calves
+  equipment:
+- name: Calves-SMR
+  muscle_group_id: calves
+  equipment: foam roll
+- name: Car Deadlift
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Car Drivers
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Carioca Quick Step
+  muscle_group_id: adductors
+  equipment:
+- name: Cat Stretch
+  muscle_group_id: lower back
+  equipment:
+- name: Catch and Overhead Throw
+  muscle_group_id: lats
+  equipment: medicine ball
+- name: Chain Handle Extension
+  muscle_group_id: triceps
+  equipment: other
+- name: Chain Press
+  muscle_group_id: chest
+  equipment: other
+- name: Chair Leg Extended Stretch
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Chair Lower Back Stretch
+  muscle_group_id: lats
+  equipment:
+- name: Chair Squat
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Chair Upper Body Stretch
+  muscle_group_id: shoulders
+  equipment: other
+- name: Chest And Front Of Shoulder Stretch
+  muscle_group_id: chest
+  equipment: other
+- name: Chest Push from 3 point stance
+  muscle_group_id: chest
+  equipment: medicine ball
+- name: Chest Push (multiple response)
+  muscle_group_id: chest
+  equipment: medicine ball
+- name: Chest Push (single response)
+  muscle_group_id: chest
+  equipment: medicine ball
+- name: Chest Push with Run Release
+  muscle_group_id: chest
+  equipment: medicine ball
+- name: Chest Stretch on Stability Ball
+  muscle_group_id: chest
+  equipment: exercise ball
+- name: Child's Pose
+  muscle_group_id: lower back
+  equipment:
+- name: Chin-Up
+  muscle_group_id: lats
+  equipment: body only
+- name: Chin To Chest Stretch
+  muscle_group_id: neck
+  equipment:
+- name: Circus Bell
+  muscle_group_id: shoulders
+  equipment: other
+- name: Clean
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Clean Deadlift
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Clean Pull
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Clean Shrug
+  muscle_group_id: traps
+  equipment: barbell
+- name: Clean and Jerk
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Clean and Press
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Clean from Blocks
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Clock Push-Up
+  muscle_group_id: chest
+  equipment: body only
+- name: Close-Grip Barbell Bench Press
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Close-Grip Dumbbell Press
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Close-Grip EZ-Bar Curl with Band
+  muscle_group_id: biceps
+  equipment: e-z curl bar
+- name: Close-Grip EZ-Bar Press
+  muscle_group_id: triceps
+  equipment: e-z curl bar
+- name: Close-Grip EZ Bar Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Close-Grip Front Lat Pulldown
+  muscle_group_id: lats
+  equipment: cable
+- name: Close-Grip Push-Up off of a Dumbbell
+  muscle_group_id: triceps
+  equipment: body only
+- name: Close-Grip Standing Barbell Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Cocoons
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Conan's Wheel
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Concentration Curls
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Cross-Body Crunch
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Cross Body Hammer Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Cross Over - With Bands
+  muscle_group_id: chest
+  equipment: bands
+- name: Crossover Reverse Lunge
+  muscle_group_id: lower back
+  equipment:
+- name: Crucifix
+  muscle_group_id: shoulders
+  equipment: other
+- name: Crunch - Hands Overhead
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Crunch - Legs On Exercise Ball
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Crunches
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Cuban Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dancer's Stretch
+  muscle_group_id: lower back
+  equipment:
+- name: Dead Bug
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Deadlift with Bands
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Deadlift with Chains
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Decline Barbell Bench Press
+  muscle_group_id: chest
+  equipment: barbell
+- name: Decline Close-Grip Bench To Skull Crusher
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Decline Crunch
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Decline Dumbbell Bench Press
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Decline Dumbbell Flyes
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Decline Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Decline EZ Bar Triceps Extension
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Decline Oblique Crunch
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Decline Push-Up
+  muscle_group_id: chest
+  equipment:
+- name: Decline Reverse Crunch
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Decline Smith Press
+  muscle_group_id: chest
+  equipment: machine
+- name: Deficit Deadlift
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Depth Jump Leap
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Dip Machine
+  muscle_group_id: triceps
+  equipment: machine
+- name: Dips - Chest Version
+  muscle_group_id: chest
+  equipment: other
+- name: Dips - Triceps Version
+  muscle_group_id: triceps
+  equipment: body only
+- name: Donkey Calf Raises
+  muscle_group_id: calves
+  equipment: other
+- name: Double Kettlebell Alternating Hang Clean
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: Double Kettlebell Jerk
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Double Kettlebell Push Press
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Double Kettlebell Snatch
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Double Kettlebell Windmill
+  muscle_group_id: abdominals
+  equipment: kettlebells
+- name: Double Leg Butt Kick
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Downward Facing Balance
+  muscle_group_id: glutes
+  equipment: exercise ball
+- name: Drag Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Drop Push
+  muscle_group_id: chest
+  equipment: other
+- name: Dumbbell Alternate Bicep Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Dumbbell Bench Press
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Dumbbell Bench Press with Neutral Grip
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Dumbbell Bicep Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Dumbbell Clean
+  muscle_group_id: hamstrings
+  equipment: dumbbell
+- name: Dumbbell Floor Press
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Dumbbell Flyes
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Dumbbell Incline Row
+  muscle_group_id: middle back
+  equipment: dumbbell
+- name: Dumbbell Incline Shoulder Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dumbbell Lunges
+  muscle_group_id: quadriceps
+  equipment: dumbbell
+- name: Dumbbell Lying One-Arm Rear Lateral Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dumbbell Lying Pronation
+  muscle_group_id: forearms
+  equipment: dumbbell
+- name: Dumbbell Lying Rear Lateral Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dumbbell Lying Supination
+  muscle_group_id: forearms
+  equipment: dumbbell
+- name: Dumbbell One-Arm Shoulder Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dumbbell One-Arm Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Dumbbell One-Arm Upright Row
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dumbbell Prone Incline Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Dumbbell Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dumbbell Rear Lunge
+  muscle_group_id: quadriceps
+  equipment: dumbbell
+- name: Dumbbell Scaption
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dumbbell Seated Box Jump
+  muscle_group_id: quadriceps
+  equipment: dumbbell
+- name: Dumbbell Seated One-Leg Calf Raise
+  muscle_group_id: calves
+  equipment: dumbbell
+- name: Dumbbell Shoulder Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Dumbbell Shrug
+  muscle_group_id: traps
+  equipment: dumbbell
+- name: Dumbbell Side Bend
+  muscle_group_id: abdominals
+  equipment: dumbbell
+- name: Dumbbell Squat
+  muscle_group_id: quadriceps
+  equipment: dumbbell
+- name: Dumbbell Squat To A Bench
+  muscle_group_id: quadriceps
+  equipment: dumbbell
+- name: Dumbbell Step Ups
+  muscle_group_id: quadriceps
+  equipment: dumbbell
+- name: Dumbbell Tricep Extension -Pronated Grip
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Dynamic Back Stretch
+  muscle_group_id: lats
+  equipment:
+- name: Dynamic Chest Stretch
+  muscle_group_id: chest
+  equipment:
+- name: EZ-Bar Curl
+  muscle_group_id: biceps
+  equipment: e-z curl bar
+- name: EZ-Bar Skullcrusher
+  muscle_group_id: triceps
+  equipment: e-z curl bar
+- name: Elbow Circles
+  muscle_group_id: shoulders
+  equipment:
+- name: Elbow to Knee
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Elbows Back
+  muscle_group_id: chest
+  equipment:
+- name: Elevated Back Lunge
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Elevated Cable Rows
+  muscle_group_id: lats
+  equipment: cable
+- name: Elliptical Trainer
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Exercise Ball Crunch
+  muscle_group_id: abdominals
+  equipment: exercise ball
+- name: Exercise Ball Pull-In
+  muscle_group_id: abdominals
+  equipment: exercise ball
+- name: Extended Range One-Arm Kettlebell Floor Press
+  muscle_group_id: chest
+  equipment: kettlebells
+- name: External Rotation
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: External Rotation with Band
+  muscle_group_id: shoulders
+  equipment: bands
+- name: External Rotation with Cable
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Face Pull
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Farmer's Walk
+  muscle_group_id: forearms
+  equipment: other
+- name: Fast Skipping
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Finger Curls
+  muscle_group_id: forearms
+  equipment: barbell
+- name: Flat Bench Cable Flyes
+  muscle_group_id: chest
+  equipment: cable
+- name: Flat Bench Leg Pull-In
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Flat Bench Lying Leg Raise
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Flexor Incline Dumbbell Curls
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Floor Glute-Ham Raise
+  muscle_group_id: hamstrings
+  equipment:
+- name: Floor Press
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Floor Press with Chains
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Flutter Kicks
+  muscle_group_id: glutes
+  equipment: body only
+- name: Foot-SMR
+  muscle_group_id: calves
+  equipment: other
+- name: Forward Drag with Press
+  muscle_group_id: chest
+  equipment: other
+- name: Frankenstein Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Freehand Jump Squat
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Frog Hops
+  muscle_group_id: quadriceps
+  equipment:
+- name: Frog Sit-Ups
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Front Barbell Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Front Barbell Squat To A Bench
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Front Box Jump
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Front Cable Raise
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Front Cone Hops (or hurdle hops)
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Front Dumbbell Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Front Incline Dumbbell Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Front Leg Raises
+  muscle_group_id: hamstrings
+  equipment: body only
+- name: Front Plate Raise
+  muscle_group_id: shoulders
+  equipment: other
+- name: Front Raise And Pullover
+  muscle_group_id: chest
+  equipment: barbell
+- name: Front Squat (Clean Grip)
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Front Squats With Two Kettlebells
+  muscle_group_id: quadriceps
+  equipment: kettlebells
+- name: Front Two-Dumbbell Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Full Range-Of-Motion Lat Pulldown
+  muscle_group_id: lats
+  equipment: cable
+- name: Gironda Sternum Chins
+  muscle_group_id: lats
+  equipment: other
+- name: Glute Ham Raise
+  muscle_group_id: hamstrings
+  equipment: machine
+- name: Glute Kickback
+  muscle_group_id: glutes
+  equipment: body only
+- name: Goblet Squat
+  muscle_group_id: quadriceps
+  equipment: kettlebells
+- name: Good Morning
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Good Morning off Pins
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Gorilla Chin/Crunch
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Groin and Back Stretch
+  muscle_group_id: adductors
+  equipment:
+- name: Groiners
+  muscle_group_id: adductors
+  equipment: body only
+- name: Hack Squat
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Hammer Curls
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Hammer Grip Incline DB Bench Press
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Hamstring-SMR
+  muscle_group_id: hamstrings
+  equipment: foam roll
+- name: Hamstring Stretch
+  muscle_group_id: hamstrings
+  equipment:
+- name: Handstand Push-Ups
+  muscle_group_id: shoulders
+  equipment: body only
+- name: Hang Clean
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Hang Clean - Below the Knees
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Hang Snatch
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Hang Snatch - Below Knees
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Hanging Bar Good Morning
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Hanging Leg Raise
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Hanging Pike
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Heaving Snatch Balance
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Heavy Bag Thrust
+  muscle_group_id: chest
+  equipment: other
+- name: High Cable Curls
+  muscle_group_id: biceps
+  equipment: cable
+- name: Hip Circles (prone)
+  muscle_group_id: abductors
+  equipment: body only
+- name: Hip Extension with Bands
+  muscle_group_id: glutes
+  equipment: bands
+- name: Hip Flexion with Band
+  muscle_group_id: quadriceps
+  equipment: bands
+- name: Hip Lift with Band
+  muscle_group_id: glutes
+  equipment: bands
+- name: Hug A Ball
+  muscle_group_id: lower back
+  equipment: exercise ball
+- name: Hug Knees To Chest
+  muscle_group_id: lower back
+  equipment:
+- name: Hurdle Hops
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Hyperextensions (Back Extensions)
+  muscle_group_id: lower back
+  equipment: other
+- name: Hyperextensions With No Hyperextension Bench
+  muscle_group_id: lower back
+  equipment: body only
+- name: IT Band and Glute Stretch
+  muscle_group_id: abductors
+  equipment: other
+- name: Iliotibial Tract-SMR
+  muscle_group_id: abductors
+  equipment: foam roll
+- name: Inchworm
+  muscle_group_id: hamstrings
+  equipment: body only
+- name: Incline Barbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Incline Bench Pull
+  muscle_group_id: middle back
+  equipment: barbell
+- name: Incline Cable Chest Press
+  muscle_group_id: chest
+  equipment: cable
+- name: Incline Cable Flye
+  muscle_group_id: chest
+  equipment: cable
+- name: Incline Dumbbell Bench With Palms Facing In
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Incline Dumbbell Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Incline Dumbbell Flyes
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Incline Dumbbell Flyes - With A Twist
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Incline Dumbbell Press
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Incline Hammer Curls
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Incline Inner Biceps Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Incline Push-Up
+  muscle_group_id: chest
+  equipment: body only
+- name: Incline Push-Up Close-Grip
+  muscle_group_id: triceps
+  equipment: body only
+- name: Incline Push-Up Depth Jump
+  muscle_group_id: chest
+  equipment: other
+- name: Incline Push-Up Medium
+  muscle_group_id: chest
+  equipment: body only
+- name: Incline Push-Up Reverse Grip
+  muscle_group_id: chest
+  equipment: body only
+- name: Incline Push-Up Wide
+  muscle_group_id: chest
+  equipment: body only
+- name: Intermediate Groin Stretch
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Intermediate Hip Flexor and Quad Stretch
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Internal Rotation with Band
+  muscle_group_id: shoulders
+  equipment: bands
+- name: Inverted Row
+  muscle_group_id: middle back
+  equipment:
+- name: Inverted Row with Straps
+  muscle_group_id: middle back
+  equipment: other
+- name: Iron Cross
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Iron Crosses (stretch)
+  muscle_group_id: quadriceps
+  equipment:
+- name: Isometric Chest Squeezes
+  muscle_group_id: chest
+  equipment: body only
+- name: Isometric Neck Exercise - Front And Back
+  muscle_group_id: neck
+  equipment: body only
+- name: Isometric Neck Exercise - Sides
+  muscle_group_id: neck
+  equipment: body only
+- name: Isometric Wipers
+  muscle_group_id: chest
+  equipment: body only
+- name: JM Press
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Jackknife Sit-Up
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Janda Sit-Up
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Jefferson Squats
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Jerk Balance
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Jerk Dip Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Jogging, Treadmill
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Keg Load
+  muscle_group_id: lower back
+  equipment: other
+- name: Kettlebell Arnold Press
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Kettlebell Dead Clean
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: Kettlebell Figure 8
+  muscle_group_id: abdominals
+  equipment: kettlebells
+- name: Kettlebell Hang Clean
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: Kettlebell One-Legged Deadlift
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: Kettlebell Pass Between The Legs
+  muscle_group_id: abdominals
+  equipment: kettlebells
+- name: Kettlebell Pirate Ships
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Kettlebell Pistol Squat
+  muscle_group_id: quadriceps
+  equipment: kettlebells
+- name: Kettlebell Seated Press
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Kettlebell Seesaw Press
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Kettlebell Sumo High Pull
+  muscle_group_id: traps
+  equipment: kettlebells
+- name: Kettlebell Thruster
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Kettlebell Turkish Get-Up (Lunge style)
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Kettlebell Turkish Get-Up (Squat style)
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Kettlebell Windmill
+  muscle_group_id: abdominals
+  equipment: kettlebells
+- name: Kipping Muscle Up
+  muscle_group_id: lats
+  equipment: other
+- name: Knee Across The Body
+  muscle_group_id: glutes
+  equipment:
+- name: Knee Circles
+  muscle_group_id: calves
+  equipment: body only
+- name: Knee/Hip Raise On Parallel Bars
+  muscle_group_id: abdominals
+  equipment: other
+- name: Knee Tuck Jump
+  muscle_group_id: hamstrings
+  equipment: body only
+- name: Kneeling Arm Drill
+  muscle_group_id: shoulders
+  equipment:
+- name: Kneeling Cable Crunch With Alternating Oblique Twists
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Kneeling Cable Triceps Extension
+  muscle_group_id: triceps
+  equipment: cable
+- name: Kneeling Forearm Stretch
+  muscle_group_id: forearms
+  equipment:
+- name: Kneeling High Pulley Row
+  muscle_group_id: lats
+  equipment: cable
+- name: Kneeling Hip Flexor
+  muscle_group_id: quadriceps
+  equipment:
+- name: Kneeling Jump Squat
+  muscle_group_id: glutes
+  equipment: barbell
+- name: Kneeling Single-Arm High Pulley Row
+  muscle_group_id: lats
+  equipment: cable
+- name: Kneeling Squat
+  muscle_group_id: glutes
+  equipment: barbell
+- name: Landmine 180's
+  muscle_group_id: abdominals
+  equipment: barbell
+- name: Landmine Linear Jammer
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Lateral Bound
+  muscle_group_id: adductors
+  equipment: body only
+- name: Lateral Box Jump
+  muscle_group_id: adductors
+  equipment: other
+- name: Lateral Cone Hops
+  muscle_group_id: adductors
+  equipment: other
+- name: Lateral Raise - With Bands
+  muscle_group_id: shoulders
+  equipment: bands
+- name: Latissimus Dorsi-SMR
+  muscle_group_id: lats
+  equipment: foam roll
+- name: Leg-Over Floor Press
+  muscle_group_id: chest
+  equipment: kettlebells
+- name: Leg-Up Hamstring Stretch
+  muscle_group_id: hamstrings
+  equipment:
+- name: Leg Extensions
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Leg Lift
+  muscle_group_id: glutes
+  equipment: body only
+- name: Leg Press
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Leg Pull-In
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Leverage Chest Press
+  muscle_group_id: chest
+  equipment: machine
+- name: Leverage Deadlift
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Leverage Decline Chest Press
+  muscle_group_id: chest
+  equipment: machine
+- name: Leverage High Row
+  muscle_group_id: middle back
+  equipment: machine
+- name: Leverage Incline Chest Press
+  muscle_group_id: chest
+  equipment: machine
+- name: Leverage Iso Row
+  muscle_group_id: lats
+  equipment: machine
+- name: Leverage Shoulder Press
+  muscle_group_id: shoulders
+  equipment: machine
+- name: Leverage Shrug
+  muscle_group_id: traps
+  equipment: machine
+- name: Linear 3-Part Start Technique
+  muscle_group_id: hamstrings
+  equipment:
+- name: Linear Acceleration Wall Drill
+  muscle_group_id: hamstrings
+  equipment:
+- name: Linear Depth Jump
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Log Lift
+  muscle_group_id: shoulders
+  equipment: other
+- name: London Bridges
+  muscle_group_id: lats
+  equipment: other
+- name: Looking At Ceiling
+  muscle_group_id: quadriceps
+  equipment:
+- name: Low Cable Crossover
+  muscle_group_id: chest
+  equipment: cable
+- name: Low Cable Triceps Extension
+  muscle_group_id: triceps
+  equipment: cable
+- name: Low Pulley Row To Neck
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Lower Back-SMR
+  muscle_group_id: lower back
+  equipment: foam roll
+- name: Lower Back Curl
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Lunge Pass Through
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: Lunge Sprint
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Lying Bent Leg Groin
+  muscle_group_id: adductors
+  equipment: other
+- name: Lying Cable Curl
+  muscle_group_id: biceps
+  equipment: cable
+- name: Lying Cambered Barbell Row
+  muscle_group_id: middle back
+  equipment: barbell
+- name: Lying Close-Grip Bar Curl On High Pulley
+  muscle_group_id: biceps
+  equipment: cable
+- name: Lying Close-Grip Barbell Triceps Extension Behind The Head
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Lying Close-Grip Barbell Triceps Press To Chin
+  muscle_group_id: triceps
+  equipment: e-z curl bar
+- name: Lying Crossover
+  muscle_group_id: abductors
+  equipment: body only
+- name: Lying Dumbbell Tricep Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Lying Face Down Plate Neck Resistance
+  muscle_group_id: neck
+  equipment: other
+- name: Lying Face Up Plate Neck Resistance
+  muscle_group_id: neck
+  equipment: other
+- name: Lying Glute
+  muscle_group_id: glutes
+  equipment: body only
+- name: Lying Hamstring
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Lying High Bench Barbell Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Lying Leg Curls
+  muscle_group_id: hamstrings
+  equipment: machine
+- name: Lying Machine Squat
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Lying One-Arm Lateral Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Lying Prone Quadriceps
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Lying Rear Delt Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Lying Supine Dumbbell Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Lying T-Bar Row
+  muscle_group_id: middle back
+  equipment: machine
+- name: Lying Triceps Press
+  muscle_group_id: triceps
+  equipment: e-z curl bar
+- name: Machine Bench Press
+  muscle_group_id: chest
+  equipment: machine
+- name: Machine Bicep Curl
+  muscle_group_id: biceps
+  equipment: machine
+- name: Machine Preacher Curls
+  muscle_group_id: biceps
+  equipment: machine
+- name: Machine Shoulder (Military) Press
+  muscle_group_id: shoulders
+  equipment: machine
+- name: Machine Triceps Extension
+  muscle_group_id: triceps
+  equipment: machine
+- name: Medicine Ball Chest Pass
+  muscle_group_id: chest
+  equipment: medicine ball
+- name: Medicine Ball Full Twist
+  muscle_group_id: abdominals
+  equipment: medicine ball
+- name: Medicine Ball Scoop Throw
+  muscle_group_id: shoulders
+  equipment: medicine ball
+- name: Middle Back Shrug
+  muscle_group_id: middle back
+  equipment: dumbbell
+- name: Middle Back Stretch
+  muscle_group_id: middle back
+  equipment:
+- name: Mixed Grip Chin
+  muscle_group_id: middle back
+  equipment: other
+- name: Monster Walk
+  muscle_group_id: abductors
+  equipment: bands
+- name: Mountain Climbers
+  muscle_group_id: quadriceps
+  equipment:
+- name: Moving Claw Series
+  muscle_group_id: hamstrings
+  equipment:
+- name: Muscle Snatch
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Muscle Up
+  muscle_group_id: lats
+  equipment: other
+- name: Narrow Stance Hack Squats
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Narrow Stance Leg Press
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Narrow Stance Squats
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Natural Glute Ham Raise
+  muscle_group_id: hamstrings
+  equipment: body only
+- name: Neck-SMR
+  muscle_group_id: neck
+  equipment: other
+- name: Neck Press
+  muscle_group_id: chest
+  equipment: barbell
+- name: Oblique Crunches
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Oblique Crunches - On The Floor
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Olympic Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: On-Your-Back Quad Stretch
+  muscle_group_id: quadriceps
+  equipment: other
+- name: On Your Side Quad Stretch
+  muscle_group_id: quadriceps
+  equipment:
+- name: One-Arm Dumbbell Row
+  muscle_group_id: middle back
+  equipment: dumbbell
+- name: One-Arm Flat Bench Dumbbell Flye
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: One-Arm High-Pulley Cable Side Bends
+  muscle_group_id: abdominals
+  equipment: cable
+- name: One-Arm Incline Lateral Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: One-Arm Kettlebell Clean
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: One-Arm Kettlebell Clean and Jerk
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: One-Arm Kettlebell Floor Press
+  muscle_group_id: chest
+  equipment: kettlebells
+- name: One-Arm Kettlebell Jerk
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: One-Arm Kettlebell Military Press To The Side
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: One-Arm Kettlebell Para Press
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: One-Arm Kettlebell Push Press
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: One-Arm Kettlebell Row
+  muscle_group_id: middle back
+  equipment: kettlebells
+- name: One-Arm Kettlebell Snatch
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: One-Arm Kettlebell Split Jerk
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: One-Arm Kettlebell Split Snatch
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: One-Arm Kettlebell Swings
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: One-Arm Long Bar Row
+  muscle_group_id: middle back
+  equipment: barbell
+- name: One-Arm Medicine Ball Slam
+  muscle_group_id: abdominals
+  equipment: medicine ball
+- name: One-Arm Open Palm Kettlebell Clean
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: One-Arm Overhead Kettlebell Squats
+  muscle_group_id: quadriceps
+  equipment: kettlebells
+- name: One-Arm Side Deadlift
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: One-Arm Side Laterals
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: One-Legged Cable Kickback
+  muscle_group_id: glutes
+  equipment: cable
+- name: One Arm Against Wall
+  muscle_group_id: lats
+  equipment:
+- name: One Arm Chin-Up
+  muscle_group_id: middle back
+  equipment: other
+- name: One Arm Dumbbell Bench Press
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: One Arm Dumbbell Preacher Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: One Arm Floor Press
+  muscle_group_id: triceps
+  equipment: barbell
+- name: One Arm Lat Pulldown
+  muscle_group_id: lats
+  equipment: cable
+- name: One Arm Pronated Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: One Arm Supinated Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: One Half Locust
+  muscle_group_id: quadriceps
+  equipment:
+- name: One Handed Hang
+  muscle_group_id: lats
+  equipment: other
+- name: One Knee To Chest
+  muscle_group_id: glutes
+  equipment:
+- name: One Leg Barbell Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Open Palm Kettlebell Clean
+  muscle_group_id: hamstrings
+  equipment: kettlebells
+- name: Otis-Up
+  muscle_group_id: abdominals
+  equipment: other
+- name: Overhead Cable Curl
+  muscle_group_id: biceps
+  equipment: cable
+- name: Overhead Lat
+  muscle_group_id: lats
+  equipment: other
+- name: Overhead Slam
+  muscle_group_id: lats
+  equipment: medicine ball
+- name: Overhead Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Overhead Stretch
+  muscle_group_id: abdominals
+  equipment:
+- name: Overhead Triceps
+  muscle_group_id: triceps
+  equipment: body only
+- name: Pallof Press
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Pallof Press With Rotation
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Palms-Down Dumbbell Wrist Curl Over A Bench
+  muscle_group_id: forearms
+  equipment: dumbbell
+- name: Palms-Down Wrist Curl Over A Bench
+  muscle_group_id: forearms
+  equipment: barbell
+- name: Palms-Up Barbell Wrist Curl Over A Bench
+  muscle_group_id: forearms
+  equipment: barbell
+- name: Palms-Up Dumbbell Wrist Curl Over A Bench
+  muscle_group_id: forearms
+  equipment: dumbbell
+- name: Parallel Bar Dip
+  muscle_group_id: triceps
+  equipment: other
+- name: Pelvic Tilt Into Bridge
+  muscle_group_id: lower back
+  equipment:
+- name: Peroneals-SMR
+  muscle_group_id: calves
+  equipment: foam roll
+- name: Peroneals Stretch
+  muscle_group_id: calves
+  equipment: other
+- name: Physioball Hip Bridge
+  muscle_group_id: glutes
+  equipment: exercise ball
+- name: Pin Presses
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Piriformis-SMR
+  muscle_group_id: glutes
+  equipment: foam roll
+- name: Plank
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Plate Pinch
+  muscle_group_id: forearms
+  equipment: other
+- name: Plate Twist
+  muscle_group_id: abdominals
+  equipment: other
+- name: Platform Hamstring Slides
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Plie Dumbbell Squat
+  muscle_group_id: quadriceps
+  equipment: dumbbell
+- name: Plyo Kettlebell Pushups
+  muscle_group_id: chest
+  equipment: kettlebells
+- name: Plyo Push-up
+  muscle_group_id: chest
+  equipment: body only
+- name: Posterior Tibialis Stretch
+  muscle_group_id: calves
+  equipment: other
+- name: Power Clean
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Power Clean from Blocks
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Power Jerk
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Power Partials
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Power Snatch
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Power Snatch from Blocks
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Power Stairs
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Preacher Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Preacher Hammer Dumbbell Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Press Sit-Up
+  muscle_group_id: abdominals
+  equipment: barbell
+- name: Prone Manual Hamstring
+  muscle_group_id: hamstrings
+  equipment:
+- name: Prowler Sprint
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Pull Through
+  muscle_group_id: glutes
+  equipment: cable
+- name: Pullups
+  muscle_group_id: lats
+  equipment: body only
+- name: Push-Up Wide
+  muscle_group_id: chest
+  equipment: body only
+- name: Push-Ups - Close Triceps Position
+  muscle_group_id: triceps
+  equipment: body only
+- name: Push-Ups With Feet Elevated
+  muscle_group_id: chest
+  equipment: body only
+- name: Push-Ups With Feet On An Exercise Ball
+  muscle_group_id: chest
+  equipment: exercise ball
+- name: Push Press
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Push Press - Behind the Neck
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Push Up to Side Plank
+  muscle_group_id: chest
+  equipment: body only
+- name: Pushups
+  muscle_group_id: chest
+  equipment: body only
+- name: Pushups (Close and Wide Hand Positions)
+  muscle_group_id: chest
+  equipment: body only
+- name: Pyramid
+  muscle_group_id: lower back
+  equipment: exercise ball
+- name: Quad Stretch
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Quadriceps-SMR
+  muscle_group_id: quadriceps
+  equipment: foam roll
+- name: Quick Leap
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Rack Delivery
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Rack Pull with Bands
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Rack Pulls
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Rear Leg Raises
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Recumbent Bike
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Return Push from Stance
+  muscle_group_id: shoulders
+  equipment: medicine ball
+- name: Reverse Band Bench Press
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Reverse Band Box Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Reverse Band Deadlift
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Reverse Band Power Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Reverse Band Sumo Deadlift
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Reverse Barbell Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Reverse Barbell Preacher Curls
+  muscle_group_id: biceps
+  equipment: e-z curl bar
+- name: Reverse Cable Curl
+  muscle_group_id: biceps
+  equipment: cable
+- name: Reverse Crunch
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Reverse Flyes
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Reverse Flyes With External Rotation
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Reverse Grip Bent-Over Rows
+  muscle_group_id: middle back
+  equipment: barbell
+- name: Reverse Grip Triceps Pushdown
+  muscle_group_id: triceps
+  equipment: cable
+- name: Reverse Hyperextension
+  muscle_group_id: hamstrings
+  equipment: machine
+- name: Reverse Machine Flyes
+  muscle_group_id: shoulders
+  equipment: machine
+- name: Reverse Plate Curls
+  muscle_group_id: biceps
+  equipment: other
+- name: Reverse Triceps Bench Press
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Rhomboids-SMR
+  muscle_group_id: middle back
+  equipment: foam roll
+- name: Rickshaw Carry
+  muscle_group_id: forearms
+  equipment: other
+- name: Rickshaw Deadlift
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Ring Dips
+  muscle_group_id: triceps
+  equipment: other
+- name: Rocket Jump
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Rocking Standing Calf Raise
+  muscle_group_id: calves
+  equipment: barbell
+- name: Rocky Pull-Ups/Pulldowns
+  muscle_group_id: lats
+  equipment: other
+- name: Romanian Deadlift
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Romanian Deadlift from Deficit
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Rope Climb
+  muscle_group_id: lats
+  equipment: other
+- name: Rope Crunch
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Rope Jumping
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Rope Straight-Arm Pulldown
+  muscle_group_id: lats
+  equipment: cable
+- name: Round The World Shoulder Stretch
+  muscle_group_id: shoulders
+  equipment: other
+- name: Rowing, Stationary
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Runner's Stretch
+  muscle_group_id: hamstrings
+  equipment:
+- name: Running, Treadmill
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Russian Twist
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Sandbag Load
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Scapular Pull-Up
+  muscle_group_id: traps
+  equipment:
+- name: Scissor Kick
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Scissors Jump
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Seated Band Hamstring Curl
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Seated Barbell Military Press
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Seated Barbell Twist
+  muscle_group_id: abdominals
+  equipment: barbell
+- name: Seated Bent-Over One-Arm Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Seated Bent-Over Rear Delt Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Seated Bent-Over Two-Arm Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Seated Biceps
+  muscle_group_id: biceps
+  equipment: body only
+- name: Seated Cable Rows
+  muscle_group_id: middle back
+  equipment: cable
+- name: Seated Cable Shoulder Press
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Seated Calf Raise
+  muscle_group_id: calves
+  equipment: machine
+- name: Seated Calf Stretch
+  muscle_group_id: calves
+  equipment:
+- name: Seated Close-Grip Concentration Barbell Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Seated Dumbbell Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Seated Dumbbell Inner Biceps Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Seated Dumbbell Palms-Down Wrist Curl
+  muscle_group_id: forearms
+  equipment: dumbbell
+- name: Seated Dumbbell Palms-Up Wrist Curl
+  muscle_group_id: forearms
+  equipment: dumbbell
+- name: Seated Dumbbell Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Seated Flat Bench Leg Pull-In
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Seated Floor Hamstring Stretch
+  muscle_group_id: hamstrings
+  equipment:
+- name: Seated Front Deltoid
+  muscle_group_id: shoulders
+  equipment: body only
+- name: Seated Glute
+  muscle_group_id: glutes
+  equipment: body only
+- name: Seated Good Mornings
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Seated Hamstring
+  muscle_group_id: hamstrings
+  equipment:
+- name: Seated Hamstring and Calf Stretch
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Seated Head Harness Neck Resistance
+  muscle_group_id: neck
+  equipment: other
+- name: Seated Leg Curl
+  muscle_group_id: hamstrings
+  equipment: machine
+- name: Seated Leg Tucks
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Seated One-Arm Dumbbell Palms-Down Wrist Curl
+  muscle_group_id: forearms
+  equipment: dumbbell
+- name: Seated One-Arm Dumbbell Palms-Up Wrist Curl
+  muscle_group_id: forearms
+  equipment: dumbbell
+- name: Seated One-arm Cable Pulley Rows
+  muscle_group_id: middle back
+  equipment: cable
+- name: Seated Overhead Stretch
+  muscle_group_id: abdominals
+  equipment:
+- name: Seated Palm-Up Barbell Wrist Curl
+  muscle_group_id: forearms
+  equipment: barbell
+- name: Seated Palms-Down Barbell Wrist Curl
+  muscle_group_id: forearms
+  equipment: barbell
+- name: Seated Side Lateral Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Seated Triceps Press
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Seated Two-Arm Palms-Up Low-Pulley Wrist Curl
+  muscle_group_id: forearms
+  equipment: cable
+- name: See-Saw Press (Alternating Side Press)
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Shotgun Row
+  muscle_group_id: lats
+  equipment: cable
+- name: Shoulder Circles
+  muscle_group_id: shoulders
+  equipment:
+- name: Shoulder Press - With Bands
+  muscle_group_id: shoulders
+  equipment: bands
+- name: Shoulder Raise
+  muscle_group_id: shoulders
+  equipment:
+- name: Shoulder Stretch
+  muscle_group_id: shoulders
+  equipment:
+- name: Side-Lying Floor Stretch
+  muscle_group_id: lats
+  equipment:
+- name: Side Bridge
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Side Hop-Sprint
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Side Jackknife
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Side Lateral Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Side Laterals to Front Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Side Leg Raises
+  muscle_group_id: adductors
+  equipment: body only
+- name: Side Lying Groin Stretch
+  muscle_group_id: adductors
+  equipment:
+- name: Side Neck Stretch
+  muscle_group_id: neck
+  equipment:
+- name: Side Standing Long Jump
+  muscle_group_id: quadriceps
+  equipment:
+- name: Side To Side Chins
+  muscle_group_id: lats
+  equipment: other
+- name: Side Wrist Pull
+  muscle_group_id: shoulders
+  equipment:
+- name: Side to Side Box Shuffle
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Single-Arm Cable Crossover
+  muscle_group_id: chest
+  equipment: cable
+- name: Single-Arm Linear Jammer
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Single-Arm Push-Up
+  muscle_group_id: chest
+  equipment: body only
+- name: Single-Cone Sprint Drill
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Single-Leg High Box Squat
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Single-Leg Hop Progression
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Single-Leg Lateral Hop
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Single-Leg Leg Extension
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Single-Leg Stride Jump
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Single Dumbbell Raise
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Single Leg Butt Kick
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Single Leg Glute Bridge
+  muscle_group_id: glutes
+  equipment: body only
+- name: Single Leg Push-off
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Sit-Up
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Sit Squats
+  muscle_group_id: quadriceps
+  equipment:
+- name: Skating
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Sled Drag - Harness
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Sled Overhead Backward Walk
+  muscle_group_id: shoulders
+  equipment: other
+- name: Sled Overhead Triceps Extension
+  muscle_group_id: triceps
+  equipment: other
+- name: Sled Push
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Sled Reverse Flye
+  muscle_group_id: shoulders
+  equipment: other
+- name: Sled Row
+  muscle_group_id: middle back
+  equipment: other
+- name: Sledgehammer Swings
+  muscle_group_id: abdominals
+  equipment: other
+- name: Smith Incline Shoulder Raise
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Smith Machine Behind the Back Shrug
+  muscle_group_id: traps
+  equipment: machine
+- name: Smith Machine Bench Press
+  muscle_group_id: chest
+  equipment: machine
+- name: Smith Machine Bent Over Row
+  muscle_group_id: middle back
+  equipment: machine
+- name: Smith Machine Calf Raise
+  muscle_group_id: calves
+  equipment: machine
+- name: Smith Machine Close-Grip Bench Press
+  muscle_group_id: triceps
+  equipment: machine
+- name: Smith Machine Decline Press
+  muscle_group_id: chest
+  equipment: machine
+- name: Smith Machine Hang Power Clean
+  muscle_group_id: hamstrings
+  equipment: machine
+- name: Smith Machine Hip Raise
+  muscle_group_id: abdominals
+  equipment: machine
+- name: Smith Machine Incline Bench Press
+  muscle_group_id: chest
+  equipment: machine
+- name: Smith Machine Leg Press
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Smith Machine One-Arm Upright Row
+  muscle_group_id: shoulders
+  equipment: machine
+- name: Smith Machine Overhead Shoulder Press
+  muscle_group_id: shoulders
+  equipment: machine
+- name: Smith Machine Pistol Squat
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Smith Machine Reverse Calf Raises
+  muscle_group_id: calves
+  equipment: machine
+- name: Smith Machine Squat
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Smith Machine Stiff-Legged Deadlift
+  muscle_group_id: hamstrings
+  equipment: machine
+- name: Smith Machine Upright Row
+  muscle_group_id: traps
+  equipment: machine
+- name: Smith Single-Leg Split Squat
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Snatch
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Snatch Balance
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Snatch Deadlift
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Snatch Pull
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Snatch Shrug
+  muscle_group_id: traps
+  equipment: barbell
+- name: Snatch from Blocks
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Speed Band Overhead Triceps
+  muscle_group_id: triceps
+  equipment: bands
+- name: Speed Box Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Speed Squats
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Spell Caster
+  muscle_group_id: abdominals
+  equipment: dumbbell
+- name: Spider Crawl
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Spider Curl
+  muscle_group_id: biceps
+  equipment: e-z curl bar
+- name: Spinal Stretch
+  muscle_group_id: middle back
+  equipment:
+- name: Split Clean
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Split Jerk
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Split Jump
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Split Snatch
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Split Squat with Dumbbells
+  muscle_group_id: quadriceps
+  equipment: dumbbell
+- name: Split Squats
+  muscle_group_id: hamstrings
+  equipment:
+- name: Squat Jerk
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Squat with Bands
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Squat with Chains
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Squat with Plate Movers
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Squats - With Bands
+  muscle_group_id: quadriceps
+  equipment: bands
+- name: Stairmaster
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Standing Alternating Dumbbell Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Standing Barbell Calf Raise
+  muscle_group_id: calves
+  equipment: barbell
+- name: Standing Barbell Press Behind Neck
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Standing Bent-Over One-Arm Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Standing Bent-Over Two-Arm Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Standing Biceps Cable Curl
+  muscle_group_id: biceps
+  equipment: cable
+- name: Standing Biceps Stretch
+  muscle_group_id: biceps
+  equipment: other
+- name: Standing Bradford Press
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Standing Cable Chest Press
+  muscle_group_id: chest
+  equipment: cable
+- name: Standing Cable Lift
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Standing Cable Wood Chop
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Standing Calf Raises
+  muscle_group_id: calves
+  equipment: machine
+- name: Standing Concentration Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Standing Dumbbell Calf Raise
+  muscle_group_id: calves
+  equipment: dumbbell
+- name: Standing Dumbbell Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Standing Dumbbell Reverse Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Standing Dumbbell Straight-Arm Front Delt Raise Above Head
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Standing Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Standing Dumbbell Upright Row
+  muscle_group_id: traps
+  equipment: dumbbell
+- name: Standing Elevated Quad Stretch
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Standing Front Barbell Raise Over Head
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Standing Gastrocnemius Calf Stretch
+  muscle_group_id: calves
+  equipment:
+- name: Standing Hamstring and Calf Stretch
+  muscle_group_id: hamstrings
+  equipment: other
+- name: Standing Hip Circles
+  muscle_group_id: abductors
+  equipment: body only
+- name: Standing Hip Flexors
+  muscle_group_id: quadriceps
+  equipment:
+- name: Standing Inner-Biceps Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Standing Lateral Stretch
+  muscle_group_id: abdominals
+  equipment:
+- name: Standing Leg Curl
+  muscle_group_id: hamstrings
+  equipment: machine
+- name: Standing Long Jump
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Standing Low-Pulley Deltoid Raise
+  muscle_group_id: shoulders
+  equipment: cable
+- name: Standing Low-Pulley One-Arm Triceps Extension
+  muscle_group_id: triceps
+  equipment: cable
+- name: Standing Military Press
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Standing Olympic Plate Hand Squeeze
+  muscle_group_id: forearms
+  equipment: other
+- name: Standing One-Arm Cable Curl
+  muscle_group_id: biceps
+  equipment: cable
+- name: Standing One-Arm Dumbbell Curl Over Incline Bench
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Standing One-Arm Dumbbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Standing Overhead Barbell Triceps Extension
+  muscle_group_id: triceps
+  equipment: barbell
+- name: Standing Palm-In One-Arm Dumbbell Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Standing Palms-In Dumbbell Press
+  muscle_group_id: shoulders
+  equipment: dumbbell
+- name: Standing Palms-Up Barbell Behind The Back Wrist Curl
+  muscle_group_id: forearms
+  equipment: barbell
+- name: Standing Pelvic Tilt
+  muscle_group_id: lower back
+  equipment:
+- name: Standing Rope Crunch
+  muscle_group_id: abdominals
+  equipment: cable
+- name: Standing Soleus And Achilles Stretch
+  muscle_group_id: calves
+  equipment:
+- name: Standing Toe Touches
+  muscle_group_id: hamstrings
+  equipment:
+- name: Standing Towel Triceps Extension
+  muscle_group_id: triceps
+  equipment: body only
+- name: Standing Two-Arm Overhead Throw
+  muscle_group_id: shoulders
+  equipment: medicine ball
+- name: Star Jump
+  muscle_group_id: quadriceps
+  equipment: body only
+- name: Step-up with Knee Raise
+  muscle_group_id: glutes
+  equipment: body only
+- name: Step Mill
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Stiff-Legged Barbell Deadlift
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Stiff-Legged Dumbbell Deadlift
+  muscle_group_id: hamstrings
+  equipment: dumbbell
+- name: Stiff Leg Barbell Good Morning
+  muscle_group_id: lower back
+  equipment: barbell
+- name: Stomach Vacuum
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Straight-Arm Dumbbell Pullover
+  muscle_group_id: chest
+  equipment: dumbbell
+- name: Straight-Arm Pulldown
+  muscle_group_id: lats
+  equipment: cable
+- name: Straight Bar Bench Mid Rows
+  muscle_group_id: middle back
+  equipment: barbell
+- name: Straight Raises on Incline Bench
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Stride Jump Crossover
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Sumo Deadlift
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Sumo Deadlift with Bands
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Sumo Deadlift with Chains
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Superman
+  muscle_group_id: lower back
+  equipment: body only
+- name: Supine Chest Throw
+  muscle_group_id: triceps
+  equipment: medicine ball
+- name: Supine One-Arm Overhead Throw
+  muscle_group_id: abdominals
+  equipment: medicine ball
+- name: Supine Two-Arm Overhead Throw
+  muscle_group_id: abdominals
+  equipment: medicine ball
+- name: Suspended Fallout
+  muscle_group_id: abdominals
+  equipment: other
+- name: Suspended Push-Up
+  muscle_group_id: chest
+  equipment: other
+- name: Suspended Reverse Crunch
+  muscle_group_id: abdominals
+  equipment: other
+- name: Suspended Row
+  muscle_group_id: middle back
+  equipment: other
+- name: Suspended Split Squat
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Svend Press
+  muscle_group_id: chest
+  equipment: other
+- name: T-Bar Row with Handle
+  muscle_group_id: middle back
+  equipment: barbell
+- name: Tate Press
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: The Straddle
+  muscle_group_id: hamstrings
+  equipment:
+- name: Thigh Abductor
+  muscle_group_id: abductors
+  equipment: machine
+- name: Thigh Adductor
+  muscle_group_id: adductors
+  equipment: machine
+- name: Tire Flip
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Toe Touchers
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Torso Rotation
+  muscle_group_id: abdominals
+  equipment: exercise ball
+- name: Trail Running/Walking
+  muscle_group_id: quadriceps
+  equipment:
+- name: Trap Bar Deadlift
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Tricep Dumbbell Kickback
+  muscle_group_id: triceps
+  equipment: dumbbell
+- name: Tricep Side Stretch
+  muscle_group_id: triceps
+  equipment:
+- name: Triceps Overhead Extension with Rope
+  muscle_group_id: triceps
+  equipment: cable
+- name: Triceps Pushdown
+  muscle_group_id: triceps
+  equipment: cable
+- name: Triceps Pushdown - Rope Attachment
+  muscle_group_id: triceps
+  equipment: cable
+- name: Triceps Pushdown - V-Bar Attachment
+  muscle_group_id: triceps
+  equipment: cable
+- name: Triceps Stretch
+  muscle_group_id: triceps
+  equipment:
+- name: Tuck Crunch
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Two-Arm Dumbbell Preacher Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Two-Arm Kettlebell Clean
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Two-Arm Kettlebell Jerk
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Two-Arm Kettlebell Military Press
+  muscle_group_id: shoulders
+  equipment: kettlebells
+- name: Two-Arm Kettlebell Row
+  muscle_group_id: middle back
+  equipment: kettlebells
+- name: Underhand Cable Pulldowns
+  muscle_group_id: lats
+  equipment: cable
+- name: Upper Back-Leg Grab
+  muscle_group_id: hamstrings
+  equipment:
+- name: Upper Back Stretch
+  muscle_group_id: middle back
+  equipment:
+- name: Upright Barbell Row
+  muscle_group_id: shoulders
+  equipment: barbell
+- name: Upright Cable Row
+  muscle_group_id: traps
+  equipment: cable
+- name: Upright Row - With Bands
+  muscle_group_id: traps
+  equipment: bands
+- name: Upward Stretch
+  muscle_group_id: shoulders
+  equipment:
+- name: V-Bar Pulldown
+  muscle_group_id: lats
+  equipment: cable
+- name: V-Bar Pullup
+  muscle_group_id: lats
+  equipment: body only
+- name: Vertical Swing
+  muscle_group_id: hamstrings
+  equipment: dumbbell
+- name: Walking, Treadmill
+  muscle_group_id: quadriceps
+  equipment: machine
+- name: Weighted Ball Hyperextension
+  muscle_group_id: lower back
+  equipment: exercise ball
+- name: Weighted Ball Side Bend
+  muscle_group_id: abdominals
+  equipment: exercise ball
+- name: Weighted Bench Dip
+  muscle_group_id: triceps
+  equipment: other
+- name: Weighted Crunches
+  muscle_group_id: abdominals
+  equipment: medicine ball
+- name: Weighted Jump Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Weighted Pull Ups
+  muscle_group_id: lats
+  equipment: other
+- name: Weighted Sissy Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Weighted Sit-Ups - With Bands
+  muscle_group_id: abdominals
+  equipment: other
+- name: Weighted Squat
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Wide-Grip Barbell Bench Press
+  muscle_group_id: chest
+  equipment: barbell
+- name: Wide-Grip Decline Barbell Bench Press
+  muscle_group_id: chest
+  equipment: barbell
+- name: Wide-Grip Decline Barbell Pullover
+  muscle_group_id: chest
+  equipment: barbell
+- name: Wide-Grip Lat Pulldown
+  muscle_group_id: lats
+  equipment: cable
+- name: Wide-Grip Pulldown Behind The Neck
+  muscle_group_id: lats
+  equipment: cable
+- name: Wide-Grip Rear Pull-Up
+  muscle_group_id: lats
+  equipment: body only
+- name: Wide-Grip Standing Barbell Curl
+  muscle_group_id: biceps
+  equipment: barbell
+- name: Wide Stance Barbell Squat
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Wide Stance Stiff Legs
+  muscle_group_id: hamstrings
+  equipment: barbell
+- name: Wind Sprints
+  muscle_group_id: abdominals
+  equipment: body only
+- name: Windmills
+  muscle_group_id: abductors
+  equipment:
+- name: World's Greatest Stretch
+  muscle_group_id: hamstrings
+  equipment:
+- name: Wrist Circles
+  muscle_group_id: forearms
+  equipment: body only
+- name: Wrist Roller
+  muscle_group_id: forearms
+  equipment: other
+- name: Wrist Rotations with Straight Bar
+  muscle_group_id: forearms
+  equipment: barbell
+- name: Yoke Walk
+  muscle_group_id: quadriceps
+  equipment: other
+- name: Zercher Squats
+  muscle_group_id: quadriceps
+  equipment: barbell
+- name: Zottman Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
+- name: Zottman Preacher Curl
+  muscle_group_id: biceps
+  equipment: dumbbell
