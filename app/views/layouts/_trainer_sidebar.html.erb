@@ -3,7 +3,7 @@
     <%= image_tag current_user.avatar, class: 'img-thumbnail rounded-circle mb-5 mt-4' %>
     <ul class="navbar-nav flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
       <li class="nav-item">
-        <%= link_to trainers_client_path(current_user),
+        <%= link_to trainers_profile_path,
                     class: "d-flex align-middle px-0 nav-link #{active_nav_item('trainer_profile')}",
                     style: config_helper(:side_nav_text_color) do
         %>

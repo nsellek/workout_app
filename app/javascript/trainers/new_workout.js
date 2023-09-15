@@ -13,7 +13,7 @@ export const NewWorkout = class {
       source: '/workouts',
       minLenght: 3,
       classes: {
-        "ui-autocomplete": "dropdown-menu",
+        "ui-autocomplete": "dropdown-menu autocomplete-dropdown",
         "ui-menu-item-wrapper": "dropdown-item",
         "ui-menu-item": ""
       },

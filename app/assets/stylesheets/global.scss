@@ -21,3 +21,9 @@ a {
     opacity: var(--a-disabled-opacity);
   }
 }
+
+.autocomplete-dropdown {
+  max-height: 320px;
+  overflow-x: hidden;
+
+}
