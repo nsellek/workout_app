@@ -6,4 +6,6 @@ class WorkoutWeek < ApplicationRecord
   belongs_to :client
 
   accepts_nested_attributes_for :workout_days, allow_destroy: true
+
+  scope :active, -> { where(deleted: false) }
 end

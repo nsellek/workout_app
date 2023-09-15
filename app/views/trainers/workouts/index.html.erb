@@ -38,11 +38,19 @@
                   <div class="card-footer">
                     <%= link_to 'View',
                                 trainers_client_workout_week_path(@client, week),
-                                class: 'btn btn-primary'
+                                class: 'btn btn-primary mt-1'
                     %>
                     <%= link_to 'Edit',
                                 edit_trainers_client_workout_path(@client, week),
-                                class: 'btn btn-warning'
+                                class: 'btn btn-warning mt-1'
+                    %>
+                    <%= link_to 'Delete',
+                                trainers_client_workout_path(@client, week),
+                                class: 'btn btn-danger mt-1',
+                                data: {
+                                  confirm: "Delete #{week.title(@week_count - index)}?"
+                                },
+                                method: :delete
                     %>
                   </div>
                 </div>

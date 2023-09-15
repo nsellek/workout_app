@@ -1,13 +1,19 @@
 module Trainers
   class WorkoutsController < ApplicationController
     before_action :set_client
-    before_action :set_workout, only: [:edit, :show]
+    before_action :set_workout, only: [:edit, :show, :destroy]
 
     add_breadcrumb 'Clients', :trainers_clients
 
     def index
       add_breadcrumb 'Workouts'
-      @workout_weeks = presenter(@client.workout_weeks.includes(workout_days: [:exercises]).reverse_order)
+      @workout_weeks = presenter(
+        @client
+          .workout_weeks
+          .active
+          .includes(workout_days: [:exercises])
+          .reverse_order
+      )
       @week_count = @workout_weeks.count
     end
 
@@ -23,6 +29,12 @@ module Trainers
     def edit
       add_breadcrumb 'Wrokouts', trainers_client_workouts_path(@client)
       add_breadcrumb "Edit #{@workout_week.name}"
+    end
+
+    def destroy
+      @workout_week.update(deleted: true)
+
+      redirect_to trainers_client_workouts_path(@client)
     end
 
     private
