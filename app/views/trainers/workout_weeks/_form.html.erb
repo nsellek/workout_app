@@ -19,7 +19,10 @@
                   Day <span class="day_count"><%= cf.options[:child_index] + 1 %></span>
                 </h5>
                 <span class="text-danger">
-                  <%= link_to 'Delete', '#!', class: 'remove-day link-danger ps-3' %>
+                  <%= link_to 'Delete',
+                              '#!',
+                              class: "remove-day link-danger ps-3 #{'disabled' if cf.object.completed?}"
+                  %>
                 </span>
                 <div class="exercises">
                   <%= cf.fields_for :exercises do |ef| %>
@@ -37,7 +40,8 @@
                           <div class="form-floating">
                             <%= ef.text_field :name,
                                               class: 'form-control autocomplete',
-                                              placeholder: 'Exercise Name'
+                                              placeholder: 'Exercise Name',
+                                              disabled: cf.object.completed?
                             %>
                             <%= ef.label :name %>
                           </div>
@@ -46,7 +50,8 @@
                           <div class="form-floating">
                             <%= ef.number_field :sets,
                                                 class: 'form-control',
-                                                placeholder: 'Sets'
+                                                placeholder: 'Sets',
+                                                disabled: cf.object.completed?
                             %>
                             <%= ef.label :sets %>
                           </div>
@@ -55,7 +60,8 @@
                           <div class="form-floating">
                             <%= ef.number_field :reps,
                                                 class: 'form-control',
-                                                placeholder: 'Reps'
+                                                placeholder: 'Reps',
+                                                disabled: cf.object.completed?
                             %>
                             <%= ef.label :reps %>
                           </div>
@@ -64,7 +70,8 @@
                           <div class="form-floating">
                             <%= ef.number_field :weight,
                                                 class: 'form-control',
-                                                placeholder: 'Weight'
+                                                placeholder: 'Weight',
+                                                disabled: cf.object.completed?
                             %>
                             <%= ef.label :weight %>
                           </div>
@@ -73,14 +80,17 @@
                           <div class="form-floating">
                             <%= ef.text_field :notes,
                                               class: 'form-control',
-                                              placeholder: 'Notes'
+                                              placeholder: 'Notes',
+                                              disabled: cf.object.completed?
                             %>
                             <%= ef.label :notes %>
                           </div>
                         </div>
                         <div class="col col-12 col-md-1 order-sm-4 order-5">
                           <div class="d-grid">
-                            <%= link_to '#!', class: 'btn btn-danger py-3 remove-workout' do %>
+                            <%= link_to '#!',
+                                        class: "btn btn-danger py-3 remove-workout #{'disabled' if cf.object.completed?}" do
+                            %>
                               <i class="fa-regular fa-trash-can"></i>
                             <% end %>
                           </div>
@@ -89,7 +99,7 @@
                     </div>
                   <% end %>
                 </div>
-                <%= link_to 'Add exercise', '#!', class: 'btn btn-outline-primary add-exercise' %>
+                <%= link_to 'Add exercise', '#!', class: "btn btn-outline-primary add-exercise #{'disabled' if cf.object.completed?}" %>
               </div>
             <% end %>
           </div>

@@ -12,3 +12,12 @@
     opacity: 0.75;
   }
 }
+
+a {
+  --a-disabled-opacity: 0.65;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: var(--a-disabled-opacity);
+  }
+}
