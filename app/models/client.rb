@@ -15,7 +15,12 @@ class Client < Account
   def current_workout_day
     @current_workout_day ||= workout_days
       .includes(exercises: :workout_sets)
-      .where(completed_at: [Date.today, nil])
+      .where(
+        completed_at: [Date.today, nil],
+        workout_weeks: {
+          deleted: false
+        }
+      )
       .first
   end
 
