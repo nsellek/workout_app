@@ -21,5 +21,7 @@ module WorkoutApp
     config.action_view.field_error_proc = proc do |html_tag, _instance|
       html_tag.gsub('form-control', 'form-control is-invalid').html_safe
     end
+
+    config.beginning_of_week = :sunday
   end
 end

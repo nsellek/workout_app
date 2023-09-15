@@ -60,7 +60,7 @@ module Trainers
             :_destroy,
             exercises_attributes: [
               :id,
-              :name,
+              :workout_id,
               :sets,
               :reps,
               :weight,

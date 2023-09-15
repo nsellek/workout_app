@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_07_230354) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_15_003333) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,7 +39,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_230354) do
     t.bigint "workout_day_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "workout_id"
     t.index ["workout_day_id"], name: "index_exercises_on_workout_day_id"
+    t.index ["workout_id"], name: "index_exercises_on_workout_id"
   end
 
   create_table "invite_tokens", force: :cascade do |t|

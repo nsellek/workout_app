@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/invite/:token', to: 'invites#show'
 
   resources :accounts, only: [:index, :create, :show]
+  resources :workouts, only: [:index]
 
   namespace :clients do
     get '/dashboard', to: 'dashboards#dashboard'

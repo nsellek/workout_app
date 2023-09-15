@@ -9,6 +9,27 @@ export const NewWorkout = class {
     this.daysContainer = document.querySelector('.days');
     this.deleteExerciseBtns = document.querySelectorAll('.remove-workout');
     this.deleteDayBtns = document.querySelectorAll('.remove-day');
+    this.autocompleteOptions = {
+      source: '/workouts',
+      minLenght: 3,
+      classes: {
+        "ui-autocomplete": "dropdown-menu",
+        "ui-menu-item-wrapper": "dropdown-item",
+        "ui-menu-item": ""
+      },
+      change: (e, ui) => {
+        if (ui.item === null)
+          e.target.value = ""
+      },
+      select: (e, ui) => {
+        e.preventDefault();
+        let $this = $(e.target),
+          workout = ui.item
+
+        $this.val(workout.label)
+        $this.parents('.exercises').find('.workout_id').val(workout.value)
+      }
+    }
   }
 
   bindAddExerciseBtns() {
@@ -40,10 +61,15 @@ export const NewWorkout = class {
     })
   }
 
+  bindWorkoutSearch() {
+    $('.autocomplete').autocomplete(this.autocompleteOptions)
+  }
+
   addExercise(addBtn, exercisesContainer) {
     let exerciseNode = this.exerciseTemplate.content.cloneNode(true),
         inputFields = exerciseNode.querySelectorAll('input'),
         labelFields = exerciseNode.querySelectorAll('label'),
+        $autoComplete = $(exerciseNode.querySelector('.autocomplete')),
         exerciseCount = exercisesContainer.querySelectorAll('.exercise').length,
         dayCount = addBtn.closest('.day').dataset.count;
 
@@ -69,12 +95,14 @@ export const NewWorkout = class {
       this.deleteExercise(event.target)
     })
     exercisesContainer.append(exerciseNode);
+    $autoComplete.autocomplete(this.autocompleteOptions);
   }
 
   addDay() {
     let dayNode = this.dayTemplate.content.cloneNode(true),
         inputFields = dayNode.querySelectorAll('input'),
         labelFields = dayNode.querySelectorAll('label'),
+        $autoComplete = $(dayNode.querySelector('.autocomplete')),
         dayCount = parseInt(this.daysContainer.querySelector('.day:last-of-type')?.dataset?.count) || 0,
         plainDayCount = (dayCount + 1);
 
@@ -110,6 +138,7 @@ export const NewWorkout = class {
       this.deleteDay(event.target)
     })
     this.daysContainer.append(dayNode);
+    $autoComplete.autocomplete(this.autocompleteOptions);
   }
 
   deleteExercise(btn) {
@@ -147,6 +176,7 @@ export const NewWorkout = class {
     this.bindAddDayBtn();
     this.bindDeleteExerciseBtns();
     this.bindDeleteDayBtns();
+    this.bindWorkoutSearch();
   }
 }
 
