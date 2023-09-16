@@ -9,7 +9,7 @@ class ConfigHandler
   ].freeze
   CONFIG_DEFAULTS = {
     sets_reps: 'short',
-    app_name: 'Workout App',
+    app_name: 'Iron PT',
     nav_color: '#212529',
     side_nav_color: '#6c757d',
     nav_text_color: '#ffffff',
