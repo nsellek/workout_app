@@ -3,14 +3,13 @@ module Clients
     before_action :set_workout_day, only: :complete
 
     def index
-      if params[:day_id]
-        @workout_day = presenter(current_account.workout_days.find(params[:day_id]))
-        @workout_week = current_account.current_workout_week
-        @view_only = @workout_day.id != current_account.current_workout_day.id
-      else
-        @workout_day = presenter(current_account.current_workout_day)
-        @workout_week = current_account.current_workout_week
-      end
+      @workout_day = if params[:day_id]
+                       presenter(current_account.workout_days.find(params[:day_id]))
+                     else
+                       presenter(current_account.current_workout_day)
+                     end
+      @workout_week = @workout_day.workout_week
+      @view_only = @workout_day.id != current_account.current_workout_day&.id
     end
 
     def complete
