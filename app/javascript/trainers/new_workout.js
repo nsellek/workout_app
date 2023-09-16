@@ -9,6 +9,7 @@ export const NewWorkout = class {
     this.daysContainer = document.querySelector('.days');
     this.deleteExerciseBtns = document.querySelectorAll('.remove-workout');
     this.deleteDayBtns = document.querySelectorAll('.remove-day');
+    this.clientChoiceBtns = document.querySelectorAll('.client-choice-toggle');
     this.autocompleteOptions = {
       source: '/workouts',
       minLenght: 3,
@@ -65,6 +66,12 @@ export const NewWorkout = class {
     $('.autocomplete').autocomplete(this.autocompleteOptions)
   }
 
+  bindClientChoiceBtn() {
+    addEventListener(this.clientChoiceBtns, 'click', event => {
+      this.toggleClientChoice(event.target);
+    })
+  }
+
   addExercise(addBtn, exercisesContainer) {
     let exerciseNode = this.exerciseTemplate.content.cloneNode(true),
         inputFields = exerciseNode.querySelectorAll('input'),
@@ -93,6 +100,9 @@ export const NewWorkout = class {
     exerciseNode.querySelector('.remove-workout').addEventListener('click', event => {
       stopDefault(event)
       this.deleteExercise(event.target)
+    })
+    exerciseNode.querySelector('.client-choice-toggle').addEventListener('click', event => {
+      this.toggleClientChoice(event.target);
     })
     exercisesContainer.append(exerciseNode);
     $autoComplete.autocomplete(this.autocompleteOptions);
@@ -137,6 +147,9 @@ export const NewWorkout = class {
       stopDefault(event)
       this.deleteDay(event.target)
     })
+    dayNode.querySelector('.client-choice-toggle').addEventListener('click', event => {
+      this.toggleClientChoice(event.target);
+    })
     this.daysContainer.append(dayNode);
     $autoComplete.autocomplete(this.autocompleteOptions);
   }
@@ -171,12 +184,23 @@ export const NewWorkout = class {
     })
   }
 
+  toggleClientChoice(checkbox) {
+    let exercise = checkbox.closest('.exercise'),
+        nameField = exercise.querySelector('.workout-name'),
+        muscleGroupField = exercise.querySelector('.muscle-group');
+
+    nameField.classList.toggle('d-none', checkbox.checked);
+    muscleGroupField.classList.toggle('d-none', !checkbox.checked);
+    console.log(exercise);
+  }
+
   init() {
     this.bindAddExerciseBtns();
     this.bindAddDayBtn();
     this.bindDeleteExerciseBtns();
     this.bindDeleteDayBtns();
     this.bindWorkoutSearch();
+    this.bindClientChoiceBtn();
   }
 }
 

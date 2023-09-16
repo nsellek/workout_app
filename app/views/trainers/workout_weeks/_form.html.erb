@@ -29,21 +29,39 @@
                     <div class="exercise">
                       <%= ef.hidden_field :id, class: 'exercise-id' if ef.object.id %>
                       <%= ef.hidden_field :workout_id, class: 'workout_id' %>
-                      <h6>
+                      <h6 class="d-inline-block">
                         Exercise
                         <span class="workout_count">
                           <%= ef.options[:child_index] + 1 %>
                         </span>
                       </h6>
+                      <div class="form-check d-inline-block ms-2">
+                        <%= ef.check_box :client_choice,
+                                          class: 'form-check-input client-choice-toggle',
+                                          disabled: cf.object.completed?
+                        %>
+                        <%= ef.label :client_choice, 'Client Choice', class: 'form-check-label' %>
+                      </div>
                       <div class="row mb-3 g-3">
                         <div class="col col-12 col-md-5 order-0">
-                          <div class="form-floating">
+                          <div class="form-floating workout-name">
                             <%= ef.text_field :name,
                                               class: 'form-control autocomplete',
                                               placeholder: 'Exercise Name',
                                               disabled: cf.object.completed?
                             %>
                             <%= ef.label :name %>
+                          </div>
+                          <div class="form-floating muscle-group d-none">
+                            <%= ef.select :muscle_group_id,
+                                          options_for_select(@muscle_groups),
+                                          {},
+                                          {
+                                            class: 'form-select form-control',
+                                            disabled: cf.object.completed?
+                                          }
+                            %>
+                            <%= ef.label :muscle_group_id, "Muscle Group" %>
                           </div>
                         </div>
                         <div class="col col-4 col-md-2 order-1">
@@ -120,12 +138,25 @@
       id="workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_workout_id"
       class="workout_id"
     >
-    <h6>
+    <h6 class="d-inline-block">
       Exercise <span class="workout_count"></span>
     </h6>
+    <div class="form-check d-inline-block ms-2">
+      <%= check_box_tag "workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][client_choice]",
+                        '1',
+                        false,
+                        class: 'form-check-input client-choice-toggle',
+                        id: "workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_client_choice"
+      %>
+      <%= label_tag "workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][client_choice]",
+                    'Client Choice',
+                    class: 'form-check-label',
+                    id: "workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_client_choice"
+      %>
+    </div>
     <div class="row mb-3 g-3">
       <div class="col col-12 col-md-5 order-0">
-        <div class="form-floating">
+        <div class="form-floating workout-name">
           <input
             class="form-control autocomplete"
             placeholder="Exercise Name"
@@ -138,6 +169,17 @@
           >
             Name
           </label>
+        </div>
+        <div class="form-floating muscle-group d-none">
+          <%= select_tag 'workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][muscle_group_id]',
+                          options_for_select(@muscle_groups),
+                          class: 'form-select form-control',
+                          id: 'workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_muscle_group_id'
+          %>
+          <%= label_tag 'workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][muscle_group_id]',
+                        'Muscle Group',
+                        id: 'workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_muscle_group_id'
+          %>
         </div>
       </div>
       <div class="col col-4 col-md-2 order-1">
@@ -232,12 +274,25 @@
           id="workout_week_workout_days_attributes_{day}_exercises_attributes_0_workout_id"
           class="workout_id"
         >
-        <h6>
+        <h6 class="d-inline-block">
           Exercise <span class="workout_count">1</span>
         </h6>
+        <div class="form-check d-inline-block ms-2">
+          <%= check_box_tag "workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][client_choice]",
+                            '1',
+                            false,
+                            class: 'form-check-input client-choice-toggle',
+                            id: "workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_client_choice"
+          %>
+          <%= label_tag "workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][client_choice]",
+                        'Client Choice',
+                        class: 'form-check-label',
+                        id: "workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_client_choice"
+          %>
+        </div>
         <div class="row mb-3 g-3">
           <div class="col col-12 col-md-5 order-0">
-            <div class="form-floating">
+            <div class="form-floating workout-name">
               <input
                 class="form-control autocomplete"
                 placeholder="Exercise Name"
@@ -250,6 +305,17 @@
               >
                 Name
               </label>
+            </div>
+            <div class="form-floating muscle-group d-none">
+              <%= select_tag 'workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][muscle_group_id]',
+                              options_for_select(@muscle_groups),
+                              class: 'form-select form-control',
+                              id: 'workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_muscle_group_id'
+              %>
+              <%= label_tag 'workout_week[workout_days_attributes][{day}][exercises_attributes][{exercise}][muscle_group_id]',
+                            'Muscle Group',
+                            id: 'workout_week_workout_days_attributes_{day}_exercises_attributes_{exercise}_muscle_group_id'
+              %>
             </div>
           </div>
           <div class="col col-4 col-md-2 order-1">

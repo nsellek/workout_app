@@ -6,4 +6,8 @@ class MuscleGroup < ApplicationRecord
       hsh[group.name.downcase] = group
     end
   end
+
+  def self.for_dropdown
+    @for_dropdown ||= all.map { |workout| [workout.name, workout.id] }
+  end
 end

@@ -21,7 +21,8 @@ module Trainers
       add_breadcrumb 'Wrokouts', trainers_client_workouts_path(@client)
       add_breadcrumb 'New'
       @workout_week = presenter(current_account.workout_weeks.new(client_id: @client.id))
-      @week_count = current_account.workout_weeks.count
+      @week_count = current_account.workout_weeks.active.count
+      @muscle_groups = MuscleGroup.for_dropdown
       workout_day = @workout_week.workout_days.build
       workout_day.exercises.build
     end
@@ -29,6 +30,7 @@ module Trainers
     def edit
       add_breadcrumb 'Wrokouts', trainers_client_workouts_path(@client)
       add_breadcrumb "Edit #{@workout_week.name}"
+      @muscle_groups = MuscleGroup.for_dropdown
     end
 
     def destroy

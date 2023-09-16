@@ -65,6 +65,8 @@ module Trainers
               :reps,
               :weight,
               :notes,
+              :client_choice,
+              :muscle_group_id,
               :_destroy
             ]
           ]
