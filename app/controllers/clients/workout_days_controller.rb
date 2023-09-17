@@ -9,7 +9,7 @@ module Clients
                        presenter(current_account.current_workout_day)
                      end
       @workout_week = @workout_day&.workout_week
-      @view_only = @workout_day.id != current_account.current_workout_day&.id
+      @view_only = @workout_day&.id != current_account.current_workout_day&.id
     end
 
     def complete
