@@ -36,8 +36,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem 'debug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv'
+  gem 'factory_bot_rails'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -49,6 +51,9 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'faker'
+  gem 'rack_session_access'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rspec-pride'
 end
