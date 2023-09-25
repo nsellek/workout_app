@@ -10,7 +10,7 @@
           <h3>
             Workout Weeks
             <%= link_to 'Add Week',
-                        new_trainers_client_workout_path(@client),
+                        new_trainers_client_workout_week_path(@client),
                         class: 'btn btn-success float-end'
             %>
           </h3>
@@ -41,11 +41,11 @@
                                 class: 'btn btn-primary mt-1'
                     %>
                     <%= link_to 'Edit',
-                                edit_trainers_client_workout_path(@client, week),
+                                edit_trainers_client_workout_week_path(@client, week),
                                 class: 'btn btn-warning mt-1'
                     %>
                     <%= link_to 'Delete',
-                                trainers_client_workout_path(@client, week),
+                                trainers_client_workout_week_path(@client, week),
                                 class: 'btn btn-danger mt-1',
                                 data: {
                                   confirm: "Delete #{week.title(@week_count - index)}?"

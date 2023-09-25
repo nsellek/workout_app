@@ -43,7 +43,7 @@ Rails.application.routes.draw do
 
     resources :clients, only: [:index, :show, :new] do
       resources :workouts, only: [:index, :show, :new, :edit, :destroy]
-      resources :workout_weeks, only: [:create, :update, :show]
+      resources :workout_weeks
     end
   end
 end
