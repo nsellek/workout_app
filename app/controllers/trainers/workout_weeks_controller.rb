@@ -32,9 +32,9 @@ module Trainers
 
       if @workout_week.save
         flash[:notice] = 'Week successfully created!'
-        redirect_to trainers_client_workouts_path(@client)
+        redirect_to trainers_client_workout_weeks_path(@client)
       else
-        render action: :new, controller: :workouts
+        render action: :new
       end
     end
 
@@ -45,25 +45,27 @@ module Trainers
     end
 
     def update
-      @workout_week = current_account.workout_weeks.find(params[:id])
+      @workout_week = presenter(current_account.workout_weeks.find(params[:id]))
 
       if @workout_week.update(workout_week_params)
         flash[:notice] = 'Week successfully updated!'
-        redirect_to trainers_client_workouts_path(@client)
+        redirect_to trainers_client_workout_weeks_path(@client)
       else
-        render action: :edit, controller: :workouts
+        @muscle_groups = MuscleGroup.for_dropdown
+        flash[:notice] = @workout_week.errors.full_messages
+        render action: :edit
       end
     end
 
     def show
-      add_breadcrumb 'Workouts', trainers_client_workouts_path(@client)
+      add_breadcrumb 'Workouts', trainers_client_workout_weeks_path(@client)
       add_breadcrumb @workout_week.name
     end
 
     def destroy
       @workout_week.update(deleted: true)
 
-      redirect_to trainers_client_workouts_path(@client)
+      redirect_to trainers_client_workout_weeks_path(@client)
     end
 
     private
@@ -75,7 +77,7 @@ module Trainers
     def set_workout_week
       @workout_week = presenter(
         WorkoutWeek
-          .includes(workout_days: [exercises: :workout_sets])
+          .display_includes
           .find_by(
             trainer_id: current_account.id,
             client_id: @client.id,

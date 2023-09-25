@@ -9,6 +9,10 @@ class ExercisePresenter < BasePresenter
     end
   end
 
+  def name
+    workout&.name || object.name || user_choice_workout
+  end
+
   private
 
   def short_sets_reps
@@ -23,5 +27,9 @@ class ExercisePresenter < BasePresenter
     return "#{sets} sets" if reps.blank?
 
     "(#{sets} sets of #{reps}#{" @ #{weight}lbs" if weight.present?})"
+  end
+
+  def user_choice_workout
+    "#{muscle_group.name} of choice"
   end
 end

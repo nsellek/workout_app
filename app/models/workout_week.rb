@@ -8,4 +8,8 @@ class WorkoutWeek < ApplicationRecord
   accepts_nested_attributes_for :workout_days, allow_destroy: true
 
   scope :active, -> { where(deleted: false) }
+
+  def self.display_includes
+    includes(workout_days: [exercises: [:workout_sets, :muscle_group, :workout]])
+  end
 end

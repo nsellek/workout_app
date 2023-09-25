@@ -41,6 +41,8 @@ Rails.application.routes.draw do
 
     resources :configurations, only: [:index, :update]
 
+    resources :workouts, except: [:destroy]
+
     resources :clients, only: [:index, :show, :new] do
       resources :workouts, only: [:index, :show, :new, :edit, :destroy]
       resources :workout_weeks

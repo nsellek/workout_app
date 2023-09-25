@@ -15,4 +15,8 @@ class WorkoutWeekPresenter < BasePresenter
   def days
     workout_days
   end
+
+  def workout_days
+    @workout_days ||= WorkoutDayPresenter.from_collection(object.workout_days)
+  end
 end

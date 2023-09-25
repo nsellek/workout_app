@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Pagy::Frontend
+
   def active_nav_item(page)
     return 'active' if @active_page == page
     return 'active' if @active_sidenav == page

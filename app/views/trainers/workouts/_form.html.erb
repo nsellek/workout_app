@@ -1,0 +1,38 @@
+<div class="row gy-2 gy-md-4">
+  <div class="col-12">
+    <div class="shadow card p-2">
+      <div class="card-body">
+        <%= form_for [:trainers, workout] do |f| %>
+          <div class="row">
+            <div class="col-5">
+              <div class="form-floating">
+                <%= f.text_field :name,
+                                  class: 'form-control',
+                                  placeholder: 'Name',
+                                  requried: true
+                %>
+                <%= f.label :name %>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-floating">
+                <%= f.select :muscle_group_id,
+                                  options_for_select(muscle_groups, f.object.muscle_group_id),
+                                  {},
+                                  {
+                                    class: 'form-select form-control',
+                                    requried: true
+                                  }
+                %>
+                <%= f.label :muscle_group_id, 'Muscle Group' %>
+              </div>
+            </div>
+            <div class="col-3 btn-group">
+              <%= f.submit class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

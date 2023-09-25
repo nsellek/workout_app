@@ -25,5 +25,10 @@ a {
 .autocomplete-dropdown {
   max-height: 320px;
   overflow-x: hidden;
+}
 
+.pagy-bootstrap-nav {
+  .pagination {
+    justify-content: center;
+  }
 }

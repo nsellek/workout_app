@@ -1,0 +1,20 @@
+<div class="row flex-nowrap">
+  <%= render 'layouts/trainer_sidebar' unless browser.mobile? %>
+
+  <div class="col py-3">
+    <%= breadcrumbs %>
+
+    <div class="row mt-md-5 mt-1">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <h3>Edit Custom Workout</h3>
+        </div>
+
+        <%= render 'form',
+                    workout: @workout,
+                    muscle_groups: @muscle_groups
+        %>
+      </div>
+    </div>
+  </div>
+</div>

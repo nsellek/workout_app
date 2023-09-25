@@ -3,6 +3,7 @@ class Trainer < Account
   has_many :clients, through: :trainer_clients
   has_many :workout_weeks
   has_many :workout_days, through: :workout_weeks
+  has_many :workouts
 
   has_one :invite_token
   has_one :configuration
