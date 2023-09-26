@@ -16,6 +16,7 @@ import 'edit_workout'
 
 // Clients JS
 import 'add_set'
+import 'pick_exercise'
 // import 'clients'
 
 document.addEventListener('turbo:load', () => {

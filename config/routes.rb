@@ -25,7 +25,7 @@ Rails.application.routes.draw do
       member do
         post :complete
       end
-      resources :exercises, only: [] do
+      resources :exercises, only: [:edit, :update] do
         resources :workout_sets, except: :index do
           member do
             post :repeat

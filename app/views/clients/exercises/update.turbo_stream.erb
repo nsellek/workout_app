@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "exercise-#{@exercise.id}" do %>
+  <%= render 'clients/workout_days/card', exercise: @exercise, view_only: false %>
+<% end %>

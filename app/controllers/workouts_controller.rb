@@ -6,7 +6,9 @@ class WorkoutsController < ApplicationController
   def index
     @workouts = if params[:term]
                   term = params[:term].split.join('%').downcase
-                  Workout.where('lower(name) LIKE ?', "%#{term}%")
+                  workouts = Workout.where('lower(name) LIKE ?', "%#{term}%")
+                  workouts = workouts.where(muscle_group_id: params[:muscle_group_id]) if params[:muscle_group_id]
+                  workouts
                 else
                   Workout.none
                 end

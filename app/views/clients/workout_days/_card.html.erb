@@ -1,0 +1,45 @@
+<div id="exercise-<%= exercise.id %>" class="col-12 mb-3">
+  <div class="shadow card p2">
+    <div class="card-header">
+      <p class="card-title">
+        <span class="float-start">
+          <%= exercise.name %><br>
+          <span class="subtitle text-danger"><%= exercise.notes %></span>
+        </span>
+        <span class="float-end text-muted"><%= exercise.sets_reps(settings) %></span>
+      </p>
+    </div>
+
+    <div class="card-body p-0">
+      <ul id="sets-<%= exercise.id %>" class="list-group list-group-flush">
+        <%= render exercise.workout_sets, view_only: view_only %>
+      </ul>
+    </div>
+    <% unless view_only %>
+      <div class="card-footer text-center">
+        <% if exercise.client_choice && exercise.workout_id.blank? %>
+          <div class="btn-group w-100">
+            <%= link_to 'Pick Workout',
+                        edit_clients_exercise_path(exercise),
+                        class: 'btn btn-outline-success',
+                        data: {
+                          turbo_frame: 'modal'
+                        }
+            %>
+          </div>
+        <% else %>
+          <div class="btn-group w-100">
+              <%= link_to 'Add Set',
+                          new_clients_exercise_workout_set_path(exercise),
+                          class: 'btn btn-outline-primary',
+                          data: {
+                            turbo_frame: 'modal'
+                          }
+              %>
+            <%#= link_to 'Volume', '#!', class: 'btn btn-outline-primary' %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
