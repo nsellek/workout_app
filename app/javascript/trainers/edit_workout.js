@@ -1,5 +1,5 @@
-import { defaultInit, stopDefault, addEventListener } from "utils";
-import { NewWorkout } from 'new_workout'
+import { defaultInit } from "utils";
+import { NewWorkout } from 'trainers/new_workout'
 
 const EditWorkout = class extends NewWorkout {
   constructor() {
@@ -37,7 +37,7 @@ const EditWorkout = class extends NewWorkout {
     input.setAttribute('type', 'hidden');
     input.setAttribute('name', idField.getAttribute('name').replace('id', '_destroy'));
     input.setAttribute('value', 1);
-    
+
     container.append(input)
   }
 }

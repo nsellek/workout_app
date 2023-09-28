@@ -1,0 +1,25 @@
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4 placeholder">
+
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= widget.name %></h5>
+        <p class="card-text">
+          <%= widget.description %>
+        </p>
+        <p class="card-text">
+          <%= button_tag 'Add',
+                          type: :button,
+                          class: 'btn btn-primary stretched-link add-widget',
+                          disabled: disabled,
+                          data: {
+                            widget_id: widget.id
+                          }
+          %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

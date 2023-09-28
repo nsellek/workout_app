@@ -3,6 +3,15 @@
     <%= image_tag client.avatar, class: 'img-thumbnail rounded-circle mb-5 mt-4' %>
     <ul class="navbar-nav flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
       <li class="nav-item">
+        <%= link_to trainers_client_dashboard_path(client),
+                    class: "d-flex align-middle px-0 nav-link #{active_nav_item('client_dashboard')}",
+                    style: config_helper(:side_nav_text_color) do
+        %>
+          <i class="fs-4 fa-solid fa-gauge-high"></i>
+          <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
         <%= link_to trainers_client_path(client),
                     class: "d-flex align-middle px-0 nav-link #{active_nav_item('client_profile')}",
                     style: config_helper(:side_nav_text_color) do
