@@ -10,9 +10,10 @@ import "jquery-ui"
 
 // custom JS
 // Trainers JS
-import 'clients_invite'
-import 'new_workout'
-import 'edit_workout'
+import 'trainers/clients_invite'
+import 'trainers/new_workout'
+import 'trainers/edit_workout'
+import 'trainers/client_dashboard'
 
 // Clients JS
 import 'clients/add_set'

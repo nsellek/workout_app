@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :accounts, only: [:index, :create, :show]
   resources :workouts, only: [:index]
+  resources :widgets, only: [:index]
 
   namespace :clients do
     get '/dashboard', to: 'dashboards#dashboard'
@@ -44,6 +45,8 @@ Rails.application.routes.draw do
     resources :workouts, except: [:destroy]
 
     resources :clients, only: [:index, :show, :new] do
+      get :dashboard
+
       resources :workouts, only: [:index, :show, :new, :edit, :destroy]
       resources :workout_weeks
     end

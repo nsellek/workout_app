@@ -1,0 +1,61 @@
+<div
+  id="client-dashboard"
+  class="row flex-nowrap"
+>
+  <%= render 'layouts/client_sidebar', client: @client unless browser.mobile? %>
+
+  <div class="col py-3">
+    <%= breadcrumbs %>
+
+    <div class="row mt-md-5 mt-1">
+      <div class="col col-md-10 offset-md-1">
+        <div class="row">
+          <h3>
+            Dashboard
+            <%= link_to 'Edit',
+                        '#!',
+                        id: 'edit-dashboard',
+                        class: 'btn btn-primary float-end'
+            %>
+            <%= link_to 'Add Widget',
+                        '#!',
+                        class: 'btn btn-primary float-end d-none edit-actions ms-1',
+                        data: {
+                          bs_toggle: 'offcanvas',
+                          bs_target: '#widget-offcanvas'
+                        }
+            %>
+            <%= link_to 'Save',
+                        '#!',
+                        id: 'save-dashboard',
+                        class: 'btn btn-success float-end d-none edit-actions me-1'
+            %>
+          </h3>
+        </div>
+        <div class="row gy-2 gy-md-4">
+          <% if @trainer_widgets.count.zero? %>
+            <div class="col col-md-3 col-6 mx-auto">
+              <div class="shadow card p2 text-center">
+                <div class="card-body">
+                  <h5 class="card-title">No Widgets Added</h5>
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <% @trainer_widgets.each do |widget_link| %>
+              <%= render "widgets/show",
+                          placeholder: true,
+                          widget: widget_link.widget
+              %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'widgets/offcanvas',
+            widgets: @widgets,
+            active_widget_ids: @active_widget_ids
+%>
