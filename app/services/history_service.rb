@@ -5,7 +5,7 @@ class HistoryService
 
   def initialize(account, exercise_id)
     @account = account
-    @exercise = account.exercises.history_includes.find(exercise_id)
+    @exercise = account.exercises.find(exercise_id)
     exercise_ids = account.exercises.where(workout_id: exercise.workout_id).pluck(:id)
     @sets = account
       .workout_sets
