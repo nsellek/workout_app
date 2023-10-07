@@ -1,3 +1,27 @@
-<%= turbo_frame_tag 'workout_preview' do %>
-  <%= render 'clients/histories/preview', workout_day: @workout_day %>
+<%= turbo_frame_tag  'offcanvas' do %>
+  <div
+    class="offcanvas offcanvas-bottom h-100"
+    id="history"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title"><%= @history.name %> History</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body text-center">
+      <% @history.grouped_history.each do |date, data| %>
+        <div class="col-12 mb-4">
+          <div class="card shadow">
+            <div class="card-header">
+              <h5 class="card-title"><%= date %></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <% data.each do |weight_rep| %>
+                <li class="list-group-item"><%= weight_rep %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 <% end %>

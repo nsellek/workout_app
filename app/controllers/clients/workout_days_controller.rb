@@ -12,6 +12,10 @@ module Clients
       @view_only = @workout_day&.id != current_account.current_workout_day&.id
     end
 
+    def show
+      @workout_day = presenter(current_account.workout_days.find(params[:id]))
+    end
+
     def complete
       @workout_day.complete!
 

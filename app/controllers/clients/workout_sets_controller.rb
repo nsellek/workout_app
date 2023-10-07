@@ -41,7 +41,7 @@ module Clients
     private
 
     def set_exercise
-      @exercise = current_account.exercises.find(params[:exercise_id])
+      @exercise = presenter(current_account.exercises.find(params[:exercise_id]))
     end
 
     def set_set

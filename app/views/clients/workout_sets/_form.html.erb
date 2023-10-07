@@ -25,10 +25,17 @@
           <div class="btn-group w-100">
             <%= button_tag 'Cancel',
                           type: :button,
-                          class: 'btn btn-outline-secondary',
+                          class: 'btn btn-secondary',
                           data: {
                             bs_dismiss: 'modal'
                           }
+          %>
+          <%= link_to 'History',
+                      clients_history_path(exercise),
+                      class: 'btn btn-warning show-history',
+                      data: {
+                        turbo_frame: 'offcanvas'
+                      }
           %>
           <%= f.submit 'Save', class: 'btn btn-primary' %>
           </div>

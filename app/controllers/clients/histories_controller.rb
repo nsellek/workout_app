@@ -8,7 +8,7 @@ module Clients
     end
 
     def show
-      @workout_day = WorkoutDayPresenter.new(current_account.workout_days.find(params[:id]))
+      @history = HistoryService.new(current_account, params[:id])
     end
 
     private

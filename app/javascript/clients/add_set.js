@@ -41,10 +41,21 @@ export const AddSet = class {
     })
   }
 
+  bindOffcanvasOpen () {
+    document.addEventListener('turbo:frame-render', event => {
+      let target = event.target
+
+      if (target.id === 'offcanvas') {
+        new bootstrap.Offcanvas(target.querySelector('#history')).show();
+      }
+    })
+  }
+
   init() {
     this.bindModalOpen()
     this.bindModalClose()
     this.bindSwipeMenu()
+    this.bindOffcanvasOpen()
   }
 }
 

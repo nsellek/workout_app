@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     resources :trainers, only: [:new, :create]
     resources :histories, only: [:index, :show]
 
-    resources :workout_days, only: [], shallow: true do
+    resources :workout_days, only: [:show], shallow: true do
       member do
         post :complete
       end
