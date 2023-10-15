@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_25_014006) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_15_184825) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -101,6 +101,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_25_014006) do
     t.datetime "updated_at", null: false
     t.date "completed_at"
     t.index ["workout_week_id"], name: "index_workout_days_on_workout_week_id"
+  end
+
+  create_table "workout_maxes", force: :cascade do |t|
+    t.integer "workout_id"
+    t.integer "client_id"
+    t.string "amount", default: "0"
+    t.string "projected_max", default: "0"
+    t.jsonb "history", default: []
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_workout_maxes_on_client_id"
+    t.index ["workout_id", "client_id"], name: "index_workout_maxes_on_workout_id_and_client_id"
+    t.index ["workout_id"], name: "index_workout_maxes_on_workout_id"
   end
 
   create_table "workout_sets", force: :cascade do |t|
