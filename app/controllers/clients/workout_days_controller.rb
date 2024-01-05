@@ -1,5 +1,6 @@
 module Clients
   class WorkoutDaysController < ApplicationController
+    before_action :check_for_trainer, except: [:show], unless: -> { params[:day_id].present? }
     before_action :set_workout_day, only: :complete
 
     def index
@@ -31,6 +32,12 @@ module Clients
 
     def set_workout_day
       @workout_day = presenter(current_account.workout_days.includes(exercises: :workout_sets).find(params[:id]))
+    end
+
+    def check_for_trainer
+      return if current_account.trainer
+
+      redirect_to new_clients_trainer_path
     end
   end
 end

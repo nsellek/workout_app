@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!,
     :check_account,
     :set_active_page
-  before_action :check_for_trainer, if: -> { current_account&.client? }
 
   helper_method :app_name,
     :current_account,
@@ -26,16 +25,10 @@ class ApplicationController < ActionController::Base
     redirect_to accounts_path
   end
 
-  def check_for_trainer
-    return if current_account.trainer
-
-    redirect_to new_clients_trainer_path
-  end
-
   def presenter(obj)
     return nil if obj.nil?
 
-    if obj.is_a?(ActiveRecord::Associations::CollectionProxy) || obj.is_a?(ActiveRecord::AssociationRelation)
+    if obj.respond_to?(:length)
       item = obj.first
       return obj if item.nil?
 

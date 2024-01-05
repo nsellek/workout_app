@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     get '/profile', to: 'clients#edit'
 
     resources :clients, only: [:update]
-    resources :trainers, only: [:new, :create]
+    resources :trainers, only: [:new, :create, :index, :destroy]
     resources :histories, only: [:index, :show]
 
     resources :workout_days, only: [:show], shallow: true do

@@ -3,7 +3,6 @@
 module Users
   class RegistrationsController < Devise::RegistrationsController
     skip_before_action :set_active_page,
-      :check_for_trainer,
       :check_account
     before_action :configure_sign_up_params, only: [:create]
     # before_action :configure_account_update_params, only: [:update]

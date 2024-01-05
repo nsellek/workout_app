@@ -1,7 +1,6 @@
 class AccountsController < ApplicationController
   skip_before_action :set_active_page,
-    :check_account,
-    :check_for_trainer
+    :check_account
 
   def index
     session[:account_id] = nil
