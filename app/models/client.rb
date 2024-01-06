@@ -11,7 +11,7 @@ class Client < Account
   end
 
   def trainer=(obj)
-    trainer_clients.new(trainer_id: obj.id).save!
+    trainer_clients.new(trainer_id: obj.id, active: true).save!
   end
 
   def configuration

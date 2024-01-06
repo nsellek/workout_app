@@ -12,6 +12,7 @@ module Trainers
           .workout_weeks
           .active
           .includes(workout_days: [:exercises])
+          .where(trainer_id: current_account.id)
           .reverse_order
       )
       @week_count = @workout_weeks.count
