@@ -16,7 +16,9 @@ class WorkoutWeekPresenter < BasePresenter
     workout_days
   end
 
-  def workout_days
+  def workout_days(use_super = false)
+    return super() if use_super
+
     @workout_days ||= WorkoutDayPresenter.from_collection(object.workout_days)
   end
 end

@@ -24,7 +24,7 @@ module Trainers
       @workout_week = presenter(current_account.workout_weeks.new(client_id: @client.id))
       @week_count = current_account.workout_weeks.active.count
       @muscle_groups = MuscleGroup.for_dropdown
-      workout_day = @workout_week.workout_days.build
+      workout_day = @workout_week.workout_days(true).build
       workout_day.exercises.build
     end
 
