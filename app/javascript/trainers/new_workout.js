@@ -28,7 +28,7 @@ export const NewWorkout = class {
           workout = ui.item
 
         $this.val(workout.label)
-        $this.parents('.exercises').find('.workout_id').val(workout.value)
+        $this.closest('.exercise').find('.workout_id').val(workout.value)
       }
     }
   }

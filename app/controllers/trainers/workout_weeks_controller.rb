@@ -98,6 +98,7 @@ module Trainers
             exercises_attributes: [
               :id,
               :workout_id,
+              :name,
               :sets,
               :reps,
               :weight,
