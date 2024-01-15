@@ -9,6 +9,7 @@ module Clients
 
     def show
       @history = HistoryService.new(current_account, params[:id])
+      @exercise_max = current_account.exercise_maxes.find_by(exercise_id: params[:id])
     end
 
     private
