@@ -31,11 +31,18 @@
           <div class="btn-group w-100">
               <%= link_to 'Add Set',
                           new_clients_exercise_workout_set_path(exercise),
-                          class: 'btn btn-outline-primary',
+                          class: 'btn btn-outline-primary text-black',
                           data: {
                             turbo_frame: 'modal'
                           }
               %>
+            <%= link_to 'History',
+                        clients_history_path(exercise),
+                        class: 'btn btn-outline-warning text-black',
+                        data: {
+                          turbo_frame: 'offcanvas'
+                        }
+            %>
             <%#= link_to 'Volume', '#!', class: 'btn btn-outline-primary' %>
           </div>
         <% end %>

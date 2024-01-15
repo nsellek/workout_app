@@ -9,7 +9,7 @@ class WorkoutSet < ApplicationRecord
   private
 
   def check_max
-    current_max = WorkoutMax.find_or_initialize_by(client_id: client.id, workout_id: workout.id)
+    current_max = ExerciseMax.find_or_initialize_by(client_id: client.id, exercise_id: exercise.id)
 
     if reps > 1
       projected_max = MaxService.project_max(weight, reps)

@@ -8,6 +8,33 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body text-center">
+      <div class="col-12 mb-4">
+        <div class="card shadow">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-5 text-end">
+                  Current Max
+                </div>
+                <div class="col-5 text-start">
+                  <%= @exercise_max&.amount || 0 %>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-5 text-end">
+                  Projected Max
+                </div>
+                <div class="col-7 text-start">
+                  <%= @exercise_max&.projected_max || 0 %>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <% @history.grouped_history.each do |date, data| %>
         <div class="col-12 mb-4">
           <div class="card shadow">

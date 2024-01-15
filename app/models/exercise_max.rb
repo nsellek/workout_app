@@ -1,5 +1,5 @@
-class WorkoutMax < ApplicationRecord
-  belongs_to :workout
+class ExerciseMax < ApplicationRecord
+  belongs_to :exercise
   belongs_to :client
 
   def set_history
