@@ -4,7 +4,7 @@ class Client < Account
   has_many :workout_days, through: :workout_weeks
   has_many :exercises, through: :workout_days
   has_many :workout_sets, through: :exercises
-  has_many :exercise_maxes
+  has_many :workout_maxes
 
   def trainer
     @trainer ||= trainer_clients.active.first&.trainer

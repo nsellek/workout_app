@@ -38,3 +38,16 @@ let createNode = (htmlString) => {
   placeholder.innerHTML = htmlString;
   return placeholder.firstElementChild
 }
+
+export const defaultAutocompleteOptions = {
+  minLength: 3,
+  classes: {
+    "ui-autocomplete": "dropdown-menu autocomplete-dropdown",
+    "ui-menu-item-wrapper": "dropdown-item",
+    "ui-menu-item": ""
+  },
+  change: (e, ui) => {
+    if (ui.item === null)
+      e.target.value = ''
+  }
+}

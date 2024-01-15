@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :clients, only: [:update]
     resources :trainers, only: [:new, :create, :index, :destroy]
     resources :histories, only: [:index, :show]
+    resources :workout_maxes, except: [:destroy]
 
     resources :workout_days, only: [:show], shallow: true do
       member do

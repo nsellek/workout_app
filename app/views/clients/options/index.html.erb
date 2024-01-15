@@ -18,6 +18,16 @@
     </ul>
 
     <ul class="list-group mt-3">
+      <%= link_to clients_workout_maxes_path, class: 'list-group-item list-group-item-action w-100' do %>
+        <i class="fa-solid fa-dumbbell"></i>
+        Manage Maxes
+        <span class="float-end">
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
+      <% end %>
+    </ul>
+
+    <ul class="list-group mt-3">
       <%= link_to clients_trainers_path, class: 'list-group-item list-group-item-action w-100' do %>
         <i class="fa-solid fa-user"></i>
         Trainer History

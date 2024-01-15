@@ -1,0 +1,46 @@
+<div class="row mt-4">
+  <div class="row p-0 m-0">
+    <div class="col-6">
+      <h3>Current Maxes</h3>
+    </div>
+    <div class="col-6">
+      <%= link_to 'New Max', new_clients_workout_max_path, class: 'btn btn-success float-end' %>
+    </div>
+  </div>
+  <div class="row p-0 m-0">
+    <div class="col">
+      <div class="card shadow mt-3">
+        <table class="table table-striped text-center">
+            <thead>
+              <tr>
+                <th>Exercise</th>
+                <th>Max</th>
+                <th>Projected</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @maxes.empty? %>
+                <tr>
+                  <td colspan="4">No Logged Maxes</td>
+                </tr>
+              <% else %>
+                <% @maxes.each do |max| %>
+                  <tr>
+                    <td><%= max.workout_name %></td>
+                    <td><%= max.amount %></td>
+                    <td><%= max.projected_max %></td>
+                    <td>
+                      <%= link_to edit_clients_workout_max_path(max) do %>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      <% end %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
