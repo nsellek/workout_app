@@ -18,36 +18,6 @@
                 class: 'navbar-brand',
                 style: config_helper(:nav_text_color)
     %>
-    <button
-      class="navbar-toggler ms-auto"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      style=<%= config_helper(:nav_text_color) %>
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav flex-column flex-wrap ms-md-auto">
-        <li class="nav-item">
-          <%= link_to 'Switch Accounts',
-                      accounts_path,
-                      class: 'nav-link',
-                      style: config_helper(:nav_text_color)
-          %>
-        </li>
-        <li class="nav-item">
-          <%= button_to 'Logout',
-                        destroy_user_session_path,
-                        method: :delete,
-                        class: 'nav-link btn btn-link',
-                        style: config_helper(:nav_text_color)
-          %>
-        </li>
-      </ul>
-    </div>
+    <div class="m-auto"></div>
   </div>
 </nav>
