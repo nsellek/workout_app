@@ -10,7 +10,7 @@ class ExercisePresenter < BasePresenter
   end
 
   def name
-    workout&.name || object.name || user_choice_workout
+    workout&.name || object.name.presence || user_choice_workout
   end
 
   private
