@@ -20,7 +20,7 @@ module Clients
     end
 
     def destroy
-      trainer_link = current_account.trainer_clients.first
+      trainer_link = current_account.trainer_clients.active.first
       trainer_link.update(active: false)
       flash[:notice] = 'Successfully removed trainer'
 
