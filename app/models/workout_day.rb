@@ -3,7 +3,7 @@ class WorkoutDay < ApplicationRecord
 
   has_one :client, through: :workout_week
 
-  has_many :exercises
+  has_many :exercises, dependent: :destroy
 
   scope :completed, -> { where.not(completed_at: nil) }
   scope :incompleted, -> { where(completed_at: nil) }

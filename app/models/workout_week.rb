@@ -1,5 +1,5 @@
 class WorkoutWeek < ApplicationRecord
-  has_many :workout_days
+  has_many :workout_days, dependent: :destroy
   has_many :exercises, through: :workout_days
 
   belongs_to :trainer
@@ -11,5 +11,9 @@ class WorkoutWeek < ApplicationRecord
 
   def self.display_includes
     includes(workout_days: [exercises: [:workout_sets, :muscle_group, :workout]])
+  end
+
+  def completed?
+    workout_days.all?(:completed?)
   end
 end
