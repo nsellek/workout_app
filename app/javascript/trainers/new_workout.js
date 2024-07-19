@@ -74,14 +74,14 @@ export const NewWorkout = class {
 
   addExercise(addBtn, exercisesContainer) {
     let exerciseNode = this.exerciseTemplate.content.cloneNode(true),
-        inputFields = exerciseNode.querySelectorAll('input'),
+        fields = exerciseNode.querySelectorAll('input, select'),
         labelFields = exerciseNode.querySelectorAll('label'),
         $autoComplete = $(exerciseNode.querySelector('.autocomplete')),
         exerciseCount = exercisesContainer.querySelectorAll('.exercise').length,
         dayCount = addBtn.closest('.day').dataset.count;
 
     exerciseNode.querySelector('.workout_count').innerText = (exerciseCount + 1);
-    inputFields.forEach(field => {
+    fields.forEach(field => {
       let name = field.getAttribute('name'),
           id = field.id;
 
@@ -110,7 +110,7 @@ export const NewWorkout = class {
 
   addDay() {
     let dayNode = this.dayTemplate.content.cloneNode(true),
-        inputFields = dayNode.querySelectorAll('input'),
+        fields = dayNode.querySelectorAll('input, select'),
         labelFields = dayNode.querySelectorAll('label'),
         $autoComplete = $(dayNode.querySelector('.autocomplete')),
         dayCount = parseInt(this.daysContainer.querySelector('.day:last-of-type')?.dataset?.count) || 0,
@@ -118,7 +118,7 @@ export const NewWorkout = class {
 
     dayNode.querySelector('.day').dataset.count = plainDayCount;
     dayNode.querySelector('.day_count').innerText = plainDayCount + 1;
-    inputFields.forEach(field => {
+    fields.forEach(field => {
       let name = field.getAttribute('name'),
           id = field.id;
 
